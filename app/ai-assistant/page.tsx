@@ -10,7 +10,7 @@ export default function AIAssistantPage() {
       id: '1',
       content: '您好！我是您的AI合规助手。今天我可以如何帮助您处理法规合规问题？',
       role: 'assistant',
-      timestamp: new Date()
+      timestamp: new Date(0) // 使用固定时间避免hydration错误
     }
   ])
   const [inputMessage, setInputMessage] = useState('')
@@ -233,10 +233,10 @@ export default function AIAssistantPage() {
               onClick={() => setShowSettings(!showSettings)}
               className="p-2 rounded-md border border-border hover:bg-secondary transition-colors"
             >
-              <Settings className="h-4 w-4" />
+              <Settings className="h-4 w-4 text-muted-foreground" />
             </button>
             <button className="p-2 rounded-md hover:bg-secondary transition-colors">
-              <Download className="h-4 w-4" />
+              <Download className="h-4 w-4 text-muted-foreground" />
             </button>
           </div>
         </div>
@@ -251,8 +251,8 @@ export default function AIAssistantPage() {
               <div
                 className={`max-w-[80%] rounded-lg p-3 ${
                   message.role === 'user'
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-secondary border border-border'
+                    ? 'bg-[#034E93] text-white'
+                    : 'bg-[#034E93] text-white border border-[#034E93]/20'
                 }`}
               >
                 <div className="flex items-center gap-2 mb-1">
@@ -264,22 +264,22 @@ export default function AIAssistantPage() {
                 </div>
                 <p className="text-sm">{message.content}</p>
                 <span className="text-xs opacity-70 mt-1 block">
-                  {message.timestamp.toLocaleTimeString()}
+                  Just now
                 </span>
               </div>
             </div>
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="max-w-[80%] rounded-lg p-3 bg-secondary border border-border">
+              <div className="max-w-[80%] rounded-lg p-3 bg-[#034E93] text-white border border-[#034E93]/20">
                 <div className="flex items-center gap-2 mb-1">
                   <Bot className="h-4 w-4" />
                   <span className="text-xs">Assistant</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-muted-foreground rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-white/80 rounded-full animate-pulse"></div>
                 </div>
               </div>
             </div>

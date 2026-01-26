@@ -94,7 +94,7 @@ function Sidebar() {
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-card border border-border hover:bg-secondary transition-colors"
         aria-label="Toggle menu"
       >
-        {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        {mobileOpen ? <X className="h-5 w-5 text-muted-foreground" /> : <Menu className="h-5 w-5 text-muted-foreground" />}
       </button>
 
       {/* 移动端遮罩 */}
@@ -127,22 +127,22 @@ function Sidebar() {
           <nav className="flex-1 px-3 py-4 space-y-1">
             {navigation.map((item) => (
               <button
-                key={item.name}
-                onClick={() => handleNavigation(item.path)}
-                className={`
-                  w-full flex items-center justify-between gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors
-                  ${item.active 
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                  }
-                `}
-              >
-                <div className="flex items-center gap-3">
-                  <item.icon className="h-4 w-4" />
-                  {item.name}
-                </div>
-                {item.active && <ChevronRight className="h-4 w-4" />}
-              </button>
+                  key={item.name}
+                  onClick={() => handleNavigation(item.path)}
+                  className={`
+                    w-full flex items-center justify-between gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors
+                    ${item.active 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    }
+                  `}
+                >
+                  <div className="flex items-center gap-3">
+                    <item.icon className={`h-4 w-4 ${item.active ? 'text-primary-foreground' : 'text-muted-foreground'}`} />
+                    {item.name}
+                  </div>
+                  {item.active && <ChevronRight className="h-4 w-4 text-primary-foreground" />}
+                </button>
             ))}
           </nav>
 
@@ -161,10 +161,10 @@ function Sidebar() {
                 `}
               >
                 <div className="flex items-center gap-3">
-                  <item.icon className="h-4 w-4" />
+                  <item.icon className={`h-4 w-4 ${item.active ? 'text-primary-foreground' : 'text-muted-foreground'}`} />
                   {item.name}
                 </div>
-                {item.active && <ChevronRight className="h-4 w-4" />}
+                {item.active && <ChevronRight className="h-4 w-4 text-primary-foreground" />}
               </button>
             ))}
           </div>
@@ -275,7 +275,7 @@ export default function MainLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen flex bg-background">
+    <div className="min-h-screen flex bg-card">
       {/* 侧边栏 */}
       <Sidebar />
 
