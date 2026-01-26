@@ -1,0 +1,56 @@
+apiVersion: apps.sealos.io/v1
+kind: App
+metadata:
+  name: jurisguard-gemini
+spec:
+  # 应用名称
+  name: jurisguard-gemini
+  
+  # 应用类型：web应用
+  type: deployment
+  
+  # 镜像配置
+  image:
+    # 使用自动构建
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    # 端口配置
+    ports:
+      - containerPort: 3000
+        protocol: TCP
+    
+    # 环境变量
+    env:
+      - name: NODE_ENV
+        value: production
+      - name: NEXT_TELEMETRY_DISABLED
+        value: "1"
+  
+  # 资源限制（免费套餐配置）
+  resources:
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
+  
+  # 副本数量
+  replicas: 1
+  
+  # 健康检查
+  healthCheck:
+    httpGet:
+      path: /
+      port: 3000
+    initialDelaySeconds: 30
+    periodSeconds: 10
+  
+  # 服务暴露配置
+  expose:
+    # 使用Sealos提供的域名
+    type: ingress
+    # 自定义域名（可选）
+    # host: your-domain.com
