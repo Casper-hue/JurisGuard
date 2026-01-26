@@ -155,7 +155,16 @@ function getDefaultData(): ComplianceData {
       }
     ],
     radarStats: [
-      { region: 'Global', value: 50, level: 'medium' }
+      { 
+        id: 'global-1',
+        region: 'Global', 
+        riskLevel: 50, 
+        category: 'System',
+        trend: 'stable',
+        lastUpdated: new Date().toISOString(),
+        value: 50, 
+        level: 'medium' 
+      }
     ],
     stats: [
       { label: 'System Status', value: 'Offline', change: '-100%', icon: 'AlertTriangle' }

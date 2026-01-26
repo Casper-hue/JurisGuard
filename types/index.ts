@@ -7,6 +7,7 @@ export interface ComplianceAlert {
   summary: string;      // 简短描述
   timestamp: string;    // ISO 日期格式
   source_url?: string;  // 用于未来爬虫
+  category?: string;    // 警报分类，例如: "Data Compliance"
 }
 
 // 雷达统计接口 - 用于风险雷达可视化
@@ -17,6 +18,8 @@ export interface RadarStat {
   category: string;     // 风险类别
   trend: "up" | "down" | "stable";
   lastUpdated: string;
+  value?: number;       // 雷达图数值
+  level?: string;       // 风险等级
 }
 
 // 统计卡片数据接口
