@@ -1,0 +1,88 @@
+{
+  "stats": [
+    {
+      "label": "Risk Items",
+      "value": "23",
+      "change": "+4",
+      "icon": "AlertTriangle",
+      "color": "text-red-500",
+      "bgColor": "bg-red-500/20"
+    },
+    {
+      "label": "Regulations Tracked",
+      "value": "147",
+      "change": "+12",
+      "icon": "Globe",
+      "color": "text-blue-500",
+      "bgColor": "bg-blue-500/20"
+    },
+    {
+      "label": "New Documents",
+      "value": "47",
+      "change": "+8",
+      "icon": "FileText",
+      "color": "text-green-500",
+      "bgColor": "bg-green-500/20"
+    },
+    {
+      "label": "Cases Tracked",
+      "value": "34",
+      "change": "+5",
+      "icon": "Scale",
+      "color": "text-purple-500",
+      "bgColor": "bg-purple-500/20"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-001",
+      "region": "EU",
+      "severity": "critical",
+      "title": "EU AI Act Officially Passed",
+      "summary": "European Parliament officially passes AI Act with strict regulatory requirements for high-risk AI systems, including biometric recognition and critical infrastructure.",
+      "timestamp": "2024-03-13T10:30:00Z",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-002", 
+      "region": "USA",
+      "severity": "high",
+      "title": "SEC Cybersecurity Disclosure Rules",
+      "summary": "SEC requires public companies to disclose material cybersecurity incidents within 4 business days, enhancing investor protection.",
+      "timestamp": "2024-03-12T14:20:00Z",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-003",
+      "region": "Singapore",
+      "severity": "high",
+      "title": "Singapore PDPA Amendments Effective",
+      "summary": "Personal Data Protection Act amendments take effect, strengthening data breach notification obligations and cross-border data transfer requirements.",
+      "timestamp": "2024-03-10T09:15:00Z",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-004",
+      "region": "EU",
+      "severity": "critical",
+      "title": "EU Data Governance Act Implementation",
+      "summary": "Data Governance Act officially implemented, establishing data intermediation services and data altruism framework to promote data sharing.",
+      "timestamp": "2024-03-08T16:45:00Z",
+      "category": "Data Compliance"
+    }
+  ],
+  "activities": [
+    {
+      "label": "Documents Reviewed",
+      "value": "47"
+    },
+    {
+      "label": "Regulations Updated",
+      "value": "12"
+    },
+    {
+      "label": "Risk Assessments",
+      "value": "8"
+    }
+  ]
+}

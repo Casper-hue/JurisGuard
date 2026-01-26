@@ -1,0 +1,372 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { FileText, Search, Filter, Download, Share, Plus, Folder, Calendar, HardDrive, Link } from 'lucide-react'
+
+interface Document {
+  id: string
+  title: string
+  type: 'policy' | 'report' | 'contract' | 'guideline' | 'regulation' | 'legislation' | 'directive'
+  size: string
+  lastModified: string
+  status: 'active' | 'draft' | 'archived'
+  category: string
+  jurisdiction?: string
+  source_url?: string
+  download_url?: string
+  description?: string
+  key_topics?: string[]
+}
+
+export default function DocumentsPage() {
+  const [documents, setDocuments] = useState<Document[]>([])
+  const [loading, setLoading] = useState(true)
+  const [selectedDocument, setSelectedDocument] = useState<Document | null>(null)
+  const [showDetails, setShowDetails] = useState(false)
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await fetch('/data/documents-data.json')
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
+        const data = await response.json()
+        setDocuments(data.documents)
+      } catch (error) {
+        console.error('Failed to load documents data:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadData()
+  }, [])
+
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterType, setFilterType] = useState('all')
+  const [filterStatus, setFilterStatus] = useState('all')
+
+  const handleViewDetails = (document: Document) => {
+    setSelectedDocument(document)
+    setShowDetails(true)
+  }
+
+  const handleDownload = (document: Document) => {
+    if (document.download_url) {
+      window.open(document.download_url, '_blank')
+    }
+  }
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'policy': return 'bg-blue-500'
+      case 'report': return 'bg-green-500'
+      case 'contract': return 'bg-purple-500'
+      case 'guideline': return 'bg-orange-500'
+      default: return 'bg-gray-500'
+    }
+  }
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'text-green-500'
+      case 'draft': return 'text-yellow-500'
+      case 'archived': return 'text-gray-500'
+      default: return 'text-gray-500'
+    }
+  }
+
+  const filteredDocuments = documents.filter(doc => {
+    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         doc.category.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesType = filterType === 'all' || doc.type === filterType
+    const matchesStatus = filterStatus === 'all' || doc.status === filterStatus
+    
+    return matchesSearch && matchesType && matchesStatus
+  })
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading documents data...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (documents.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <p className="text-destructive">Failed to load documents data</p>
+          <p className="text-sm text-muted-foreground mt-2">Please check if the data file exists</p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-3xl font-bold text-foreground mb-2">Document Management</h1>
+        <p className="text-base text-muted-foreground">Manage and organize your compliance documents</p>
+      </div>
+
+      {/* 搜索和过滤 */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex-1 relative">
+          <input
+            type="text"
+            placeholder="Search documents..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 rounded-md border border-border bg-input text-muted-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring focus:border-transparent"
+          />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        </div>
+        
+        <select
+          value={filterType}
+          onChange={(e) => setFilterType(e.target.value)}
+          className="px-3 py-2 rounded-md border border-border bg-input text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring focus:border-transparent text-sm"
+        >
+          <option value="all" className="text-muted-foreground">All Types</option>
+          <option value="policy" className="text-muted-foreground">Policy</option>
+          <option value="report" className="text-muted-foreground">Report</option>
+          <option value="contract" className="text-muted-foreground">Contract</option>
+          <option value="guideline" className="text-muted-foreground">Guideline</option>
+        </select>
+        
+        <select
+          value={filterStatus}
+          onChange={(e) => setFilterStatus(e.target.value)}
+          className="px-3 py-2 rounded-md border border-border bg-input text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring focus:border-transparent text-sm"
+        >
+          <option value="all" className="text-muted-foreground">All Status</option>
+          <option value="active" className="text-muted-foreground">Active</option>
+          <option value="draft" className="text-muted-foreground">Draft</option>
+          <option value="archived" className="text-muted-foreground">Archived</option>
+        </select>
+      </div>
+
+
+
+      {/* 文档列表 */}
+      <div className="p-6 rounded-xl bg-card border border-border">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-lg font-semibold text-foreground">Document Library</h2>
+          <div className="flex gap-2">
+            <button className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-transparent text-sm text-foreground hover:bg-secondary transition-colors">
+              <Plus className="h-4 w-4" />
+              Upload New
+            </button>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          {filteredDocuments.map((doc) => (
+            <div key={doc.id} className="p-6 rounded-xl bg-card/10 border border-border hover:bg-blue-900/99 hover:border-primary/20 transition-all duration-300 group">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {doc.title}
+                    </h3>
+                    <span className={`px-2 py-1 rounded text-xs ${getStatusColor(doc.status)} text-white`}>
+                      {doc.status.charAt(0).toUpperCase() + doc.status.slice(1)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
+                    <div className="flex items-center gap-1">
+                      <FileText className="h-3 w-3 text-muted-foreground" />
+                      <span>{doc.type.charAt(0).toUpperCase() + doc.type.slice(1)}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Folder className="h-3 w-3 text-muted-foreground" />
+                      <span>{doc.category}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3 text-muted-foreground" />
+                      <span>Modified: {new Date(doc.lastModified).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric'
+                      })}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <HardDrive className="h-3 w-3 text-muted-foreground" />
+                      <span>{doc.size}</span>
+                    </div>
+                    {doc.jurisdiction && (
+                      <div className="flex items-center gap-1">
+                        <span>Jurisdiction: {doc.jurisdiction}</span>
+                      </div>
+                    )}
+                    {doc.source_url && (
+                      <div className="flex items-center gap-1">
+                        <Link className="h-3 w-3 text-muted-foreground" />
+                        <span>Source Available</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {doc.description && (
+                    <p className="text-sm text-muted-foreground mb-3">{doc.description}</p>
+                  )}
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">
+                  ID: {doc.id}
+                </span>
+                <div className="flex gap-1">
+                  <button 
+                    onClick={() => handleDownload(doc)}
+                    className="p-2 rounded-md border border-border bg-transparent text-foreground hover:bg-secondary transition-colors"
+                    title="Download PDF"
+                  >
+                    <Download className="h-4 w-4" />
+                  </button>
+                  <button 
+                    onClick={() => handleViewDetails(doc)}
+                    className="p-2 rounded-md border border-border bg-transparent text-foreground hover:bg-secondary transition-colors"
+                    title="View Details"
+                  >
+                    <FileText className="h-4 w-4" />
+                  </button>
+                  <button className="p-2 rounded-md border border-border bg-transparent text-foreground hover:bg-secondary transition-colors">
+                    <Share className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {filteredDocuments.length === 0 && (
+          <div className="text-center py-8">
+            <Folder className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+            <p className="text-muted-foreground">No documents match your search criteria</p>
+          </div>
+        )}
+      </div>
+
+      {/* Document Details Modal */}
+      {showDetails && selectedDocument && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-background rounded-xl p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-foreground">Document Details</h3>
+              <button 
+                onClick={() => setShowDetails(false)}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                ✕
+              </button>
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-2">{selectedDocument.title}</h4>
+                <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center gap-1">
+                    <FileText className="h-3 w-3" />
+                    <span>Type: {selectedDocument.type.charAt(0).toUpperCase() + selectedDocument.type.slice(1)}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Folder className="h-3 w-3" />
+                    <span>Category: {selectedDocument.category}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Calendar className="h-3 w-3" />
+                    <span>Modified: {new Date(selectedDocument.lastModified).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric'
+                    })}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <HardDrive className="h-3 w-3" />
+                    <span>Size: {selectedDocument.size}</span>
+                  </div>
+                  <div className={`px-2 py-1 rounded text-xs ${getStatusColor(selectedDocument.status)} text-white`}>
+                    {selectedDocument.status.charAt(0).toUpperCase() + selectedDocument.status.slice(1)}
+                  </div>
+                  {selectedDocument.jurisdiction && (
+                    <div className="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-500">
+                      {selectedDocument.jurisdiction}
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              {selectedDocument.description && (
+                <div>
+                  <h5 className="font-medium text-foreground mb-2">Description</h5>
+                  <p className="text-sm text-muted-foreground">{selectedDocument.description}</p>
+                </div>
+              )}
+              
+              {selectedDocument.key_topics && selectedDocument.key_topics.length > 0 && (
+                <div>
+                  <h5 className="font-medium text-foreground mb-2">Key Topics</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedDocument.key_topics.map((topic, index) => (
+                      <span key={index} className="px-2 py-1 rounded text-xs bg-blue-500/20 text-blue-500">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {selectedDocument.source_url && (
+                <div>
+                  <h5 className="font-medium text-foreground mb-2">Source</h5>
+                  <div className="flex items-center gap-2">
+                    <Link className="h-4 w-4 text-primary" />
+                    <a 
+                      href={selectedDocument.source_url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 transition-colors break-all"
+                    >
+                      {selectedDocument.source_url}
+                    </a>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1">Click the link to view the official document</p>
+                </div>
+              )}
+              
+              <div>
+                <h5 className="font-medium text-foreground mb-2">Document ID</h5>
+                <p className="text-sm text-muted-foreground">{selectedDocument.id}</p>
+              </div>
+            </div>
+            
+            <div className="flex justify-end gap-3 mt-6">
+              {selectedDocument.download_url && (
+                <button 
+                  onClick={() => handleDownload(selectedDocument)}
+                  className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  Download PDF
+                </button>
+              )}
+              <button 
+                onClick={() => setShowDetails(false)}
+                className="px-4 py-2 border border-border rounded-md hover:bg-secondary transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

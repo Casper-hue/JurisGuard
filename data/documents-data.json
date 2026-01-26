@@ -1,0 +1,49 @@
+{
+  "documents": [
+    {
+      "id": "1",
+      "title": "Data Protection Policy v2.1",
+      "type": "policy",
+      "size": "2.4 MB",
+      "lastModified": "2024-01-15",
+      "status": "active",
+      "category": "Data Privacy"
+    },
+    {
+      "id": "2",
+      "title": "Q4 2023 Compliance Report",
+      "type": "report",
+      "size": "5.7 MB",
+      "lastModified": "2024-01-10",
+      "status": "active",
+      "category": "Reporting"
+    },
+    {
+      "id": "3",
+      "title": "Vendor Security Agreement Template",
+      "type": "contract",
+      "size": "1.2 MB",
+      "lastModified": "2024-01-08",
+      "status": "active",
+      "category": "Contracts"
+    },
+    {
+      "id": "4",
+      "title": "AI System Implementation Guidelines",
+      "type": "guideline",
+      "size": "3.1 MB",
+      "lastModified": "2024-01-05",
+      "status": "draft",
+      "category": "AI Compliance"
+    },
+    {
+      "id": "5",
+      "title": "Cybersecurity Incident Response Plan",
+      "type": "policy",
+      "size": "4.8 MB",
+      "lastModified": "2023-12-20",
+      "status": "active",
+      "category": "Security"
+    }
+  ]
+}

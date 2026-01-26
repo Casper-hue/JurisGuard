@@ -1,0 +1,135 @@
+{
+  "alerts": [
+    {
+      "id": "alert-001",
+      "region": "EU",
+      "severity": "critical",
+      "title": "AI Act Final Draft Released",
+      "summary": "European Parliament approves final draft of AI regulation with enhanced compliance requirements for high-risk systems.",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"
+    },
+    {
+      "id": "alert-002", 
+      "region": "USA",
+      "severity": "high",
+      "title": "SEC Cybersecurity Disclosure Rules",
+      "summary": "New requirements for public companies to disclose material cybersecurity incidents within 4 business days.",
+      "timestamp": "2024-01-14T14:20:00Z",
+      "source_url": "https://www.sec.gov/news/press-release/2023-139"
+    },
+    {
+      "id": "alert-003",
+      "region": "China",
+      "severity": "medium",
+      "title": "Data Security Law Implementation Guidelines",
+      "summary": "Updated guidelines for cross-border data transfers and classification of important data.",
+      "timestamp": "2024-01-13T09:15:00Z",
+      "source_url": "https://www.cac.gov.cn/2024-01/12/c_1212345678.htm"
+    },
+    {
+      "id": "alert-004",
+      "region": "UK",
+      "severity": "high",
+      "title": "Digital Markets Act Compliance Requirements",
+      "summary": "New obligations for gatekeeper platforms under UK's digital competition framework.",
+      "timestamp": "2024-01-12T16:45:00Z",
+      "source_url": "https://www.gov.uk/government/publications/digital-markets-act"
+    },
+    {
+      "id": "alert-005",
+      "region": "Japan",
+      "severity": "medium",
+      "title": "Personal Information Protection Act Amendments",
+      "summary": "Revised requirements for data breach notifications and cross-border data transfers.",
+      "timestamp": "2024-01-11T11:30:00Z",
+      "source_url": "https://www.ppc.go.jp/en/legal/"
+    }
+  ],
+  "radarStats": [
+    {
+      "id": "radar-001",
+      "region": "EU",
+      "riskLevel": 85,
+      "category": "Data Privacy",
+      "trend": "up",
+      "lastUpdated": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "radar-002",
+      "region": "USA",
+      "riskLevel": 72,
+      "category": "Cybersecurity",
+      "trend": "up",
+      "lastUpdated": "2024-01-15T09:30:00Z"
+    },
+    {
+      "id": "radar-003",
+      "region": "China",
+      "riskLevel": 65,
+      "category": "Data Localization",
+      "trend": "stable",
+      "lastUpdated": "2024-01-15T09:00:00Z"
+    },
+    {
+      "id": "radar-004",
+      "region": "UK",
+      "riskLevel": 58,
+      "category": "Competition Law",
+      "trend": "down",
+      "lastUpdated": "2024-01-15T08:30:00Z"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Total Risks",
+      "value": "247",
+      "change": "+12%",
+      "icon": "AlertTriangle"
+    },
+    {
+      "label": "Monitored Jurisdictions", 
+      "value": "58",
+      "change": "+3",
+      "icon": "Globe"
+    },
+    {
+      "label": "Compliant Assets",
+      "value": "89%",
+      "change": "+2%",
+      "icon": "CheckCircle"
+    },
+    {
+      "label": "Response Time",
+      "value": "2.4h",
+      "change": "-0.3h",
+      "icon": "Clock"
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "action": "Risk assessment completed for EU AI Act",
+      "time": "2 min ago",
+      "user": "System"
+    },
+    {
+      "id": 2,
+      "action": "New regulation detected in USA jurisdiction",
+      "time": "15 min ago", 
+      "user": "AI Monitor"
+    },
+    {
+      "id": 3,
+      "action": "Compliance report generated for Q4 2023",
+      "time": "1 hour ago",
+      "user": "Jane Doe"
+    },
+    {
+      "id": 4,
+      "action": "Alert threshold updated for critical risks",
+      "time": "2 hours ago",
+      "user": "John Smith"
+    }
+  ]
+}

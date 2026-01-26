@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "id": "SC-2023-001",
+      "title": "Google LLC v. Oracle America, Inc.",
+      "court": "Supreme Court",
+      "jurisdiction": "United States",
+      "caseType": "Copyright",
+      "filingDate": "2023-01-15",
+      "status": "settled",
+      "parties": ["Google LLC", "Oracle America, Inc."],
+      "description": "Landmark copyright case regarding software APIs",
+      "impactLevel": "high"
+    },
+    {
+      "id": "EC-2023-045",
+      "title": "European Commission v. Meta Platforms",
+      "court": "European Court of Justice",
+      "jurisdiction": "European Union",
+      "caseType": "Data Privacy",
+      "filingDate": "2023-03-20",
+      "status": "active",
+      "parties": ["European Commission", "Meta Platforms, Inc."],
+      "description": "Data transfer compliance under GDPR regulations",
+      "impactLevel": "high"
+    },
+    {
+      "id": "CA-2023-128",
+      "title": "California Privacy Protection Agency v. Amazon",
+      "court": "California Superior Court",
+      "jurisdiction": "California",
+      "caseType": "Consumer Privacy",
+      "filingDate": "2023-05-10",
+      "status": "active",
+      "parties": ["CPPA", "Amazon.com, Inc."],
+      "description": "CCPA compliance enforcement action",
+      "impactLevel": "medium"
+    },
+    {
+      "id": "UK-2023-067",
+      "title": "Information Commissioner's Office v. TikTok",
+      "court": "High Court of Justice",
+      "jurisdiction": "United Kingdom",
+      "caseType": "Children's Privacy",
+      "filingDate": "2023-02-28",
+      "status": "appealed",
+      "parties": ["ICO", "TikTok Ltd."],
+      "description": "Children's data protection compliance under UK GDPR",
+      "impactLevel": "medium"
+    },
+    {
+      "id": "AU-2023-089",
+      "title": "Australian Competition and Consumer Commission v. Apple",
+      "court": "Federal Court of Australia",
+      "jurisdiction": "Australia",
+      "caseType": "Competition Law",
+      "filingDate": "2023-04-05",
+      "status": "closed",
+      "parties": ["ACCC", "Apple Inc."],
+      "description": "App Store competition and consumer protection case",
+      "impactLevel": "low"
+    }
+  ]
+}

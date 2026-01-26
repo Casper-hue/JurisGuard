@@ -1,0 +1,278 @@
+{
+  "alerts": [
+    {
+      "id": "alert-001",
+      "region": "EU",
+      "severity": "critical",
+      "title": "EU AI Act Officially Passed",
+      "summary": "European Parliament officially passes AI Act with strict regulatory requirements for high-risk AI systems, including biometric recognition and critical infrastructure.",
+      "timestamp": "2024-03-13T10:30:00Z",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-002", 
+      "region": "USA",
+      "severity": "high",
+      "title": "SEC Cybersecurity Disclosure Rules",
+      "summary": "SEC requires public companies to disclose material cybersecurity incidents within 4 business days, enhancing investor protection.",
+      "timestamp": "2024-03-12T14:20:00Z",
+      "source_url": "https://www.sec.gov/news/press-release/2023-139",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-003",
+      "region": "Singapore",
+      "severity": "high",
+      "title": "Singapore PDPA Amendments Effective",
+      "summary": "Personal Data Protection Act amendments take effect, strengthening data breach notification obligations and cross-border data transfer requirements.",
+      "timestamp": "2024-03-10T09:15:00Z",
+      "source_url": "https://www.pdpc.gov.sg/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-004",
+      "region": "EU",
+      "severity": "critical",
+      "title": "EU Data Governance Act Implementation",
+      "summary": "Data Governance Act officially implemented, establishing data intermediation services and data altruism framework to promote data sharing.",
+      "timestamp": "2024-03-08T16:45:00Z",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/data-governance-act",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-005",
+      "region": "USA",
+      "severity": "high",
+      "title": "US Export Control Updates",
+      "summary": "Bureau of Industry and Security updates export control list, strengthening controls on advanced computing chips and semiconductor manufacturing equipment.",
+      "timestamp": "2024-03-05T11:30:00Z",
+      "source_url": "https://www.bis.doc.gov/",
+      "category": "Import/Export Control"
+    },
+    {
+      "id": "alert-006",
+      "region": "Thailand",
+      "severity": "medium",
+      "title": "Thailand PDPA Implementation Rules",
+      "summary": "PDPA implementation rules released, clarifying specific obligations and compliance requirements for data controllers and processors.",
+      "timestamp": "2024-03-03T13:20:00Z",
+      "source_url": "https://www.pdpc.tb.tu/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-007",
+      "region": "EU",
+      "severity": "high",
+      "title": "EU Digital Services Act Full Implementation",
+      "summary": "Digital Services Act takes effect for all online platforms, requiring enhanced content moderation and user protection measures.",
+      "timestamp": "2024-02-28T10:15:00Z",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-008",
+      "region": "Malaysia",
+      "severity": "medium",
+      "title": "Malaysia Personal Data Protection Standards Update",
+      "summary": "Updated personal data protection standards, strengthening data security requirements and cross-border data transfer regulations.",
+      "timestamp": "2024-02-25T14:30:00Z",
+      "source_url": "https://www.pdp.gov.my/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-009",
+      "region": "USA",
+      "severity": "critical",
+      "title": "US Intellectual Property Protection Initiatives",
+      "summary": "USPTO launches new intellectual property protection programs, enhancing patent support for small and medium enterprises.",
+      "timestamp": "2024-02-22T09:45:00Z",
+      "source_url": "https://www.uspto.gov/",
+      "category": "Intellectual Property"
+    },
+    {
+      "id": "alert-010",
+      "region": "Vietnam",
+      "severity": "medium",
+      "title": "Vietnam Cybersecurity Law Implementation Rules",
+      "summary": "Cybersecurity Law implementation rules released, specifying data localization storage and cross-border transfer requirements.",
+      "timestamp": "2024-02-20T11:20:00Z",
+      "source_url": "https://www.mic.gov.vn/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-011",
+      "region": "EU",
+      "severity": "high",
+      "title": "EU Intellectual Property Enforcement Updates",
+      "summary": "Enhanced intellectual property enforcement measures, particularly targeting online infringement activities.",
+      "timestamp": "2024-02-18T15:10:00Z",
+      "source_url": "https://euipo.europa.eu/",
+      "category": "Intellectual Property"
+    },
+    {
+      "id": "alert-012",
+      "region": "Indonesia",
+      "severity": "medium",
+      "title": "Indonesia Personal Data Protection Law Implementation",
+      "summary": "Personal Data Protection Law officially implemented, establishing data subject rights and data controller obligations.",
+      "timestamp": "2024-02-15T13:40:00Z",
+      "source_url": "https://www.kominfo.go.id/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-013",
+      "region": "USA",
+      "severity": "high",
+      "title": "US Customs Import Compliance Requirements",
+      "summary": "Updated import commodity compliance requirements, strengthening restrictions on forced labor products.",
+      "timestamp": "2024-02-12T10:25:00Z",
+      "source_url": "https://www.cbp.gov/",
+      "category": "Import/Export Control"
+    },
+    {
+      "id": "alert-014",
+      "region": "Philippines",
+      "severity": "medium",
+      "title": "Philippines Data Privacy Act Guidelines",
+      "summary": "National Privacy Commission releases Data Privacy Act implementation guidelines, clarifying data processing principles.",
+      "timestamp": "2024-02-10T14:15:00Z",
+      "source_url": "https://www.privacy.gov.ph/",
+      "category": "Data Compliance"
+    },
+    {
+      "id": "alert-015",
+      "region": "EU",
+      "severity": "critical",
+      "title": "EU Critical Raw Materials Import Controls",
+      "summary": "Strengthened import controls on critical raw materials, ensuring supply chain security and strategic autonomy.",
+      "timestamp": "2024-02-08T11:50:00Z",
+      "source_url": "https://ec.europa.eu/growth/industry/strategy/critical-raw-materials_en",
+      "category": "Import/Export Control"
+    }
+  ],
+  "radarStats": [
+    {
+      "id": "radar-001",
+      "region": "EU",
+      "riskLevel": 85,
+      "category": "Data Privacy",
+      "trend": "up",
+      "lastUpdated": "2024-03-15T10:00:00Z"
+    },
+    {
+      "id": "radar-002",
+      "region": "USA",
+      "riskLevel": 78,
+      "category": "Cybersecurity",
+      "trend": "up",
+      "lastUpdated": "2024-03-15T09:30:00Z"
+    },
+    {
+      "id": "radar-003",
+      "region": "Singapore",
+      "riskLevel": 65,
+      "category": "Data Localization",
+      "trend": "stable",
+      "lastUpdated": "2024-03-15T09:00:00Z"
+    },
+    {
+      "id": "radar-004",
+      "region": "Thailand",
+      "riskLevel": 58,
+      "category": "Compliance Requirements",
+      "trend": "up",
+      "lastUpdated": "2024-03-15T08:30:00Z"
+    },
+    {
+      "id": "radar-005",
+      "region": "Malaysia",
+      "riskLevel": 52,
+      "category": "Data Protection",
+      "trend": "stable",
+      "lastUpdated": "2024-03-15T08:00:00Z"
+    },
+    {
+      "id": "radar-006",
+      "region": "Vietnam",
+      "riskLevel": 68,
+      "category": "Cybersecurity",
+      "trend": "up",
+      "lastUpdated": "2024-03-15T07:30:00Z"
+    },
+    {
+      "id": "radar-007",
+      "region": "Indonesia",
+      "riskLevel": 45,
+      "category": "Data Compliance",
+      "trend": "down",
+      "lastUpdated": "2024-03-15T07:00:00Z"
+    },
+    {
+      "id": "radar-008",
+      "region": "Philippines",
+      "riskLevel": 55,
+      "category": "Privacy Protection",
+      "trend": "stable",
+      "lastUpdated": "2024-03-15T06:30:00Z"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Active Regulations",
+      "value": "156",
+      "change": "+8",
+      "icon": "AlertTriangle"
+    },
+    {
+      "label": "Monitored Regions", 
+      "value": "24",
+      "change": "+2",
+      "icon": "Globe"
+    },
+    {
+      "label": "Compliance Rate",
+      "value": "92%",
+      "change": "+3%",
+      "icon": "CheckCircle"
+    },
+    {
+      "label": "Response Time",
+      "value": "1.8h",
+      "change": "-0.4h",
+      "icon": "Clock"
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "action": "EU AI Act risk assessment completed",
+      "time": "5 minutes ago",
+      "user": "System"
+    },
+    {
+      "id": 2,
+      "action": "Singapore PDPA compliance report generated",
+      "time": "25 minutes ago", 
+      "user": "AI Monitor"
+    },
+    {
+      "id": 3,
+      "action": "US export control updates detected",
+      "time": "1 hour ago",
+      "user": "Compliance Team"
+    },
+    {
+      "id": 4,
+      "action": "Southeast Asia data compliance trend analysis",
+      "time": "2 hours ago",
+      "user": "Data Analyst"
+    },
+    {
+      "id": 5,
+      "action": "Intellectual property protection strategy updated",
+      "time": "3 hours ago",
+      "user": "Legal Team"
+    }
+  ]
+}
