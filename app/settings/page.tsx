@@ -1,6 +1,6 @@
 export default function SettingsPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-background">
       <div className="max-w-md mx-auto">
         <div className="flex justify-center mb-6">
           <div className="relative">
