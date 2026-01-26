@@ -29,8 +29,8 @@
       "value": "34",
       "change": "+5",
       "icon": "Scale",
-      "color": "text-purple-500",
-      "bgColor": "bg-purple-500/20"
+      "color": "text-orange-500",
+      "bgColor": "bg-orange-500/20"
     }
   ],
   "alerts": [
