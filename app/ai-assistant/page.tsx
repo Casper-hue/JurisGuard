@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MessageCircle, Send, Bot, User, Download, Upload, Settings, AlertCircle } from 'lucide-react'
 import { AIMessage, getAIService } from '@/lib/ai-service'
 
@@ -18,12 +18,29 @@ export default function AIAssistantPage() {
   const [error, setError] = useState<string | null>(null)
   const [showSettings, setShowSettings] = useState(false)
   const [apiConfig, setApiConfig] = useState({
-    apiKey: localStorage.getItem('ai_api_key') || '',
-    baseURL: localStorage.getItem('ai_base_url') || 'https://api.deepseek.com/v1',
-    model: localStorage.getItem('ai_model') || 'deepseek-chat',
-    temperature: parseFloat(localStorage.getItem('ai_temperature') || '0.7'),
-    maxTokens: parseInt(localStorage.getItem('ai_max_tokens') || '2000')
+    apiKey: '',
+    baseURL: 'https://api.deepseek.com/v1',
+    model: 'deepseek-chat',
+    temperature: 0.7,
+    maxTokens: 2000
   })
+
+  // 只在客户端加载localStorage配置
+  useEffect(() => {
+    const loadConfigFromStorage = () => {
+      if (typeof window !== 'undefined') {
+        setApiConfig({
+          apiKey: localStorage.getItem('ai_api_key') || '',
+          baseURL: localStorage.getItem('ai_base_url') || 'https://api.deepseek.com/v1',
+          model: localStorage.getItem('ai_model') || 'deepseek-chat',
+          temperature: parseFloat(localStorage.getItem('ai_temperature') || '0.7'),
+          maxTokens: parseInt(localStorage.getItem('ai_max_tokens') || '2000')
+        })
+      }
+    }
+
+    loadConfigFromStorage()
+  }, [])
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return
