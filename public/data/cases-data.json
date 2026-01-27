@@ -1,154 +1,205 @@
 {
   "cases": [
     {
-      "id": "SC-2021-001",
-      "title": "Google LLC v. Oracle America, Inc.",
-      "court": "Supreme Court of the United States",
+      "id": "SC-2023-001",
+      "title": "测试4",
+      "court": "Supreme Court",
       "jurisdiction": "United States",
       "caseType": "Copyright",
-      "filingDate": "2021-04-05",
-      "status": "decided",
-      "parties": ["Google LLC", "Oracle America, Inc."],
-      "description": "Landmark copyright case regarding software APIs and fair use doctrine",
-      "impactLevel": "high",
-      "source_url": "https://www.supremecourt.gov/opinions/20pdf/18-956_d18f.pdf",
-      "outcome": "Google's use of Java APIs ruled as fair use",
-      "key_issues": ["Software APIs", "Fair Use", "Copyrightability"]
-    },
-    {
-      "id": "ECJ-2020-045",
-      "title": "Data Protection Commissioner v. Facebook Ireland Ltd",
-      "court": "Court of Justice of the European Union",
-      "jurisdiction": "European Union",
-      "caseType": "Data Privacy",
-      "filingDate": "2020-07-16",
-      "status": "decided",
-      "parties": ["Data Protection Commissioner", "Facebook Ireland Ltd", "Maximillian Schrems"],
-      "description": "Schrems II case invalidating EU-US Privacy Shield framework",
-      "impactLevel": "critical",
-      "source_url": "https://curia.europa.eu/juris/document/document.jsf?docid=228677",
-      "outcome": "Privacy Shield invalidated, stricter requirements for data transfers",
-      "key_issues": ["Data Transfers", "Privacy Shield", "GDPR Compliance"]
-    },
-    {
-      "id": "SC-2014-129",
-      "title": "Riley v. California",
-      "court": "Supreme Court of the United States",
-      "jurisdiction": "United States",
-      "caseType": "Digital Privacy",
-      "filingDate": "2014-06-25",
-      "status": "decided",
-      "parties": ["David Riley", "State of California"],
-      "description": "Landmark digital privacy case establishing warrant requirement for cell phone searches",
-      "impactLevel": "high",
-      "source_url": "https://www.supremecourt.gov/opinions/13pdf/13-132_8l9c.pdf",
-      "outcome": "Warrant required for cell phone searches incident to arrest",
-      "key_issues": ["Digital Privacy", "Fourth Amendment", "Cell Phone Searches"]
-    },
-    {
-      "id": "ECJ-2014-067",
-      "title": "Google Spain SL v. Agencia Española de Protección de Datos",
-      "court": "Court of Justice of the European Union",
-      "jurisdiction": "European Union",
-      "caseType": "Data Privacy",
-      "filingDate": "2014-05-13",
-      "status": "decided",
-      "parties": ["Google Spain SL", "Agencia Española de Protección de Datos", "Mario Costeja González"],
-      "description": "Landmark case establishing the 'Right to be Forgotten' under EU law",
-      "impactLevel": "high",
-      "source_url": "https://curia.europa.eu/juris/document/document.jsf?docid=152065",
-      "outcome": "Establishment of Right to be Forgotten for EU citizens",
-      "key_issues": ["Right to be Forgotten", "Data Protection", "Search Engines"]
-    },
-    {
-      "id": "CAFC-2022-089",
-      "title": "Alice Corp. v. CLS Bank International",
-      "court": "United States Court of Appeals for the Federal Circuit",
-      "jurisdiction": "United States",
-      "caseType": "Software Patent",
-      "filingDate": "2014-06-19",
-      "status": "decided",
-      "parties": ["Alice Corporation", "CLS Bank International"],
-      "description": "Landmark software patent case establishing test for patent eligibility of software inventions",
-      "impactLevel": "high",
-      "source_url": "https://www.supremecourt.gov/opinions/13pdf/13-298_7lh8.pdf",
-      "outcome": "Two-step test for software patent eligibility established",
-      "key_issues": ["Software Patents", "Patent Eligibility", "Abstract Ideas"]
-    },
-    {
-      "id": "EC-2023-128",
-      "title": "European Commission v. Meta Platforms Ireland Ltd",
-      "court": "European Commission",
-      "jurisdiction": "European Union",
-      "caseType": "Competition Law",
-      "filingDate": "2023-05-22",
-      "status": "active",
-      "parties": ["European Commission", "Meta Platforms Ireland Ltd"],
-      "description": "Antitrust investigation into Meta's data practices and market dominance",
-      "impactLevel": "high",
-      "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_2848",
-      "outcome": "Ongoing investigation",
-      "key_issues": ["Antitrust", "Data Dominance", "Digital Markets"]
-    },
-    {
-      "id": "NDCA-2018-034",
-      "title": "In re: Facebook, Inc. Consumer Privacy User Profile Litigation",
-      "court": "United States District Court for the Northern District of California",
-      "jurisdiction": "United States",
-      "caseType": "Data Privacy",
-      "filingDate": "2018-03-21",
+      "filingDate": "2023-01-15",
       "status": "settled",
-      "parties": ["Facebook Users", "Facebook, Inc."],
-      "description": "Class action lawsuit regarding Cambridge Analytica data scandal",
-      "impactLevel": "high",
-      "source_url": "https://www.cand.uscourts.gov/judges/failla-katherine-p-kpf/case-no-18-md-02843-vc/",
-      "outcome": "$725 million settlement approved",
-      "key_issues": ["Data Breach", "Class Action", "Third-Party Data Access"]
+      "parties": [
+        "Google LLC",
+        "Oracle America, Inc."
+      ],
+      "description": "Landmark copyright case regarding software APIs",
+      "impactLevel": "high"
     },
     {
-      "id": "ECJ-2021-156",
-      "title": "La Quadrature du Net v. Premier ministre",
-      "court": "Court of Justice of the European Union",
+      "id": "EC-2023-045",
+      "title": "European Commission v. Meta Platforms",
+      "court": "European Court of Justice",
       "jurisdiction": "European Union",
-      "caseType": "Data Retention",
-      "filingDate": "2020-10-06",
-      "status": "decided",
-      "parties": ["La Quadrature du Net", "French Government"],
-      "description": "Case regarding data retention requirements and fundamental rights",
-      "impactLevel": "medium",
-      "source_url": "https://curia.europa.eu/juris/document/document.jsf?docid=228388",
-      "outcome": "Strict limitations on data retention for national security",
-      "key_issues": ["Data Retention", "National Security", "Fundamental Rights"]
-    },
-    {
-      "id": "SC-2018-237",
-      "title": "Carpenter v. United States",
-      "court": "Supreme Court of the United States",
-      "jurisdiction": "United States",
-      "caseType": "Digital Privacy",
-      "filingDate": "2018-06-22",
-      "status": "decided",
-      "parties": ["Timothy Carpenter", "United States"],
-      "description": "Landmark case establishing Fourth Amendment protection for cell site location information",
-      "impactLevel": "high",
-      "source_url": "https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf",
-      "outcome": "Warrant required for historical cell site location information",
-      "key_issues": ["Cell Site Data", "Fourth Amendment", "Digital Evidence"]
-    },
-    {
-      "id": "UKSC-2021-078",
-      "title": "Lloyd v. Google LLC",
-      "court": "Supreme Court of the United Kingdom",
-      "jurisdiction": "United Kingdom",
       "caseType": "Data Privacy",
-      "filingDate": "2021-11-10",
-      "status": "decided",
-      "parties": ["Richard Lloyd", "Google LLC"],
-      "description": "Representative action regarding Safari workaround tracking",
+      "filingDate": "2023-03-20",
+      "status": "active",
+      "parties": [
+        "European Commission",
+        "Meta Platforms, Inc."
+      ],
+      "description": "Data transfer compliance under GDPR regulations",
+      "impactLevel": "high"
+    },
+    {
+      "id": "CA-2023-128",
+      "title": "California Privacy Protection Agency v. Amazon",
+      "court": "California Superior Court",
+      "jurisdiction": "California",
+      "caseType": "Consumer Privacy",
+      "filingDate": "2023-05-10",
+      "status": "active",
+      "parties": [
+        "CPPA",
+        "Amazon.com, Inc."
+      ],
+      "description": "CCPA compliance enforcement action",
+      "impactLevel": "medium"
+    },
+    {
+      "id": "UK-2023-067",
+      "title": "Information Commissioner's Office v. TikTok",
+      "court": "High Court of Justice",
+      "jurisdiction": "United Kingdom",
+      "caseType": "Children's Privacy",
+      "filingDate": "2023-02-28",
+      "status": "appealed",
+      "parties": [
+        "ICO",
+        "TikTok Ltd."
+      ],
+      "description": "Children's data protection compliance under UK GDPR",
+      "impactLevel": "medium"
+    },
+    {
+      "id": "AU-2023-089",
+      "title": "Australian Competition and Consumer Commission v. Apple",
+      "court": "Federal Court of Australia",
+      "jurisdiction": "Australia",
+      "caseType": "Competition Law",
+      "filingDate": "2023-04-05",
+      "status": "closed",
+      "parties": [
+        "ACCC",
+        "Apple Inc."
+      ],
+      "description": "App Store competition and consumer protection case",
+      "impactLevel": "low"
+    },
+    {
+      "id": "CASE_20240115_001",
+      "title": "张三诉李四合同纠纷案",
+      "court": "北京市第一中级人民法院",
+      "jurisdiction": "北京市",
+      "caseType": "民事",
+      "filingDate": "2024-01-15",
+      "status": "active",
+      "parties": [
+        "张三（原告）",
+        "李四（被告）"
+      ],
+      "description": "原告张三起诉被告李四，要求其支付合同项下货款人民币500万元及相应利息。案件核心争议为被告是否构成合同违约及是否应履行货款支付义务。",
       "impactLevel": "medium",
-      "source_url": "https://www.supremecourt.uk/cases/docs/uksc-2019-0213-judgment.pdf",
-      "outcome": "Claim allowed to proceed as representative action",
-      "key_issues": ["Class Action", "Browser Tracking", "Data Protection"]
+      "source_url": null,
+      "outcome": null,
+      "key_issues": [
+        "合同违约认定",
+        "货款支付义务"
+      ],
+      "createdAt": "2026-01-27T00:01:51.106Z",
+      "updatedAt": "2026-01-27T00:01:51.106Z"
+    },
+    {
+      "id": "auto_generated_case_001",
+      "title": "涉“导轨”实用新型专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "知识产权",
+      "filingDate": "2022-01-01",
+      "status": "decided",
+      "parties": [
+        "广东某新材料公司（原告/上诉人）",
+        "中山市某制品厂（被告/被上诉人）",
+        "李某（被告/被上诉人）"
+      ],
+      "description": "广东某新材料公司向中山市某制品厂提供其拥有的“一种导轨”实用新型专利技术图纸，诱导其生产样品并购买，随后提起专利侵权诉讼。在诉讼中，原告还向被告的客户发送侵权警告函。一审法院认定被诉侵权行为系经专利权人允许，驳回原告诉请。原告上诉后，二审维持原判。后被告方反诉原告恶意诉讼和商业诋毁，一审判决原告赔偿经济损失，二审（最高人民法院）认定原告行为超出正当维权限度，具有干扰竞争对手的非法目的和主观恶意，构成恶意诉讼，维持原判。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回广东某新材料公司的上诉，维持广州知识产权法院一审判决，即广东某新材料公司分别赔偿中山市某制品厂、李某经济损失30000元及85000元，并认定其行为构成恶意诉讼。",
+      "key_issues": [
+        "恶意提起知识产权诉讼的认定标准",
+        "专利权人诱导取证行为的法律性质与后果",
+        "诉讼中向竞争对手客户发送警告函的正当性边界",
+        "滥用起诉权与诚信原则的司法适用"
+      ],
+      "createdAt": "2026-01-27T02:47:00.044Z",
+      "updatedAt": "2026-01-27T02:47:00.045Z"
+    },
+    {
+      "id": "CASE-2022-SPC-IP-1861",
+      "title": "涉‘靶式流量计’实用新型专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "福建省厦门市",
+      "caseType": "Intellectual Property",
+      "filingDate": "2022-01-01",
+      "status": "decided",
+      "parties": [
+        "上诉人（原审原告）：某仪器仪表公司",
+        "被上诉人（原审被告）：某科技公司",
+        "相关方：某机械公司"
+      ],
+      "description": "某仪器仪表公司在明知其‘内置式数显靶式流量计’实用新型专利权已于2006年3月因未缴年费终止的情况下，仍于2015年、2019年、2020年多次对某科技公司提起专利侵权诉讼，索赔金额高达数百万元，并申请财产保全冻结对方资产。某科技公司反诉其构成恶意诉讼。最高人民法院二审认定某仪器仪表公司缺乏权利基础，主观上具有通过诉讼牟取不当利益的故意，其行为构成恶意提起知识产权诉讼，判决驳回上诉，维持原判赔偿某科技公司6万元。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回某仪器仪表公司的上诉，维持福建省厦门市中级人民法院作出的一审判决，即认定某仪器仪表公司构成恶意诉讼，需赔偿某科技公司经济损失及合理费用共计6万元。",
+      "key_issues": [
+        "恶意提起知识产权诉讼的认定标准",
+        "专利权终止后提起侵权诉讼的权利基础问题",
+        "诉讼索赔金额与权利基础价值的匹配性（权利‘厚不厚’）",
+        "财产保全措施在恶意诉讼中的滥用风险"
+      ],
+      "createdAt": "2026-01-27T03:52:07.055Z",
+      "updatedAt": "2026-01-27T03:52:07.056Z"
+    },
+    {
+      "id": "CASE-2021-1353",
+      "title": "涉“罗汉果提取物”制备方法发明专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "Intellectual Property",
+      "filingDate": "2018-07-13",
+      "status": "decided",
+      "parties": [
+        "湖南某公司（原告/上诉人）",
+        "桂林某公司（被告/被上诉人）"
+      ],
+      "description": "湖南某公司起诉桂林某公司侵犯其“一种适用于工业生产的罗汉果提取物的制备方法”专利权，并向证监会举报，导致桂林某公司配股审核一度暂停。后湖南某公司撤诉。桂林某公司反诉请求确认湖南某公司构成恶意诉讼。一审驳回，二审最高人民法院维持原判，认为现有证据不足以认定湖南某公司提起诉讼明显缺乏权利基础或事实根据，或具有明显恶意。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回桂林某公司的上诉，维持原判，即不认定湖南某公司构成恶意诉讼。",
+      "key_issues": [
+        "恶意诉讼的认定标准",
+        "知识产权诉讼的正当性与边界",
+        "诉讼行为与商业竞争（如上市进程）的关联",
+        "司法审慎与谦抑原则在诉讼认定中的适用"
+      ],
+      "createdAt": "2026-01-27T04:28:17.034Z",
+      "updatedAt": "2026-01-27T04:28:17.034Z"
+    },
+    {
+      "id": "CASE_2023_最高法知民终869号",
+      "title": "涉“行车记录仪”专利恶意诉讼案",
+      "court": "最高人民法院知识产权法庭",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "Intellectual Property",
+      "filingDate": "2026-01-01",
+      "status": "decided",
+      "parties": [
+        "原告/上诉人：顺某公司",
+        "被告/被上诉人：八某公司",
+        "相关方：雄某公司、许某（八某公司实际控制人）、陈某（八某公司监事）、博某公司（案外人）"
+      ],
+      "description": "八某公司利用其明知存在权利瑕疵（4件专利应无效，2件专利被许可方有权使用）的6件行车记录仪专利，在代工方博某公司更换为顺某公司后，对顺某公司提起18件专利侵权诉讼，构成恶意诉讼。顺某公司起诉要求赔偿损失。一审判决赔偿30万元，二审（最高人民法院）改判支持顺某公司全部诉求，判决八某公司等赔偿经济损失100万元及维权合理开支12万元，确立了恶意诉讼需赔偿被诉方包括预期利益损失在内的全面赔偿原则。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "二审（终审）判决：八某公司等连带赔偿顺某公司经济损失100万元及维权合理开支12万元。",
+      "key_issues": [
+        "专利恶意诉讼的认定标准",
+        "滥用知识产权诉讼权利的司法规制",
+        "恶意诉讼损害赔偿责任的范围界定（全面赔偿原则）",
+        "预期利益损失与恶意诉讼因果关系的认定"
+      ],
+      "createdAt": "2026-01-27T04:46:15.693Z",
+      "updatedAt": "2026-01-27T04:46:15.693Z"
     }
   ]
 }

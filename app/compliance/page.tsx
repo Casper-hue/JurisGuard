@@ -22,9 +22,14 @@ export default function CompliancePage() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch('/data/compliance-data.json')
+        // 添加时间戳参数防止缓存
+        const timestamp = new Date().getTime()
+        const response = await fetch(`/data/compliance-data.json?t=${timestamp}`)
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
         const data = await response.json()
+        console.log('Loaded compliance data:', data)
+        console.log('Alerts count:', data.alerts?.length)
+        console.log('Alerts data:', data.alerts)
         setComplianceData(data)
       } catch (error) {
         console.error('Failed to load compliance data:', error)
@@ -85,13 +90,21 @@ export default function CompliancePage() {
   // Use search results or local data
   const alertsToDisplay = searchQuery && searchResults.length > 0 ? searchResults : complianceData.alerts
   
+  console.log('Alerts to display:', alertsToDisplay)
+  console.log('Filter:', filter)
+  console.log('Local search term:', localSearchTerm)
+  
   const filteredAlerts = alertsToDisplay.filter(alert => {
     const matchesFilter = filter === 'all' || alert.severity === filter
     const matchesSearch = alert.title.toLowerCase().includes(localSearchTerm.toLowerCase()) ||
                          alert.summary.toLowerCase().includes(localSearchTerm.toLowerCase()) ||
                          alert.region.toLowerCase().includes(localSearchTerm.toLowerCase())
+    
+    console.log(`Alert ${alert.id}: filter=${matchesFilter}, search=${matchesSearch}, title="${alert.title}"`)
     return matchesFilter && matchesSearch
   })
+  
+  console.log('Filtered alerts count:', filteredAlerts.length)
 
   return (
     <div className="space-y-8">

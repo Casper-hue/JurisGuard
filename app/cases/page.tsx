@@ -28,9 +28,14 @@ export default function CasesPage() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch('/data/cases-data.json')
+        // 添加时间戳参数防止缓存
+        const timestamp = new Date().getTime()
+        const response = await fetch(`/data/cases-data.json?t=${timestamp}`)
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
         const data = await response.json()
+        console.log('Loaded cases data:', data)
+        console.log('Cases count:', data.cases?.length)
+        console.log('Cases data:', data.cases)
         setCases(data.cases)
       } catch (error) {
         console.error('Failed to load cases data:', error)
@@ -58,8 +63,11 @@ export default function CasesPage() {
     const matchesStatus = statusFilter === 'all' || caseItem.status === statusFilter
     const matchesJurisdiction = jurisdictionFilter === 'all' || caseItem.jurisdiction === jurisdictionFilter
     
+    console.log(`Case ${caseItem.id}: search=${matchesSearch}, status=${matchesStatus}, jurisdiction=${matchesJurisdiction}, title="${caseItem.title}"`)
     return matchesSearch && matchesStatus && matchesJurisdiction
   })
+  
+  console.log('Filtered cases count:', filteredCases.length)
 
   const getStatusColor = (status: string) => {
     switch (status) {

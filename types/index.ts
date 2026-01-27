@@ -8,6 +8,15 @@ export interface ComplianceAlert {
   timestamp: string;    // ISO 日期格式
   source_url?: string;  // 用于未来爬虫
   category?: string;    // 警报分类，例如: "Data Compliance"
+  
+  // 兼容AI提取的额外字段
+  jurisdiction?: string;
+  publishDate?: string;
+  regulationType?: string;
+  importanceLevel?: "critical" | "high" | "medium" | "low";
+  hasSource?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 // 雷达统计接口 - 用于风险雷达可视化

@@ -4,13 +4,13 @@
       "id": "alert-001",
       "region": "EU",
       "severity": "critical",
-      "title": "AI Act Final Draft Released",
+      "title": "测试3",
       "summary": "European Parliament approves final draft of AI regulation with enhanced compliance requirements for high-risk systems.",
       "timestamp": "2024-01-15T10:30:00Z",
       "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"
     },
     {
-      "id": "alert-002", 
+      "id": "alert-002",
       "region": "USA",
       "severity": "high",
       "title": "SEC Cybersecurity Disclosure Rules",
@@ -44,6 +44,52 @@
       "summary": "Revised requirements for data breach notifications and cross-border data transfers.",
       "timestamp": "2024-01-11T11:30:00Z",
       "source_url": "https://www.ppc.go.jp/en/legal/"
+    },
+    {
+      "id": "REG-20250317-001",
+      "region": "China",
+      "severity": "critical",
+      "title": "测试5",
+      "summary": "该法于2017年6月1日起施行，是中国网络安全领域的基础性法律。它规定了网络运营者的安全保护义务，要求其采取技术措施保障网络安全，防止数据泄露和网络攻击。该法适用于全国范围内的网络安全管理，确立了网络安全的基本制度框架。",
+      "timestamp": "2016-11-07T00:00:00Z",
+      "source_url": "https://www.npc.gov.cn/npc/c30834/201611/270b8e0c5c7c4a3db7ac4a7c3ae3c4f6.shtml",
+      "category": "Security",
+      "jurisdiction": "中国",
+      "publishDate": "2026-01-01",
+      "regulationType": "法律",
+      "importanceLevel": "critical",
+      "hasSource": true,
+      "createdAt": "2026-01-27T00:14:57.833Z",
+      "updatedAt": "2026-01-27T00:14:57.833Z"
+    },
+    {
+      "id": "REG-2023-11-06-001",
+      "region": "China",
+      "severity": "critical",
+      "title": "中华人民共和国民事诉讼法",
+      "summary": "中华人民共和国民事诉讼法是中国民事诉讼程序的基本法律，规定了法院审理民事案件的基本原则、管辖、审判组织、证据、审判程序、执行程序等核心制度。该法于1991年通过，历经五次修正，最新修正案于2023年9月1日通过，自2024年1月1日起施行。",
+      "timestamp": "2023-11-06T17:54:00Z",
+      "source_url": "https://www.jyg.gov.cn/fgj/ztzl/gzzd/art/2023/art_0298ac1ad4de4615ad7cba32e4eeb598.html",
+      "category": "Data Compliance",
+      "jurisdiction": "中国",
+      "publishDate": "2023-09-01",
+      "regulationType": "法律",
+      "importanceLevel": "critical",
+      "hasSource": true,
+      "createdAt": "2026-01-27T01:06:52.190Z",
+      "updatedAt": "2026-01-27T01:06:52.190Z"
+    },
+    {
+      "id": "REG-20231106-001",
+      "region": "China",
+      "severity": "critical",
+      "title": "中华人民共和国民事诉讼法",
+      "summary": "《中华人民共和国民事诉讼法》是规范民事诉讼程序的基本法律，规定了人民法院审理民事案件的原则、制度和程序，以及当事人和其他诉讼参与人的诉讼权利与义务。该法于1991年通过，历经五次修正，最新修正案于2023年9月1日通过，自2024年1月1日起施行。",
+      "timestamp": "2024-01-01",
+      "source_url": "https://www.jyg.gov.cn/fgj/ztzl/gzzd/art/2023/art_0298ac1ad4de4615ad7cba32e4eeb598.html",
+      "category": "Litigation",
+      "createdAt": "2026-01-27T04:44:02.043Z",
+      "updatedAt": "2026-01-27T04:44:02.043Z"
     }
   ],
   "radarStats": [
@@ -88,7 +134,7 @@
       "icon": "AlertTriangle"
     },
     {
-      "label": "Monitored Jurisdictions", 
+      "label": "Monitored Jurisdictions",
       "value": "58",
       "change": "+3",
       "icon": "Globe"
@@ -116,7 +162,7 @@
     {
       "id": 2,
       "action": "New regulation detected in USA jurisdiction",
-      "time": "15 min ago", 
+      "time": "15 min ago",
       "user": "AI Monitor"
     },
     {

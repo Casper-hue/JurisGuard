@@ -1,6 +1,8 @@
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable */
 
 :root {
   --background: #ffffff;
@@ -17,4 +19,58 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* 自定义日期选择器样式 */
+.datepicker-custom::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+.datepicker-custom::-webkit-datetime-edit {
+  color: #9ca3af;
+}
+
+.datepicker-custom::-webkit-datetime-edit-fields-wrapper {
+  color: #9ca3af;
+}
+
+/* 日历弹出框样式 */
+.datepicker-custom::-webkit-calendar-picker-indicator:hover {
+  filter: invert(0.3);
+}
+
+/* 自定义日历弹出框背景色 */
+.datepicker-custom::-webkit-calendar-picker {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+}
+
+.datepicker-custom::-webkit-calendar-picker table {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.datepicker-custom::-webkit-calendar-picker th {
+  background-color: #1f2937;
+  color: #d1d5db;
+  border: none;
+}
+
+.datepicker-custom::-webkit-calendar-picker td {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+}
+
+.datepicker-custom::-webkit-calendar-picker td:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+
+.datepicker-custom::-webkit-calendar-picker td:focus {
+  background-color: #3b82f6;
+  color: #ffffff;
 }

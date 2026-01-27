@@ -2,13 +2,16 @@
   "cases": [
     {
       "id": "SC-2023-001",
-      "title": "Google LLC v. Oracle America, Inc.",
+      "title": "测试4",
       "court": "Supreme Court",
       "jurisdiction": "United States",
       "caseType": "Copyright",
       "filingDate": "2023-01-15",
       "status": "settled",
-      "parties": ["Google LLC", "Oracle America, Inc."],
+      "parties": [
+        "Google LLC",
+        "Oracle America, Inc."
+      ],
       "description": "Landmark copyright case regarding software APIs",
       "impactLevel": "high"
     },
@@ -20,7 +23,10 @@
       "caseType": "Data Privacy",
       "filingDate": "2023-03-20",
       "status": "active",
-      "parties": ["European Commission", "Meta Platforms, Inc."],
+      "parties": [
+        "European Commission",
+        "Meta Platforms, Inc."
+      ],
       "description": "Data transfer compliance under GDPR regulations",
       "impactLevel": "high"
     },
@@ -32,7 +38,10 @@
       "caseType": "Consumer Privacy",
       "filingDate": "2023-05-10",
       "status": "active",
-      "parties": ["CPPA", "Amazon.com, Inc."],
+      "parties": [
+        "CPPA",
+        "Amazon.com, Inc."
+      ],
       "description": "CCPA compliance enforcement action",
       "impactLevel": "medium"
     },
@@ -44,7 +53,10 @@
       "caseType": "Children's Privacy",
       "filingDate": "2023-02-28",
       "status": "appealed",
-      "parties": ["ICO", "TikTok Ltd."],
+      "parties": [
+        "ICO",
+        "TikTok Ltd."
+      ],
       "description": "Children's data protection compliance under UK GDPR",
       "impactLevel": "medium"
     },
@@ -56,9 +68,138 @@
       "caseType": "Competition Law",
       "filingDate": "2023-04-05",
       "status": "closed",
-      "parties": ["ACCC", "Apple Inc."],
+      "parties": [
+        "ACCC",
+        "Apple Inc."
+      ],
       "description": "App Store competition and consumer protection case",
       "impactLevel": "low"
+    },
+    {
+      "id": "CASE_20240115_001",
+      "title": "张三诉李四合同纠纷案",
+      "court": "北京市第一中级人民法院",
+      "jurisdiction": "北京市",
+      "caseType": "民事",
+      "filingDate": "2024-01-15",
+      "status": "active",
+      "parties": [
+        "张三（原告）",
+        "李四（被告）"
+      ],
+      "description": "原告张三起诉被告李四，要求其支付合同项下货款人民币500万元及相应利息。案件核心争议为被告是否构成合同违约及是否应履行货款支付义务。",
+      "impactLevel": "medium",
+      "source_url": null,
+      "outcome": null,
+      "key_issues": [
+        "合同违约认定",
+        "货款支付义务"
+      ],
+      "createdAt": "2026-01-27T00:01:51.106Z",
+      "updatedAt": "2026-01-27T00:01:51.106Z"
+    },
+    {
+      "id": "auto_generated_case_001",
+      "title": "涉“导轨”实用新型专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "知识产权",
+      "filingDate": "2022-01-01",
+      "status": "decided",
+      "parties": [
+        "广东某新材料公司（原告/上诉人）",
+        "中山市某制品厂（被告/被上诉人）",
+        "李某（被告/被上诉人）"
+      ],
+      "description": "广东某新材料公司向中山市某制品厂提供其拥有的“一种导轨”实用新型专利技术图纸，诱导其生产样品并购买，随后提起专利侵权诉讼。在诉讼中，原告还向被告的客户发送侵权警告函。一审法院认定被诉侵权行为系经专利权人允许，驳回原告诉请。原告上诉后，二审维持原判。后被告方反诉原告恶意诉讼和商业诋毁，一审判决原告赔偿经济损失，二审（最高人民法院）认定原告行为超出正当维权限度，具有干扰竞争对手的非法目的和主观恶意，构成恶意诉讼，维持原判。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回广东某新材料公司的上诉，维持广州知识产权法院一审判决，即广东某新材料公司分别赔偿中山市某制品厂、李某经济损失30000元及85000元，并认定其行为构成恶意诉讼。",
+      "key_issues": [
+        "恶意提起知识产权诉讼的认定标准",
+        "专利权人诱导取证行为的法律性质与后果",
+        "诉讼中向竞争对手客户发送警告函的正当性边界",
+        "滥用起诉权与诚信原则的司法适用"
+      ],
+      "createdAt": "2026-01-27T02:47:00.044Z",
+      "updatedAt": "2026-01-27T02:47:00.045Z"
+    },
+    {
+      "id": "CASE-2022-SPC-IP-1861",
+      "title": "涉‘靶式流量计’实用新型专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "福建省厦门市",
+      "caseType": "Intellectual Property",
+      "filingDate": "2022-01-01",
+      "status": "decided",
+      "parties": [
+        "上诉人（原审原告）：某仪器仪表公司",
+        "被上诉人（原审被告）：某科技公司",
+        "相关方：某机械公司"
+      ],
+      "description": "某仪器仪表公司在明知其‘内置式数显靶式流量计’实用新型专利权已于2006年3月因未缴年费终止的情况下，仍于2015年、2019年、2020年多次对某科技公司提起专利侵权诉讼，索赔金额高达数百万元，并申请财产保全冻结对方资产。某科技公司反诉其构成恶意诉讼。最高人民法院二审认定某仪器仪表公司缺乏权利基础，主观上具有通过诉讼牟取不当利益的故意，其行为构成恶意提起知识产权诉讼，判决驳回上诉，维持原判赔偿某科技公司6万元。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回某仪器仪表公司的上诉，维持福建省厦门市中级人民法院作出的一审判决，即认定某仪器仪表公司构成恶意诉讼，需赔偿某科技公司经济损失及合理费用共计6万元。",
+      "key_issues": [
+        "恶意提起知识产权诉讼的认定标准",
+        "专利权终止后提起侵权诉讼的权利基础问题",
+        "诉讼索赔金额与权利基础价值的匹配性（权利‘厚不厚’）",
+        "财产保全措施在恶意诉讼中的滥用风险"
+      ],
+      "createdAt": "2026-01-27T03:52:07.055Z",
+      "updatedAt": "2026-01-27T03:52:07.056Z"
+    },
+    {
+      "id": "CASE-2021-1353",
+      "title": "涉“罗汉果提取物”制备方法发明专利恶意诉讼案",
+      "court": "最高人民法院",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "Intellectual Property",
+      "filingDate": "2018-07-13",
+      "status": "decided",
+      "parties": [
+        "湖南某公司（原告/上诉人）",
+        "桂林某公司（被告/被上诉人）"
+      ],
+      "description": "湖南某公司起诉桂林某公司侵犯其“一种适用于工业生产的罗汉果提取物的制备方法”专利权，并向证监会举报，导致桂林某公司配股审核一度暂停。后湖南某公司撤诉。桂林某公司反诉请求确认湖南某公司构成恶意诉讼。一审驳回，二审最高人民法院维持原判，认为现有证据不足以认定湖南某公司提起诉讼明显缺乏权利基础或事实根据，或具有明显恶意。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "最高人民法院二审判决驳回桂林某公司的上诉，维持原判，即不认定湖南某公司构成恶意诉讼。",
+      "key_issues": [
+        "恶意诉讼的认定标准",
+        "知识产权诉讼的正当性与边界",
+        "诉讼行为与商业竞争（如上市进程）的关联",
+        "司法审慎与谦抑原则在诉讼认定中的适用"
+      ],
+      "createdAt": "2026-01-27T04:28:17.034Z",
+      "updatedAt": "2026-01-27T04:28:17.034Z"
+    },
+    {
+      "id": "CASE_2023_最高法知民终869号",
+      "title": "涉“行车记录仪”专利恶意诉讼案",
+      "court": "最高人民法院知识产权法庭",
+      "jurisdiction": "中华人民共和国",
+      "caseType": "Intellectual Property",
+      "filingDate": "2026-01-01",
+      "status": "decided",
+      "parties": [
+        "原告/上诉人：顺某公司",
+        "被告/被上诉人：八某公司",
+        "相关方：雄某公司、许某（八某公司实际控制人）、陈某（八某公司监事）、博某公司（案外人）"
+      ],
+      "description": "八某公司利用其明知存在权利瑕疵（4件专利应无效，2件专利被许可方有权使用）的6件行车记录仪专利，在代工方博某公司更换为顺某公司后，对顺某公司提起18件专利侵权诉讼，构成恶意诉讼。顺某公司起诉要求赔偿损失。一审判决赔偿30万元，二审（最高人民法院）改判支持顺某公司全部诉求，判决八某公司等赔偿经济损失100万元及维权合理开支12万元，确立了恶意诉讼需赔偿被诉方包括预期利益损失在内的全面赔偿原则。",
+      "impactLevel": "high",
+      "source_url": null,
+      "outcome": "二审（终审）判决：八某公司等连带赔偿顺某公司经济损失100万元及维权合理开支12万元。",
+      "key_issues": [
+        "专利恶意诉讼的认定标准",
+        "滥用知识产权诉讼权利的司法规制",
+        "恶意诉讼损害赔偿责任的范围界定（全面赔偿原则）",
+        "预期利益损失与恶意诉讼因果关系的认定"
+      ],
+      "createdAt": "2026-01-27T04:46:15.693Z",
+      "updatedAt": "2026-01-27T04:46:15.693Z"
     }
   ]
 }
