@@ -1,6 +1,6 @@
-# JurisGuard Gemini
+# JurisGuard
 
-JurisGuard Gemini 是一个专为法律专业人员设计的智能合规管理平台，集成了AI助手、法规追踪、风险评估和文档管理功能。
+JurisGuard是一个专为法律专业人员设计的智能合规管理平台，集成了AI助手、法规追踪、风险评估和文档管理功能。
 
 ## 🎯 项目亮点
 
