@@ -28,6 +28,7 @@ interface PublicCase {
   summary?: string
   severity?: string
   category?: string
+  timestamp?: string
 }
 
 interface Document {

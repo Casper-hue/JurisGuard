@@ -164,6 +164,8 @@ function getDefaultComplianceData(): ComplianceData {
         category: 'System'
       }
     ],
+    cases: [], // 添加空的 cases 数组
+    documents: [], // 添加空的 documents 数组
     radarStats: [
       { 
         id: 'global-1',

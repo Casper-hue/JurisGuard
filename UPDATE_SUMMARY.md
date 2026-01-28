@@ -1,4 +1,4 @@
-# JurisGuard_Gemini 项目更新总结
+# JurisGuard项目更新总结
 
 ## 任务概述
 

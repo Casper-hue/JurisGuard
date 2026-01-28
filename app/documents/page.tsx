@@ -16,6 +16,12 @@ interface Document {
   download_url?: string
   description?: string
   key_topics?: string[]
+  content?: string
+  author?: string
+  version?: string
+  reviewDate?: string
+  relatedRegulations?: string[]
+  tags?: string[]
 }
 
 export default function DocumentsPage() {

@@ -46,3 +46,57 @@ export interface ActivityItem {
   time: string;
   user: string;
 }
+
+// 法院案例接口
+export interface PublicCase {
+  id: string;
+  title: string;
+  court: string;
+  jurisdiction: string;
+  caseType: string;
+  filingDate: string;
+  status: string;
+  parties: string[];
+  description: string;
+  impactLevel: string;
+  region?: string;
+  summary?: string;
+  severity?: string;
+  category?: string;
+  timestamp?: string;
+  source_url?: string;
+  outcome?: string;
+  key_issues?: string[];
+}
+
+// 文档接口
+export interface Document {
+  id: string;
+  title: string;
+  type: string;
+  jurisdiction: string;
+  status: string;
+  publishDate: string;
+  effectiveDate: string;
+  lastModified: string;
+  content?: string;
+  author?: string;
+  version?: string;
+  reviewDate?: string;
+  relatedRegulations?: string[];
+  tags?: string[];
+  summary?: string;
+  sourceUrl?: string;
+  category?: string;
+  description?: string;
+}
+
+// 合规数据接口
+export interface ComplianceData {
+  alerts: ComplianceAlert[];
+  cases: PublicCase[];
+  documents: Document[];
+  radarStats: RadarStat[];
+  stats: StatCard[];
+  activities: ActivityItem[];
+}

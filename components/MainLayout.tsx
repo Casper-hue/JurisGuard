@@ -270,7 +270,7 @@ function Header() {
 
 // 主布局组件
 export default function MainLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
@@ -292,3 +292,5 @@ export default function MainLayout({
     </div>
   )
 }
+
+export { MainLayout }; // 导出命名版本以支持命名导入
