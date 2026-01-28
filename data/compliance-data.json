@@ -1,181 +1,326 @@
 {
+  "lastUpdated": "2026-01-29T10:00:00.000Z",
+  "totalRegulations": 8,
   "alerts": [
     {
-      "id": "alert-001",
-      "region": "EU",
-      "severity": "critical",
-      "title": "测试3",
-      "summary": "European Parliament approves final draft of AI regulation with enhanced compliance requirements for high-risk systems.",
-      "timestamp": "2024-01-15T10:30:00Z",
-      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"
-    },
-    {
-      "id": "alert-002",
+      "id": "REG-20260129-001",
       "region": "USA",
-      "severity": "high",
-      "title": "SEC Cybersecurity Disclosure Rules",
-      "summary": "New requirements for public companies to disclose material cybersecurity incidents within 4 business days.",
-      "timestamp": "2024-01-14T14:20:00Z",
-      "source_url": "https://www.sec.gov/news/press-release/2023-139"
-    },
-    {
-      "id": "alert-003",
-      "region": "China",
-      "severity": "medium",
-      "title": "Data Security Law Implementation Guidelines",
-      "summary": "Updated guidelines for cross-border data transfers and classification of important data.",
-      "timestamp": "2024-01-13T09:15:00Z",
-      "source_url": "https://www.cac.gov.cn/2024-01/12/c_1212345678.htm"
-    },
-    {
-      "id": "alert-004",
-      "region": "UK",
-      "severity": "high",
-      "title": "Digital Markets Act Compliance Requirements",
-      "summary": "New obligations for gatekeeper platforms under UK's digital competition framework.",
-      "timestamp": "2024-01-12T16:45:00Z",
-      "source_url": "https://www.gov.uk/government/publications/digital-markets-act"
-    },
-    {
-      "id": "alert-005",
-      "region": "Japan",
-      "severity": "medium",
-      "title": "Personal Information Protection Act Amendments",
-      "summary": "Revised requirements for data breach notifications and cross-border data transfers.",
-      "timestamp": "2024-01-11T11:30:00Z",
-      "source_url": "https://www.ppc.go.jp/en/legal/"
-    },
-    {
-      "id": "REG-20250317-001",
-      "region": "China",
-      "severity": "critical",
-      "title": "测试5",
-      "summary": "该法于2017年6月1日起施行，是中国网络安全领域的基础性法律。它规定了网络运营者的安全保护义务，要求其采取技术措施保障网络安全，防止数据泄露和网络攻击。该法适用于全国范围内的网络安全管理，确立了网络安全的基本制度框架。",
-      "timestamp": "2016-11-07T00:00:00Z",
-      "source_url": "https://www.npc.gov.cn/npc/c30834/201611/270b8e0c5c7c4a3db7ac4a7c3ae3c4f6.shtml",
-      "category": "Security",
-      "jurisdiction": "中国",
-      "publishDate": "2026-01-01",
-      "regulationType": "法律",
-      "importanceLevel": "critical",
-      "hasSource": true,
-      "createdAt": "2026-01-27T00:14:57.833Z",
-      "updatedAt": "2026-01-27T00:14:57.833Z"
-    },
-    {
-      "id": "REG-2023-11-06-001",
-      "region": "China",
-      "severity": "critical",
-      "title": "中华人民共和国民事诉讼法",
-      "summary": "中华人民共和国民事诉讼法是中国民事诉讼程序的基本法律，规定了法院审理民事案件的基本原则、管辖、审判组织、证据、审判程序、执行程序等核心制度。该法于1991年通过，历经五次修正，最新修正案于2023年9月1日通过，自2024年1月1日起施行。",
-      "timestamp": "2023-11-06T17:54:00Z",
-      "source_url": "https://www.jyg.gov.cn/fgj/ztzl/gzzd/art/2023/art_0298ac1ad4de4615ad7cba32e4eeb598.html",
-      "category": "Data Compliance",
-      "jurisdiction": "中国",
-      "publishDate": "2023-09-01",
-      "regulationType": "法律",
-      "importanceLevel": "critical",
-      "hasSource": true,
-      "createdAt": "2026-01-27T01:06:52.190Z",
-      "updatedAt": "2026-01-27T01:06:52.190Z"
-    },
-    {
-      "id": "REG-20231106-001",
-      "region": "China",
-      "severity": "critical",
-      "title": "中华人民共和国民事诉讼法",
-      "summary": "《中华人民共和国民事诉讼法》是规范民事诉讼程序的基本法律，规定了人民法院审理民事案件的原则、制度和程序，以及当事人和其他诉讼参与人的诉讼权利与义务。该法于1991年通过，历经五次修正，最新修正案于2023年9月1日通过，自2024年1月1日起施行。",
-      "timestamp": "2024-01-01",
-      "source_url": "https://www.jyg.gov.cn/fgj/ztzl/gzzd/art/2023/art_0298ac1ad4de4615ad7cba32e4eeb598.html",
-      "category": "Litigation",
-      "createdAt": "2026-01-27T04:44:02.043Z",
-      "updatedAt": "2026-01-27T04:44:02.043Z"
-    }
-  ],
-  "radarStats": [
-    {
-      "id": "radar-001",
-      "region": "EU",
-      "riskLevel": 85,
+      "jurisdiction": "California",
+      "title": "California Consumer Privacy Act (CCPA)",
+      "summary": "The California Consumer Privacy Act (CCPA), effective January 1, 2020, provides consumers with rights regarding their personal information, including rights to know, delete, and opt-out of sale of personal information.",
+      "fullText": "The California Consumer Privacy Act (CCPA), codified as Cal. Civ. Code § 1798.100 et seq., was signed into law on June 28, 2018. The law grants California residents the right to know what personal information is being collected about them, whether their personal information is sold or disclosed and to whom, the right to delete personal information held by businesses, and the right to opt-out of sale of personal information. The law applies to businesses that collect consumers' personal data and meet certain thresholds.",
+      "effectiveDate": "2020-01-01",
+      "status": "Active",
       "category": "Data Privacy",
-      "trend": "up",
-      "lastUpdated": "2024-01-15T10:00:00Z"
+      "subCategory": "Consumer Rights",
+      "importanceLevel": "critical",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Right to know what personal information is being collected",
+        "Right to know whether personal information is sold or disclosed and to whom",
+        "Right to delete personal information held by businesses",
+        "Right to opt-out of sale of personal information",
+        "Right to non-discrimination for exercising privacy rights"
+      ],
+      "relatedRegulations": [
+        "Cal. Civ. Code § 1798.100",
+        "CCPA Regulations"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Significant",
+        "financialImpact": "Civil penalties up to $2,500 per violation or $7,500 per intentional violation",
+        "operationalImpact": "Requires data mapping, privacy policies, and consumer request procedures"
+      },
+      "tags": [
+        "Data Privacy",
+        "Consumer Rights",
+        "Personal Information",
+        "Opt-Out Rights"
+      ],
+      "source": "California Legislative Information",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=CIV&division=3.&title=1.81.&part=4.&chapter=&article=",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
     },
     {
-      "id": "radar-002",
+      "id": "REG-20260129-002",
+      "region": "EU",
+      "jurisdiction": "European Union",
+      "title": "General Data Protection Regulation (GDPR)",
+      "summary": "The General Data Protection Regulation (GDPR) (EU) 2016/679 is a regulation in EU law on data protection and privacy in the European Union and the European Economic Area.",
+      "fullText": "The General Data Protection Regulation (GDPR) (EU) 2016/679 is a regulation in EU law on data protection and privacy in the European Union (EU) and the European Economic Area (EEA). The GDPR aims primarily to give control to individuals over their personal data and to simplify the regulatory environment for international business by unifying the regulation within the EU. Superseding the Data Protection Directive 95/46/EC, the regulation contains provisions and requirements related to the processing of personally identifiable information of individuals living in the EU, and applies to all enterprises, regardless of location, that are doing business with the EU.",
+      "effectiveDate": "2018-05-25",
+      "status": "Active",
+      "category": "Data Protection",
+      "subCategory": "Privacy Rights",
+      "importanceLevel": "critical",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Lawfulness, fairness and transparency",
+        "Purpose limitation",
+        "Data minimization",
+        "Accuracy of personal data",
+        "Storage limitation",
+        "Integrity and confidentiality",
+        "Accountability principle"
+      ],
+      "relatedRegulations": [
+        "EU GDPR",
+        "Directive 95/46/EC"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Critical",
+        "financialImpact": "Administrative fines up to €20 million or 4% of annual global turnover",
+        "operationalImpact": "Requires comprehensive data protection policies, procedures, and DPO appointment"
+      },
+      "tags": [
+        "Data Protection",
+        "Privacy Rights",
+        "EU Law",
+        "Compliance"
+      ],
+      "source": "Official Journal of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
+    },
+    {
+      "id": "REG-20260129-003",
       "region": "USA",
-      "riskLevel": 72,
-      "category": "Cybersecurity",
-      "trend": "up",
-      "lastUpdated": "2024-01-15T09:30:00Z"
+      "jurisdiction": "Federal",
+      "title": "Health Insurance Portability and Accountability Act (HIPAA)",
+      "summary": "The Health Insurance Portability and Accountability Act of 1996 (HIPAA) is a United States federal law that provides data privacy and security provisions for safeguarding medical information.",
+      "fullText": "The Health Insurance Portability and Accountability Act of 1996 (HIPAA) Public Law 104-191 is a United States federal law that provided the first nationwide standards for protecting individuals' medical records and other personal health information. It gives patients more control over their health information, sets boundaries on the use and release of health records, establishes appropriate safeguards that must be implemented to protect the privacy of protected health information, and holds violators accountable with civil and criminal penalties.",
+      "effectiveDate": "1996-08-21",
+      "status": "Active",
+      "category": "Healthcare Privacy",
+      "subCategory": "Medical Records",
+      "importanceLevel": "critical",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Privacy Rule protects individually identifiable health information",
+        "Security Rule addresses electronic transmission of health information",
+        "Breach Notification Rule requires notification of breaches",
+        "Enforcement Rule governs compliance and investigations"
+      ],
+      "relatedRegulations": [
+        "45 CFR Parts 160 and 164",
+        "HITECH Act"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Critical for healthcare entities",
+        "financialImpact": "Penalties up to $1.5 million per violation category per year",
+        "operationalImpact": "Requires extensive privacy and security policies"
+      },
+      "tags": [
+        "Healthcare Privacy",
+        "Medical Records",
+        "Protected Health Information",
+        "Compliance"
+      ],
+      "source": "United States Congress",
+      "url": "https://www.hhs.gov/hipaa/index.html",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
     },
     {
-      "id": "radar-003",
+      "id": "REG-20260129-004",
+      "region": "USA",
+      "jurisdiction": "Federal",
+      "title": "Fair Labor Standards Act (FLSA)",
+      "summary": "The Fair Labor Standards Act (FLSA) is a United States federal law that establishes minimum wage, overtime pay, recordkeeping, and child labor standards.",
+      "fullText": "The Fair Labor Standards Act of 1938 (FLSA) is a United States federal law that establishes minimum wage, overtime pay, recordkeeping, and child labor standards affecting full-time and part-time workers in the private sector and in Federal, State, and local governments. Covered nonexempt workers are entitled to a minimum wage of not less than $7.25 per hour. Overtime pay at a rate not less than one and one-half times the employee's regular rate of pay is required after 40 hours of work in a workweek.",
+      "effectiveDate": "1938-06-25",
+      "status": "Active",
+      "category": "Labor Law",
+      "subCategory": "Employment Standards",
+      "importanceLevel": "important",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Minimum wage of $7.25 per hour",
+        "Overtime pay at 1.5x regular rate after 40 hours/week",
+        "Recordkeeping of employee information",
+        "Child labor restrictions"
+      ],
+      "relatedRegulations": [
+        "29 U.S.C. § 201",
+        "Department of Labor Regulations"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Universal for most employers",
+        "financialImpact": "Wage and penalty obligations",
+        "operationalImpact": "Requires payroll tracking systems"
+      },
+      "tags": [
+        "Labor Law",
+        "Employment Standards",
+        "Wages",
+        "Overtime"
+      ],
+      "source": "United States Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/flsa",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
+    },
+    {
+      "id": "REG-20260129-005",
+      "region": "USA",
+      "jurisdiction": "Federal",
+      "title": "Foreign Corrupt Practices Act (FCPA)",
+      "summary": "The Foreign Corrupt Practices Act of 1977 (FCPA) is a United States federal law that prohibits U.S. companies and individuals from bribing foreign officials to obtain or retain business.",
+      "fullText": "The Foreign Corrupt Practices Act of 1977 (FCPA), Pub.L. 95-91, 91 Stat. 730, 15 U.S.C. § 78dd-1, et seq., is a United States federal law known primarily for two of its main provisions: the anti-bribery provision and the accounting provision. The anti-bribery provision prohibits corrupt payments to foreign officials to obtain or retain business. The accounting provision requires companies to keep accurate books and records and maintain adequate internal accounting controls.",
+      "effectiveDate": "1977-12-19",
+      "status": "Active",
+      "category": "Anti-Corruption",
+      "subCategory": "International Business",
+      "importanceLevel": "critical",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Prohibition on bribery of foreign officials",
+        "Accurate books and records",
+        "Adequate internal accounting controls",
+        "Compliance programs for companies"
+      ],
+      "relatedRegulations": [
+        "15 U.S.C. § 78dd-1",
+        "Securities Exchange Act provisions"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Critical for international business",
+        "financialImpact": "Criminal penalties up to $2 million for companies, $250,000 for individuals",
+        "operationalImpact": "Requires robust compliance and monitoring systems"
+      },
+      "tags": [
+        "Anti-Corruption",
+        "International Business",
+        "Compliance",
+        "Internal Controls"
+      ],
+      "source": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/spotlight/fcpa.shtml",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
+    },
+    {
+      "id": "REG-20260129-006",
+      "region": "Singapore",
+      "jurisdiction": "Singapore",
+      "title": "Personal Data Protection Act (PDPA)",
+      "summary": "The Personal Data Protection Act 2012 (PDPA) is Singapore's baseline data protection law that governs the collection, use, disclosure and care of personal data.",
+      "fullText": "The Personal Data Protection Act 2012 (No. 26 of 2012) is Singapore's baseline data protection law that governs the collection, use, disclosure and care of personal data. It establishes a comprehensive and balanced framework for the protection of personal data while allowing the legitimate use of such data. The PDPA creates a baseline standard for organizations to follow in respect of the collection, use and disclosure of personal data about individuals.",
+      "effectiveDate": "2014-07-02",
+      "status": "Active",
+      "category": "Data Protection",
+      "subCategory": "Privacy Rights",
+      "importanceLevel": "important",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Consent obligation for collection, use or disclosure",
+        "Purpose limitation for data use",
+        "Notification of purpose and manner of collection",
+        "Access and correction rights",
+        "Protection of personal data",
+        "Retention limitation"
+      ],
+      "relatedRegulations": [
+        "Personal Data Protection Act 2012",
+        "PDPC Regulations"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Significant for businesses operating in Singapore",
+        "financialImpact": "Financial penalties up to S$1 million",
+        "operationalImpact": "Requires data protection policies and consent mechanisms"
+      },
+      "tags": [
+        "Data Protection",
+        "Singapore Law",
+        "Consent",
+        "Personal Data"
+      ],
+      "source": "Singapore Statutes Online",
+      "url": "https://sso.agc.gov.sg/Act/PDPA2012",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
+    },
+    {
+      "id": "REG-20260129-007",
       "region": "China",
-      "riskLevel": 65,
-      "category": "Data Localization",
-      "trend": "stable",
-      "lastUpdated": "2024-01-15T09:00:00Z"
+      "jurisdiction": "China",
+      "title": "Cybersecurity Law of the People's Republic of China",
+      "summary": "The Cybersecurity Law of the People's Republic of China governs network operations, data protection, and cybersecurity in China.",
+      "fullText": "The Cybersecurity Law of the People's Republic of China, passed by the Standing Committee of the National People's Congress on November 7, 2016, and effective from June 1, 2017, is China's foundational cybersecurity regulation. It establishes requirements for operators of critical information infrastructure, data localization requirements, and cybersecurity protection obligations for network operators.",
+      "effectiveDate": "2017-06-01",
+      "status": "Active",
+      "category": "Cybersecurity",
+      "subCategory": "Data Localization",
+      "importanceLevel": "important",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Security protection obligations for network operators",
+        "Data localization for critical information infrastructure operators",
+        "Cross-border transfer security assessment",
+        "User identity verification",
+        "Network security level protection"
+      ],
+      "relatedRegulations": [
+        "Cybersecurity Law of China",
+        "Measures for Security Assessment"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Critical for businesses operating in China",
+        "financialImpact": "Administrative penalties and business suspension",
+        "operationalImpact": "Requires data localization and security measures"
+      },
+      "tags": [
+        "Cybersecurity",
+        "China Law",
+        "Data Localization",
+        "Infrastructure"
+      ],
+      "source": "National People's Congress of China",
+      "url": "http://www.npc.gov.cn/npc/c30834/201611/b35ec79020274cb288140291bf0e744e.shtml",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "radar-004",
-      "region": "UK",
-      "riskLevel": 58,
-      "category": "Competition Law",
-      "trend": "down",
-      "lastUpdated": "2024-01-15T08:30:00Z"
-    }
-  ],
-  "stats": [
-    {
-      "label": "Total Risks",
-      "value": "247",
-      "change": "+12%",
-      "icon": "AlertTriangle"
-    },
-    {
-      "label": "Monitored Jurisdictions",
-      "value": "58",
-      "change": "+3",
-      "icon": "Globe"
-    },
-    {
-      "label": "Compliant Assets",
-      "value": "89%",
-      "change": "+2%",
-      "icon": "CheckCircle"
-    },
-    {
-      "label": "Response Time",
-      "value": "2.4h",
-      "change": "-0.3h",
-      "icon": "Clock"
-    }
-  ],
-  "activities": [
-    {
-      "id": 1,
-      "action": "Risk assessment completed for EU AI Act",
-      "time": "2 min ago",
-      "user": "System"
-    },
-    {
-      "id": 2,
-      "action": "New regulation detected in USA jurisdiction",
-      "time": "15 min ago",
-      "user": "AI Monitor"
-    },
-    {
-      "id": 3,
-      "action": "Compliance report generated for Q4 2023",
-      "time": "1 hour ago",
-      "user": "Jane Doe"
-    },
-    {
-      "id": 4,
-      "action": "Alert threshold updated for critical risks",
-      "time": "2 hours ago",
-      "user": "John Smith"
+      "id": "REG-20260129-008",
+      "region": "Thailand",
+      "jurisdiction": "Thailand",
+      "title": "Personal Data Protection Act B.E. 2562 (2019)",
+      "summary": "Thailand's Personal Data Protection Act (PDPA) governs the collection, use, and disclosure of personal data in Thailand.",
+      "fullText": "The Personal Data Protection Act B.E. 2562 (2019) is Thailand's primary data protection legislation, which became effective on May 27, 2020. The Act applies to the collection, processing, and utilization of personal data, whether by manual or automatic means, during the course of business conducted in Thailand or involving personal data of Thai citizens.",
+      "effectiveDate": "2020-05-27",
+      "status": "Active",
+      "category": "Data Protection",
+      "subCategory": "Privacy Rights",
+      "importanceLevel": "important",
+      "complianceDeadline": "Ongoing",
+      "requirements": [
+        "Consent for data processing",
+        "Rights of data subjects",
+        "Data protection impact assessments",
+        "Data breach notifications",
+        "Appointment of data protection officers"
+      ],
+      "relatedRegulations": [
+        "Personal Data Protection Act B.E. 2562",
+        "Ministry of Digital Economy Regulations"
+      ],
+      "impactAssessment": {
+        "businessImpact": "Significant for businesses operating in Thailand",
+        "financialImpact": "Penalties up to THB 5 million",
+        "operationalImpact": "Requires compliance with data subject rights and consent"
+      },
+      "tags": [
+        "Data Protection",
+        "Thailand Law",
+        "Consent",
+        "Data Subjects"
+      ],
+      "source": "Royal Thai Government Gazette",
+      "url": "https://www.mdes.go.th/pdpa",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "medium"
     }
   ]
 }

@@ -1,0 +1,55 @@
+name: Weekly Data Update
+on:
+  schedule:
+    # 每周一早上9点运行 (UTC时间，相当于北京时间下午5点)
+    # 如果要北京时间早上9点，应使用 1 UTC (即 1 1 UTC = 北京时间 9 点)
+    - cron: '0 1 * * 1'  # 每周一 1:00 UTC (北京时间周一上午9:00)
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
+      TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+      NEXT_PUBLIC_USE_FREE_API: ${{ secrets.NEXT_PUBLIC_USE_FREE_API }}
+      
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run data crawling and processing
+      run: |
+        if [ "$NEXT_PUBLIC_USE_FREE_API" = "openrouter" ]; then
+          npm run crawl-data-openrouter
+        elif [ "$NEXT_PUBLIC_USE_FREE_API" = "huggingface" ]; then
+          npm run crawl-data-huggingface
+        elif [ "$NEXT_PUBLIC_USE_FREE_API" = "together" ]; then
+          npm run crawl-data-together
+        else
+          npm run crawl-data
+        fi
+
+    - name: Commit and push if changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add -A
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Weekly data update [skip ci]"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

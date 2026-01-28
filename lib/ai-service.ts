@@ -258,10 +258,43 @@ export class AIService {
  */
 export const defaultAIConfig: AIConfig = {
   apiKey: process.env.NEXT_PUBLIC_AI_API_KEY || '',
-  baseURL: process.env.NEXT_PUBLIC_AI_BASE_URL || 'https://api.deepseek.com/v1',
-  model: process.env.NEXT_PUBLIC_AI_MODEL || 'deepseek-chat',
-  temperature: 0.7,
-  max_tokens: 2000
+  baseURL: process.env.NEXT_PUBLIC_AI_BASE_URL || 
+           (process.env.USE_OPENROUTER ? 'https://openrouter.ai/api/v1' : 
+            process.env.USE_HUGGINGFACE ? 'https://api-inference.huggingface.co/v1' :
+            'https://api.deepseek.com/v1'),
+  model: process.env.NEXT_PUBLIC_AI_MODEL || 
+         (process.env.USE_OPENROUTER ? 'mistralai/mistral-7b-instruct:free' : 
+          process.env.USE_HUGGINGFACE ? 'microsoft/DialoGPT-medium' : 
+          'deepseek-chat'),
+  temperature: parseFloat(process.env.AI_TEMPERATURE || '0.7'),
+  max_tokens: parseInt(process.env.AI_MAX_TOKENS || '2000')
+}
+
+/**
+ * 预设的免费API配置
+ */
+export const FREE_AI_CONFIGS = {
+  OPENROUTER_FREE: {
+    apiKey: process.env.OPENROUTER_API_KEY || process.env.NEXT_PUBLIC_AI_API_KEY || '',
+    baseURL: 'https://openrouter.ai/api/v1',
+    model: 'mistralai/mistral-7b-instruct:free', // 免费模型
+    temperature: 0.7,
+    max_tokens: 2000
+  },
+  HUGGINGFACE_FREE: {
+    apiKey: process.env.HUGGINGFACE_API_KEY || process.env.NEXT_PUBLIC_AI_API_KEY || '',
+    baseURL: 'https://api-inference.huggingface.co/v1',
+    model: 'microsoft/DialoGPT-medium',
+    temperature: 0.7,
+    max_tokens: 2000
+  },
+  TOGETHER_FREE: {
+    apiKey: process.env.TOGETHER_API_KEY || process.env.NEXT_PUBLIC_AI_API_KEY || '',
+    baseURL: 'https://api.together.xyz/v1',
+    model: 'togethercomputer/StripedHyena-Nous-7B',
+    temperature: 0.7,
+    max_tokens: 2000
+  }
 }
 
 /**
@@ -270,6 +303,39 @@ export const defaultAIConfig: AIConfig = {
 export function createAIService(config?: Partial<AIConfig>): AIService {
   const finalConfig = { ...defaultAIConfig, ...config }
   return new AIService(finalConfig)
+}
+
+/**
+ * 获取免费AI服务实例
+ * 支持在客户端使用免费API
+ */
+export function getFreeAIService(serviceType: 'openrouter' | 'huggingface' | 'together', apiKey?: string): AIService {
+  let config;
+  
+  switch(serviceType) {
+    case 'openrouter':
+      config = {
+        ...FREE_AI_CONFIGS.OPENROUTER_FREE,
+        apiKey: apiKey || FREE_AI_CONFIGS.OPENROUTER_FREE.apiKey
+      };
+      break;
+    case 'huggingface':
+      config = {
+        ...FREE_AI_CONFIGS.HUGGINGFACE_FREE,
+        apiKey: apiKey || FREE_AI_CONFIGS.HUGGINGFACE_FREE.apiKey
+      };
+      break;
+    case 'together':
+      config = {
+        ...FREE_AI_CONFIGS.TOGETHER_FREE,
+        apiKey: apiKey || FREE_AI_CONFIGS.TOGETHER_FREE.apiKey
+      };
+      break;
+    default:
+      throw new Error('Invalid service type. Must be "openrouter", "huggingface", or "together"');
+  }
+  
+  return new AIService(config);
 }
 
 /**

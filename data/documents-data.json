@@ -1,49 +1,246 @@
 {
+  "lastUpdated": "2026-01-29T10:00:00.000Z",
+  "totalDocuments": 10,
   "documents": [
     {
-      "id": "1",
-      "title": "Data Protection Policy v2.1",
-      "type": "policy",
-      "size": "2.4 MB",
-      "lastModified": "2024-01-15",
+      "id": "DOC-20260129-001",
+      "title": "California Consumer Privacy Act (CCPA) - Official Text",
+      "type": "regulation",
+      "category": "Data Security",
+      "jurisdiction": "California, USA",
+      "author": "California Legislature",
+      "version": "Final",
       "status": "active",
-      "category": "Data Privacy"
+      "lastModified": "2020-01-01",
+      "reviewDate": "2021-01-01",
+      "description": "Official text of the California Consumer Privacy Act, including amendments and regulations",
+      "relatedRegulations": [
+        "CCPA Regulations",
+        "California Privacy Rights Act (CPRA)"
+      ],
+      "tags": [
+        "Privacy",
+        "Data Protection",
+        "CCPA",
+        "Consumer Rights"
+      ],
+      "content": "# California Consumer Privacy Act (CCPA)\n\n## Official Text - Civil Code Section 1798.100 et seq.\n\n### Declaration of Policy\n\nThe Legislature hereby finds and declares that privacy is a fundamental right in California and that consumers should have rights with respect to their personal information, including rights to know, to delete, to opt-out of sale, and to non-discrimination for the exercise of those rights.\n\n### Definitions\n\nFor purposes of this title:\n\n(a) \"Business\" means a sole proprietorship, partnership, limited liability company, corporation, association, or other legal entity that is organized or operated for profit, that annually satisfies one or more of the following thresholds:\n\n(1) Has annual gross revenues greater than twenty-five million dollars ($25,000,000).\n\n(2) Alone or jointly for commercial purposes buys, receives for commercial purposes, sells, or shares for commercial purposes, alone or in combination, the personal information of 50,000 or more consumers, households, or devices.\n\n(3) Derives 50 percent or more of annual revenues from selling consumers' personal information.\n\n(b) \"Commercial purpose\" means selling, communicating, or otherwise making use of consumer information for commercial purposes, including, but not limited to, advertising.\n\n(c) \"Consumer\" means a natural person who is a California resident, as determined in accordance with Section 17014 of Title 18 of the California Code of Regulations, as it relates to the 2001-2002 income tax year.\n\n(d) \"Personal information\" means information that identifies, relates to, describes, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or household.\n\n### Consumer Rights\n\n#### Right to Know\n\nConsumers have the right to request that a business disclose information about the personal information that it has collected about consumers.\n\n#### Right to Delete\n\nConsumers have the right to request that a business delete any personal information about the consumer which the business has collected.\n\n#### Right to Opt-Out\n\nConsumers have the right to opt-out of the sale of their personal information.\n\n### Business Obligations\n\nBusinesses must implement reasonable security procedures and practices to protect consumer personal information from unauthorized access, destruction, use, modification, or disclosure.\n\n### Penalties\n\nViolations of this title are subject to civil penalties of up to two thousand five hundred dollars ($2,500) per violation, or seven thousand five hundred dollars ($7,500) per intentional violation."
     },
     {
-      "id": "2",
-      "title": "Q4 2023 Compliance Report",
-      "type": "report",
-      "size": "5.7 MB",
-      "lastModified": "2024-01-10",
+      "id": "DOC-20260129-002",
+      "title": "General Data Protection Regulation (GDPR) - Article Text",
+      "type": "regulation",
+      "category": "Data Protection",
+      "jurisdiction": "European Union",
+      "author": "European Parliament",
+      "version": "Official",
       "status": "active",
-      "category": "Reporting"
+      "lastModified": "2018-05-25",
+      "reviewDate": "2023-05-25",
+      "description": "Official text of the General Data Protection Regulation (EU) 2016/679",
+      "relatedRegulations": [
+        "ePrivacy Directive",
+        "Data Protection Directive 95/46/EC"
+      ],
+      "tags": [
+        "GDPR",
+        "Privacy",
+        "Data Protection",
+        "EU Law"
+      ],
+      "content": "# General Data Protection Regulation (GDPR)\n\n## Regulation (EU) 2016/679 of the European Parliament and of the Council\n\n### Chapter I - General provisions\n\n#### Article 1 - Subject-matter and objectives\n\nThis Regulation lays down rules relating to the protection of natural persons with regard to the processing of personal data and rules relating to the free movement of personal data.\n\n#### Article 2 - Material scope\n\nThis Regulation applies to the processing of personal data wholly or partly by automated means, and to the processing other than by automated means of personal data which form part of, or are intended to form part of, a filing system.\n\n#### Article 3 - Territorial scope\n\nThis Regulation applies to the processing of personal data in the context of the activities of an establishment of a controller or a processor in the Union, regardless of whether the processing takes place in the Union or not.\n\n### Chapter II - Principles\n\n#### Article 5 - Principles relating to processing of personal data\n\nPersonal data shall be:\n\n(a) processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency');\n\n(b) collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes; further processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes shall, in accordance with Article 89(1), not be considered to be incompatible with the initial purposes ('purpose limitation');\n\n(c) adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation');\n\n(d) accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay ('accuracy');\n\n(e) kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed; personal data may be stored for longer periods insofar as the personal data will be processed solely for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) subject to implementation of the appropriate technical and organisational measures required by this Regulation ('storage limitation');\n\n(f) processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures ('integrity and confidentiality')."
     },
     {
-      "id": "3",
-      "title": "Vendor Security Agreement Template",
+      "id": "DOC-20260129-003",
+      "title": "Patent Application Guide - Biotechnology Inventions",
+      "type": "guidance",
+      "category": "Intellectual Property",
+      "jurisdiction": "USA",
+      "author": "USPTO",
+      "version": "2023 Edition",
+      "status": "active",
+      "lastModified": "2023-01-15",
+      "reviewDate": "2024-01-15",
+      "description": "USPTO guidance for patent applications in biotechnology field",
+      "relatedRegulations": [
+        "35 U.S.C. § 101",
+        "Manual of Patent Examining Procedure"
+      ],
+      "tags": [
+        "Patents",
+        "Biotechnology",
+        "USPTO",
+        "Patent Applications"
+      ],
+      "content": "# USPTO Patent Application Guide - Biotechnology Inventions\n\n## Subject Matter Eligibility Under 35 U.S.C. § 101\n\n### Background\n\nThe United States Patent and Trademark Office (USPTO) has issued guidance regarding patent subject matter eligibility for biotechnology inventions following the Supreme Court's decisions in Association for Molecular Pathology v. Myriad Genetics, Inc. and Mayo Collaborative Services v. Prometheus Laboratories, Inc.\n\n### Guidance for Patent Applications\n\n#### Natural Phenomena and Abstract Ideas\n\nClaims directed to naturally occurring phenomena, such as isolated DNA sequences identical to genomic DNA, are not patent eligible under 35 U.S.C. § 101. However, claims directed to compositions that differ from naturally occurring counterparts in marked characteristics would satisfy the eligibility requirement.\n\n#### Examples of Patent-Eligible Subject Matter\n\n1. Compositions comprising isolated nucleic acids encoding functional proteins with markedly different characteristics from naturally occurring sequences\n\n2. Methods of using synthetic nucleic acids that do not occur in nature\n\n3. Processes for creating artificial genetic constructs\n\n#### Examples of Patent-Ineligible Subject Matter\n\n1. Claims directed to naturally occurring DNA sequences\n\n2. Methods of observing or detecting natural phenomena\n\n3. Diagnostic methods that merely compare patient data to normal values\n\n### Disclosure Requirements\n\nBiotechnology applications must provide:\n\n1. A written description of the claimed invention\n\n2. Enablement for one skilled in the art to make and use the invention\n\n3. Best mode of carrying out the invention\n\n### Claim Construction\n\nExaminers should construe claims broadly but reasonably in light of the specification. For biotechnology applications, the ordinary artisan would be a person with a PhD in molecular biology or biochemistry with 5+ years of industry experience."
+    },
+    {
+      "id": "DOC-20260129-004",
+      "title": "Fair Labor Standards Act Compliance Manual",
+      "type": "compliance",
+      "category": "Labor Compliance",
+      "jurisdiction": "USA",
+      "author": "Department of Labor",
+      "version": "2024 Edition",
+      "status": "active",
+      "lastModified": "2024-01-01",
+      "reviewDate": "2025-01-01",
+      "description": "Compliance manual for Fair Labor Standards Act requirements",
+      "relatedRegulations": [
+        "29 U.S.C. § 201 et seq.",
+        "29 CFR Part 531"
+      ],
+      "tags": [
+        "FLSA",
+        "Labor Standards",
+        "Wages",
+        "Overtime"
+      ],
+      "content": "# Fair Labor Standards Act (FLSA) Compliance Manual\n\n## Wage and Hour Division\n\n### Minimum Wage Requirements\n\n#### Current Federal Minimum Wage\n\nThe federal minimum wage is $7.25 per hour effective July 24, 2009. States may establish higher minimum wages, and in cases where an employee is subject to both state and federal minimum wage laws, the employee is entitled to the higher minimum wage.\n\n#### Special Minimum Wages\n\n1. **Tipped Employees**: Employers may pay tipped employees $2.13 per hour in direct wages if the tips received equal at least $5.12 per hour to make up the difference between the direct wage and the federal minimum wage.\n\n2. **Youth Minimum Wage**: Employers may pay workers under age 20 a lower minimum wage of $4.25 per hour for the first 90 consecutive calendar days of employment.\n\n3. **Full-time Students**: Employers enrolled in full-time academic programs may be paid not less than 85 percent of the minimum wage under certificate from the Department of Labor.\n\n### Overtime Pay Requirements\n\n#### Standard Overtime Provisions\n\nCovered, nonexempt employees must receive overtime pay for hours worked over 40 per workweek at a rate not less than one and one-half times the employee's regular rate of pay. There is no limit on the number of hours employees aged 16 and older may work in any workweek.\n\n#### Workweek Definition\n\nA workweek is a period of 168 hours during seven consecutive 24-hour periods. It may begin on any day of the week and at any hour of the day established by the employer. Generally, each workweek stands alone and an employer cannot average hours over two or more weeks to determine overtime liability.\n\n#### Regular Rate Calculation\n\nThe regular rate of pay includes all remuneration for employment except:\n\n1. Gifts\n2. Payments made for occasional periods when no work is performed\n3. Premium pay for Saturday, Sunday, or holiday work\n4. Discretionary bonuses\n\n### Recordkeeping Requirements\n\nEmployers must maintain the following records for each employee:\n\n1. Personal information (name, address, occupation, etc.)\n2. Time and payroll records\n3. Wage rate information\n4. Earnings statements\n5. Deduction records\n\n### Child Labor Provisions\n\n#### Hazardous Occupations\n\nChildren under 18 years of age may not work in occupations declared hazardous by the Secretary of Labor. These include manufacturing and storing explosives, mining, meat processing, power-driven woodworking machines, and operating power-driven machinery.\n\n#### Hours Limitations for Minor Workers\n\nStudents under 16 may not work:\n\n1. During school hours\n2. More than 3 hours on a school day\n3. More than 18 hours in a school week\n4. More than 8 hours on a non-school day\n5. More than 40 hours in a non-school week"
+    },
+    {
+      "id": "DOC-20260129-005",
+      "title": "Foreign Corrupt Practices Act - Compliance Guidelines",
+      "type": "compliance",
+      "category": "Import/Export Control",
+      "jurisdiction": "USA",
+      "author": "SEC and DOJ",
+      "version": "2023 Edition",
+      "status": "active",
+      "lastModified": "2023-11-15",
+      "reviewDate": "2024-11-15",
+      "description": "Compliance guidelines for Foreign Corrupt Practices Act",
+      "relatedRegulations": [
+        "15 U.S.C. § 78dd-1",
+        "18 U.S.C. § 3059"
+      ],
+      "tags": [
+        "FCPA",
+        "Anti-Corruption",
+        "Compliance",
+        "International Business"
+      ],
+      "content": "# Foreign Corrupt Practices Act (FCPA) Compliance Guidelines\n\n## Anti-Bribery and Accounting Provisions\n\n### Anti-Bribery Provisions\n\n#### Prohibited Conduct\n\nThe FCPA makes it unlawful for a U.S. person or entity to offer, pay, promise to pay, or authorize the payment of money or anything of value to a foreign official for the purpose of obtaining or retaining business or securing any improper advantage. The anti-bribery provisions apply to:\n\n1. Issuers of securities registered under Section 12 of the Securities Exchange Act of 1934\n2. Domestic concerns\n3. Any person who acts while in the United States\n4. Any person who acts while outside the United States if such conduct would constitute a violation of the anti-bribery provisions if committed in the United States\n\n#### Foreign Officials\n\nThe term 'foreign official' includes any officer or employee of a foreign government or any department, agency, or instrumentality thereof, and any officer or employee of a public international organization. It also includes any person acting in an official capacity for or on behalf of any such government or department, agency, or instrumentality.\n\n#### Facilitating Payments\n\nThe FCPA contains an exception for payments to foreign officials for routine governmental actions, commonly referred to as facilitating or expediting payments. However, companies should carefully evaluate such payments as they may violate other laws or company policies.\n\n### Accounting Provisions\n\n#### Books and Records\n\nCompanies subject to the FCPA must make and keep books, records, and accounts which, in reasonable detail, accurately and fairly reflect the transactions and dispositions of assets. This includes:\n\n1. Recording all transactions through an effective system of internal accounting controls\n2. Proper authorization of transactions\n3. Safeguarding of assets\n\n#### Internal Controls\n\nCompanies must devise and maintain a system of internal accounting controls sufficient to:\n\n1. Provide reasonable assurances that transactions are executed in accordance with management's general or specific authorization\n2. Provide reasonable assurances that transactions are recorded as necessary to permit preparation of financial statements\n3. Provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets\n\n### Compliance Program Elements\n\nEffective FCPA compliance programs should include:\n\n1. Leadership commitment and tone at the top\n2. Risk assessment procedures\n3. Policies and procedures\n4. Training and communications\n5. Third-party due diligence\n6. Monitoring and auditing\n7. Disciplinary procedures\n8. Remediation procedures\n\n### Penalties\n\nViolations of the anti-bribery provisions can result in criminal penalties of up to $2 million for companies and $250,000 for individuals, plus disgorgement of profits. Accounting violations can result in criminal penalties of up to $25 million for companies and $5 million for individuals."
+    },
+    {
+      "id": "DOC-20260129-006",
+      "title": "Personal Data Protection Act Singapore - Full Text",
+      "type": "regulation",
+      "category": "Data Security",
+      "jurisdiction": "Singapore",
+      "author": "Singapore Parliament",
+      "version": "Current",
+      "status": "active",
+      "lastModified": "2020-11-02",
+      "reviewDate": "2025-11-02",
+      "description": "Full text of Singapore's Personal Data Protection Act",
+      "relatedRegulations": [
+        "PDPA No. 26 of 2012",
+        "Personal Data Protection Regulations 2014"
+      ],
+      "tags": [
+        "PDPA",
+        "Data Protection",
+        "Singapore",
+        "Privacy"
+      ],
+      "content": "# Personal Data Protection Act (Singapore)\n\n## No. 26 of 2012\n\n### Chapter 1 - Preliminary\n\n#### 1. Short title and commencement\n\nThis Act may be cited as the Personal Data Protection Act 2012 and shall come into operation on such date as the Minister may, by notification in the Gazette, appoint.\n\n#### 2. Interpretation\n\nIn this Act, unless the context otherwise requires —\n\n'agency' means a Ministry or department of the Government, or any authority, body or statutory board, established by or under any written law;\n\n'consent' means agreement to the collection, use or disclosure of personal data about an individual in the circumstances set out in this Act;\n\n'controller' means an organisation that makes decisions about the purposes for and the manner in which personal data is processed;\n\n'data intermediary' means an organisation that processes personal data on behalf of another organisation but does not include an employee of an organisation who processes personal data in the course of his employment;\n\n'personal data' means data, whether true or not, about an individual who can be identified from that data; if the data is in the possession of or is under the control of an organisation, the individual can be identified from the data in combination with other data in the possession of or under the control of the organisation and accessible by or on behalf of the organisation;\n\n'processing', in relation to any data, means doing any operation or set of operations on the data, whether or not by automated means, including —\n(a) recording;\n(b) holding;\n(c) organising;\n(d) adapting or altering;\n(e) retrieving;\n(f) consulting;\n(g) using;\n(h) disclosing;\n(i) erasing;\n(j) destroying;\n(k) protecting;\n(l) securing;\n(m) anonymising;\n(n) combining;\n(o) linking;\n(p) transferring;\n(q) making available;\n(r) restoring;\n(s) recovering;\n(t) copying;\n(u) modifying;\n(v) publishing;\n(w) disseminating;\n(x) transmitting;\n(y) sending;\n(z) forwarding;\n(aa) routing;\n(bb) broadcasting;\n(cc) relaying;\n(dd) carrying; or\n(ee) delivering.\n\n### Chapter 2 - Data Protection Framework\n\n#### 3. Scope of Act\n\nThis Act governs the collection, use, disclosure and care of personal data by organisations in a manner that recognises both the rights of individuals to protect their personal data and the needs of organisations to collect, use or disclose personal data for purposes that a reasonable person would consider appropriate in the circumstances.\n\n#### 4. Obligation to protect personal data\n\nAn organisation shall protect personal data in its possession or under its control by making reasonable security arrangements to prevent unauthorised access, collection, use, disclosure, copying, modification, disposal or other similar risks.\n\n#### 5. Consent obligation\n\nAn organisation may collect, use or disclose personal data about an individual only if it has obtained the individual's consent to such collection, use or disclosure, unless the collection, use or disclosure is —\n(a) pursuant to the common law rights or duties of the organisation; or\n(b) permitted under the provisions of any written law.\n\n#### 6. Purpose limitation\n\nAn organisation shall not collect, use or disclose personal data about an individual for any purpose unless such collection, use or disclosure is with the individual's consent and is for a purpose within the scope of the purpose or purposes for which the consent was given.\n\n#### 7. Notification of purpose\n\nAn organisation shall inform an individual of the purposes for which personal data about the individual is collected, used or disclosed by the organisation before or at the time of, or as soon as practicable after, the data is collected, used or disclosed."
+    },
+    {
+      "id": "DOC-20260129-007",
+      "title": "Cybersecurity Law of the People's Republic of China - Official Text",
+      "type": "regulation",
+      "category": "Import/Export Control",
+      "jurisdiction": "China",
+      "author": "Standing Committee of National People's Congress",
+      "version": "Official",
+      "status": "active",
+      "lastModified": "2017-06-01",
+      "reviewDate": "2022-06-01",
+      "description": "Official text of China's Cybersecurity Law",
+      "relatedRegulations": [
+        "Cybersecurity Law of China",
+        "Data Security Law of China"
+      ],
+      "tags": [
+        "Cybersecurity",
+        "China Law",
+        "Data Localization",
+        "CNI"
+      ],
+      "content": "# Cybersecurity Law of the People's Republic of China\n\n## Passed by the Standing Committee of the National People's Congress on November 7, 2016\n\n### Chapter I - General Provisions\n\n#### Article 1\n\nThis Law is enacted to ensure cybersecurity, safeguard cyberspace sovereignty and national security, social and public interests, and protect the legitimate rights and interests of citizens, legal persons and other organizations in accordance with the law, and to promote the healthy development of informatization in the economy and society.\n\n#### Article 2\n\nThis Law applies to the construction, operation, maintenance and use of networks within the territory of the People's Republic of China, as well as the supervision and administration of cybersecurity.\n\n#### Article 3\n\nThe State adheres to giving equal emphasis to cybersecurity and the development of informatization, following the principles of promoting development through security and guaranteeing security through development, and advancing the construction of network infrastructure and interconnection, encouraging innovation and application of network technology, supporting the cultivation of cybersecurity talents, establishing and improving the cybersecurity protection system, and enhancing the ability of cybersecurity protection.\n\n### Chapter II - Network Security Support and Promotion\n\n#### Article 4\n\nThe State formulates and continuously improves the cybersecurity strategy, clarifies the basic requirements and main objectives for ensuring the security of critical information infrastructure, and proposes policies, tasks and measures for key areas.\n\n#### Article 5\n\nThe State takes measures to monitor, defend against, and deal with cyber security risks and threats originating from within or outside the territory of the People's Republic of China, protecting critical information infrastructure from attacks, intrusions, interference and destruction, and punishing cyber-related criminal activities in accordance with the law.\n\n### Chapter III - Network Operation Security\n\n#### Article 21\n\nThe State implements a cyber security level protection system. Network operators shall fulfill the following security protection obligations in accordance with the requirements of the cyber security level protection system:\n\n(1) Develop internal security management systems and operating procedures, designate a cyber security officer, and implement cyber security protection responsibilities;\n\n(2) Take technical measures to guard against computer viruses and network attacks, intrusions and other acts that endanger cyber security;\n\n(3) Take monitoring and recording measures for network operation status and cyber security incidents, and retain relevant network logs for no less than six months;\n\n(4) Take data classification, backup of important data and encryption measures;\n\n(5) Other obligations prescribed by laws and administrative regulations.\n\n#### Article 31\n\nThe State establishes a system for protecting critical information infrastructure. For public communications and information services, energy, transportation, water conservancy, finance, public services, e-government and other important industries and fields, if a network attack, intrusion or destruction of the network may seriously endanger national security, national economy and people's livelihood, and public interests, they shall be given priority protection on the basis of the network security level protection system.\n\n### Chapter IV - Network Information Security\n\n#### Article 41\n\nNetwork operators collecting and using personal information shall follow the principles of legality, legitimacy, and necessity, publicly announce collection and use rules, clearly indicate the purpose, method and scope of collecting and using information, and obtain the consent of the person whose information is being collected.\n\n#### Article 42\n\nNetwork operators shall not disclose, tamper with, or destroy personal information collected; without the consent of the person whose information was collected, personal information shall not be provided to others. However, this does not apply if the data has been processed in such a way that it cannot identify a specific individual and cannot be restored.\n\n#### Article 43\n\nIndividuals have the right to request that network operators delete their personal information if the operator violates laws, regulations, or agreements between the parties in collecting or using their personal information, or if the individual withdraws their consent.\n\n### Chapter V - Monitoring, Warning and Emergency Response\n\n#### Article 51\n\nThe national cyberspace administration department shall coordinate with relevant departments to strengthen the collection, analysis and notification of cyber security information, and release cyber security monitoring and warning information uniformly according to regulations."
+    },
+    {
+      "id": "DOC-20260129-008",
+      "title": "ASEAN Framework Agreement on Services - Chapter on Financial Services",
+      "type": "agreement",
+      "category": "Import/Export Control",
+      "jurisdiction": "Southeast Asia",
+      "author": "ASEAN",
+      "version": "Revised",
+      "status": "active",
+      "lastModified": "2020-01-01",
+      "reviewDate": "2025-01-01",
+      "description": "Chapter on financial services under ASEAN Framework Agreement",
+      "relatedRegulations": [
+        "AFAS",
+        "GATS"
+      ],
+      "tags": [
+        "ASEAN",
+        "Trade Agreement",
+        "Financial Services",
+        "Regional Integration"
+      ],
+      "content": "# ASEAN Framework Agreement on Services - Chapter on Financial Services\n\n## AFAS - Financial Services Chapter\n\n### Article 1 - Definitions\n\nFor the purposes of this Chapter:\n\n'Financial service' means any service of a financial nature offered by a financial service supplier of a Member State. This includes:\n\n(a) All insurance and insurance-related services including:\n(i) Life and non-life insurance;\n(ii) Reinsurance and retrocession;\n(iii) Insurance intermediation such as brokerage and agency;\n(iv) Services auxiliary to insurance such as consultancy, actuarial, risk assessment, and claim settlement;\n\n(b) All banking and other financial services (excluding insurance) including:\n(i) Acceptance of deposits and other repayable funds from the public;\n(ii) Lending of all types including consumer credit, mortgage credit, factoring and financing of commercial transactions;\n(iii) Financial leasing;\n(iv) Payment and money transmission services;\n(v) Guarantees and commitments;\n(vi) Trading for own account or for accounts of customers in money market instruments, foreign exchange, derivative products, exchange and interest rate instruments, transferable securities, and commodities;\n(vii) Participation in securities issues and provision of investment services;\n(viii) Money management;\n(ix) Financial advice;\n(x) Custodial and related services;\n(xi) Settlement and clearing services for financial assets;\n(xii) Providing references and credit reporting;\n(xiii) Sale of payment instruments such as credit cards and traveler's cheques;\n\n'Financial service supplier' means any natural or legal person of a Member State that supplies or seeks to supply a financial service.\n\n'Member State' means Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Malaysia, Myanmar, Philippines, Singapore, Thailand, and Vietnam.\n\n### Article 2 - Scope of Application\n\nThis Chapter applies to measures by Member States affecting the supply of financial services by financial service suppliers of another Member State.\n\nThis Chapter does not apply to:\n\n(a) Services supplied in the exercise of governmental authority;\n(b) Financial services provided by central banks or monetary authorities;\n(c) Government procurement of financial services.\n\n### Article 3 - Market Access\n\nEach Member State shall permit financial service suppliers of any other Member State to establish commercial presence in its territory under the terms and conditions set forth in its Schedule.\n\nMarket access shall be granted without limitation as to the total value of transactions, the number of operations, or the total quantity of output.\n\n### Article 4 - National Treatment\n\nEach Member State shall accord to financial service suppliers of any other Member State treatment no less favorable than that it accords to its own financial service suppliers.\n\n### Article 5 - Prudential Measures\n\nNothing in this Chapter shall be construed to prevent a Member State from maintaining or adopting prudential measures for the protection of investors, depositors, policyholders, or the financial system.\n\n### Article 6 - New Obligations\n\nMember States agree to progressively liberalize trade in financial services through successive rounds of negotiations and commitments."
+    },
+    {
+      "id": "DOC-20260129-009",
+      "title": "EU-US Privacy Shield Framework - Complete Text",
+      "type": "framework",
+      "category": "Data Security",
+      "jurisdiction": "Transnational",
+      "author": "European Commission and US Department of Commerce",
+      "version": "Historical",
+      "status": "invalidated",
+      "lastModified": "2016-07-12",
+      "reviewDate": "2020-07-16",
+      "description": "Complete text of EU-US Privacy Shield Framework (now invalidated)",
+      "relatedRegulations": [
+        "GDPR",
+        "US Privacy Act"
+      ],
+      "tags": [
+        "Privacy Shield",
+        "Data Transfer",
+        "EU-US Relations",
+        "GDPR"
+      ],
+      "content": "# EU-US Privacy Shield Framework\n\n## Joint Statement by the European Commission and the US Department of Commerce\n\n### Introduction\n\nOn 12 July 2016, the European Commission adopted an adequacy decision on the EU-US Privacy Shield, confirming that it provides adequate protection for personal data transferred from the EU to participating US companies. However, this framework was subsequently invalidated by the Court of Justice of the European Union in Case C-311/18 (Schrems II) on 16 July 2020.\n\n### Principles of the EU-US Privacy Shield\n\n#### Notice Principle\n\nA US organization participating in the Privacy Shield must inform individuals about the purposes for which their personal data is collected, used, shared, and retained. Organizations must also inform individuals about their right to access their personal data and about the independent recourse mechanism available to investigate complaints.\n\n#### Choice Principle\n\nA US organization participating in the Privacy Shield must provide individuals with the choice (opt-out) regarding:\n\n1. The use of their personal data for a purpose other than that for which it was collected or subsequently authorized;\n2. The sharing of their personal data with a third party;\n3. The transfer of their personal data to a third country agent.\n\n#### Accountability for Onward Transfer Principle\n\nA US organization participating in the Privacy Shield must contractually require its agents to provide at least the same level of privacy protection as required by the Privacy Shield Principles. The organization remains liable for any onward transfer of personal data to a third party that processes the data in a manner inconsistent with the Principles.\n\n#### Security Principle\n\nA US organization participating in the Privacy Shield must take reasonable and appropriate security measures to protect personal data from loss, misuse, and unauthorized access, disclosure, alteration, and destruction.\n\n#### Data Integrity and Purpose Limitation Principle\n\nA US organization participating in the Privacy Shield must limit personal data to what is relevant for the purposes of processing. The organization must take reasonable steps to ensure that personal data is reliable for its intended use, accurate, complete, and current.\n\n#### Access Principle\n\nA US organization participating in the Privacy Shield must provide individuals with access to their personal data upon request. An organization may limit or deny access where providing access would be impossible, would involve disproportionate expense, or would seriously compromise the privacy of others.\n\n#### Recourse, Enforcement, and Liability Principle\n\nA US organization participating in the Privacy Shield must provide readily available and affordable independent recourse mechanisms to investigate complaints. Organizations must also commit to cooperate with the panel established by the Department of Commerce and the Federal Trade Commission to resolve complaints.\n\n### Verification and Compliance\n\nOrganizations participating in the Privacy Shield were required to self-certify annually to the Department of Commerce that they comply with the Privacy Shield Principles. The Department of Commerce maintained a list of compliant organizations.\n\n### Limitations and Validity\n\nFollowing the Court of Justice of the European Union's judgment in Case C-311/18 (Schrems II), the EU-US Privacy Shield Framework is no longer considered a valid mechanism for transatlantic data transfers under GDPR."
+    },
+    {
+      "id": "DOC-20260129-010",
+      "title": "Model International Sales Contract - INCOTERMS 2020 Provisions",
       "type": "contract",
-      "size": "1.2 MB",
-      "lastModified": "2024-01-08",
+      "category": "Import/Export Control",
+      "jurisdiction": "International",
+      "author": "International Chamber of Commerce",
+      "version": "2020",
       "status": "active",
-      "category": "Contracts"
-    },
-    {
-      "id": "4",
-      "title": "AI System Implementation Guidelines",
-      "type": "guideline",
-      "size": "3.1 MB",
-      "lastModified": "2024-01-05",
-      "status": "draft",
-      "category": "AI Compliance"
-    },
-    {
-      "id": "5",
-      "title": "Cybersecurity Incident Response Plan",
-      "type": "policy",
-      "size": "4.8 MB",
-      "lastModified": "2023-12-20",
-      "status": "active",
-      "category": "Security"
+      "lastModified": "2020-01-01",
+      "reviewDate": "2025-01-01",
+      "description": "Model contract incorporating INCOTERMS 2020 provisions",
+      "relatedRegulations": [
+        "INCOTERMS 2020",
+        "UN Convention on Contracts for the International Sale of Goods"
+      ],
+      "tags": [
+        "INCOTERMS",
+        "International Trade",
+        "Contracts",
+        "Shipping Terms"
+      ],
+      "content": "# Model International Sales Contract - INCOTERMS 2020 Provisions\n\n## International Chamber of Commerce Model Contract\n\n### Article 1 - Application of INCOTERMS 2020\n\nThis contract incorporates the International Commercial Terms (INCOTERMS) 2020 published by the International Chamber of Commerce. The parties acknowledge that they have reviewed and understand the selected INCOTERMS rule and agree to be bound by its provisions.\n\n### Article 2 - Selected Trade Term\n\nThe parties have selected the following INCOTERMS 2020 rule for the transaction:\n\n**[Selected Term]** - [Complete Description]\n\n### Article 3 - Seller's Obligations\n\nDepending on the selected INCOTERMS rule, the seller shall be responsible for:\n\n1. **Delivery**: The seller delivers when the goods are placed at the disposal of the buyer at the agreed named place (for delivery terms) or when the goods are handed over to the first carrier (for carriage terms).\n\n2. **Export Clearance**: The seller must arrange and pay for export clearance, including customs formalities, export licenses, and other export requirements.\n\n3. **Transportation**: The seller must contract for and pay the costs of carriage necessary to bring the goods to the named destination (for carriage terms).\n\n4. **Insurance**: For CIF and CIP terms, the seller must obtain cargo insurance against the buyer's risk of loss of or damage to the goods during carriage.\n\n5. **Documentation**: The seller must provide the buyer with a commercial invoice and any other documentary evidence typically required to deliver the goods as agreed.\n\n### Article 4 - Buyer's Obligations\n\nDepending on the selected INCOTERMS rule, the buyer shall be responsible for:\n\n1. **Payment**: Payment of the price as agreed in the contract.\n\n2. **Arranging Transport**: For EXW, FCA, FAS, and FOB terms, the buyer arranges and pays for transport from the named place.\n\n3. **Import Clearance**: The buyer must arrange and pay for import clearance, including customs formalities, import licenses, and other import requirements.\n\n4. **Risk**: From the moment the goods are delivered according to the selected INCOTERMS rule, the buyer bears all risks of loss or damage to the goods.\n\n### Article 5 - INCOTERMS 2020 Rules Summary\n\n#### Rules for Any Mode of Transport:\n\n1. **EXW (Ex Works)**: The seller makes the goods available at their premises. The buyer bears all costs and risks involved in bringing the goods from the seller's premises to the final destination.\n\n2. **FCA (Free Carrier)**: The seller delivers the goods to the carrier nominated by the buyer at the named place.\n\n3. **CPT (Carriage Paid To)**: The seller pays for carriage to the named destination. Risk passes when goods are handed to the first carrier.\n\n4. **CIP (Carriage and Insurance Paid To)**: As CPT but with insurance provided by the seller.\n\n5. **DAP (Delivered At Place)**: The seller delivers when the goods are placed at the disposal of the buyer on the arriving means of transport ready for unloading at the named place.\n\n6. **DPU (Delivered at Place Unloaded)**: The seller delivers when the goods are unloaded from the arriving means of transport and placed at the disposal of the buyer at the named place.\n\n7. **DDP (Delivered Duty Paid)**: The seller bears all costs and risks involved in bringing the goods to the named destination and clearing them for import.\n\n#### Rules for Sea and Inland Waterway Transport:\n\n1. **FAS (Free Alongside Ship)**: The seller delivers when goods are placed alongside the vessel at the named port of shipment.\n\n2. **FOB (Free on Board)**: The seller delivers when the goods pass the ship's rail at the named port of shipment.\n\n3. **CFR (Cost and Freight)**: The seller pays for carriage to the named port of destination. Risk passes when goods pass the ship's rail.\n\n4. **CIF (Cost, Insurance and Freight)**: As CFR but with insurance provided by the seller.\n\n### Article 6 - Dispute Resolution\n\nAny disputes arising from this contract shall be resolved in accordance with the rules of the International Chamber of Commerce Arbitration."
     }
   ]
 }

@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "crawl-data": "node scripts/crawl-and-process.js",
+    "crawl-data-openrouter": "USE_OPENROUTER=true node scripts/crawl-and-process.js",
+    "crawl-data-huggingface": "USE_HUGGINGFACE=true node scripts/crawl-and-process.js",
+    "crawl-data-together": "USE_TOGETHER=true node scripts/crawl-and-process.js",
+    "test-dashboard-api": "node -e \"require('http').get({hostname:'localhost',port:3000,path:'/api/dashboard',method:'GET'},res=>{let data='';res.on('data',chunk=>data+=chunk);res.on('end',()=>console.log('API Response:',JSON.parse(data)))}).on('error',e=>console.error('Error:',e));\""
   },
   "dependencies": {
     "clsx": "^2.1.1",

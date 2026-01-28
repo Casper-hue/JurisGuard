@@ -1,6 +1,7 @@
-import MainLayout from '@/components/MainLayout';
+// app/admin/layout.tsx
+import { MainLayout } from '@/components/MainLayout';
 
-export default function DashboardLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;

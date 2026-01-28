@@ -1,170 +1,204 @@
 {
   "alerts": [
     {
-      "id": "alert-001",
+      "id": "REG-20260129-001",
+      "region": "USA",
+      "severity": "critical",
+      "title": "California Consumer Privacy Act (CCPA) Amendment - Enhanced Data Security Requirements",
+      "summary": "Updated CCPA provisions requiring stronger data security measures for businesses handling California residents' personal information",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://oag.ca.gov/privacy/ccpa",
+      "category": "Data Security",
+      "jurisdiction": "California, USA",
+      "publishDate": "2026-02-01",
+      "regulationType": "Consumer Privacy Amendment",
+      "importanceLevel": "critical"
+    },
+    {
+      "id": "REG-20260129-002",
       "region": "EU",
       "severity": "critical",
-      "title": "测试3",
-      "summary": "European Parliament approves final draft of AI regulation with enhanced compliance requirements for high-risk systems.",
-      "timestamp": "2024-01-15T10:30:00Z",
-      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"
+      "title": "General Data Protection Regulation (GDPR) Update - Cross-Border Data Transfer Guidelines",
+      "summary": "New guidelines for international data transfers under GDPR with stricter compliance requirements",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://edpb.europa.eu/our-work-tools/public-consultations-art-704/2021/guidelines-052021-restrictions-under-article-46_en",
+      "category": "Data Security",
+      "jurisdiction": "European Union",
+      "publishDate": "2026-02-15",
+      "regulationType": "International Transfer Guidelines",
+      "importanceLevel": "critical"
     },
     {
-      "id": "alert-002",
+      "id": "REG-20260129-003",
+      "region": "Singapore",
+      "severity": "high",
+      "title": "Personal Data Protection Act (PDPA) Amendment - Mandatory Breach Reporting",
+      "summary": "Enhanced breach notification requirements under Singapore's PDPA effective January 2026",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Other-Guides/Advisory-Guide-on-Breach-Notification.pdf",
+      "category": "Data Security",
+      "jurisdiction": "Singapore",
+      "publishDate": "2026-01-01",
+      "regulationType": "Breach Notification Amendment",
+      "importanceLevel": "high"
+    },
+    {
+      "id": "REG-20260129-004",
+      "region": "USA",
+      "severity": "medium",
+      "title": "Patent Trial and Appeal Board (PTAB) Revised Procedures for Inter Partes Review",
+      "summary": "Updated procedures for challenging patent validity through inter partes review proceedings",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://www.uspto.gov/patents/law/rules/uspto-changes-and-improvements-to-inter-partes-review-and-post-grant-review",
+      "category": "Intellectual Property",
+      "jurisdiction": "Federal, USA",
+      "publishDate": "2026-02-01",
+      "regulationType": "Patent Procedure Amendment",
+      "importanceLevel": "medium"
+    },
+    {
+      "id": "REG-20260129-005",
+      "region": "EU",
+      "severity": "high",
+      "title": "Unitary Patent and Unified Patent Court Agreement Implementation",
+      "summary": "Regulation establishing the Unitary Patent and Unified Patent Court system across participating EU member states",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0793",
+      "category": "Intellectual Property",
+      "jurisdiction": "European Union",
+      "publishDate": "2023-06-01",
+      "regulationType": "Patent System Regulation",
+      "importanceLevel": "high"
+    },
+    {
+      "id": "REG-20260129-006",
+      "region": "China",
+      "severity": "high",
+      "title": "Measures for Security Review of Network Products and Services - Intellectual Property Provisions",
+      "summary": "Regulations requiring security review of network products with implications for intellectual property rights",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "http://www.cac.gov.cn/2021-12/28/c_1643136087029127.htm",
+      "category": "Intellectual Property",
+      "jurisdiction": "China",
+      "publishDate": "2022-01-01",
+      "regulationType": "Technology Security Regulation",
+      "importanceLevel": "high"
+    },
+    {
+      "id": "REG-20260129-007",
       "region": "USA",
       "severity": "high",
-      "title": "SEC Cybersecurity Disclosure Rules",
-      "summary": "New requirements for public companies to disclose material cybersecurity incidents within 4 business days.",
-      "timestamp": "2024-01-14T14:20:00Z",
-      "source_url": "https://www.sec.gov/news/press-release/2023-139"
+      "title": "Fair Labor Standards Act (FLSA) Update - Gig Economy Worker Classifications",
+      "summary": "New guidance on employee versus independent contractor classification for gig economy workers",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://www.dol.gov/agencies/whd/flsa",
+      "category": "Labor Compliance",
+      "jurisdiction": "Federal, USA",
+      "publishDate": "2026-01-15",
+      "regulationType": "Worker Classification Guidance",
+      "importanceLevel": "high"
     },
     {
-      "id": "alert-003",
-      "region": "China",
+      "id": "REG-20260129-008",
+      "region": "Thailand",
       "severity": "medium",
-      "title": "Data Security Law Implementation Guidelines",
-      "summary": "Updated guidelines for cross-border data transfers and classification of important data.",
-      "timestamp": "2024-01-13T09:15:00Z",
-      "source_url": "https://www.cac.gov.cn/2024-01/12/c_1212345678.htm"
-    },
-    {
-      "id": "alert-004",
-      "region": "UK",
-      "severity": "high",
-      "title": "Digital Markets Act Compliance Requirements",
-      "summary": "New obligations for gatekeeper platforms under UK's digital competition framework.",
-      "timestamp": "2024-01-12T16:45:00Z",
-      "source_url": "https://www.gov.uk/government/publications/digital-markets-act"
-    },
-    {
-      "id": "alert-005",
-      "region": "Japan",
-      "severity": "medium",
-      "title": "Personal Information Protection Act Amendments",
-      "summary": "Revised requirements for data breach notifications and cross-border data transfers.",
-      "timestamp": "2024-01-11T11:30:00Z",
-      "source_url": "https://www.ppc.go.jp/en/legal/"
-    },
-    {
-      "id": "REG-20250317-001",
-      "region": "China",
-      "severity": "critical",
-      "title": "测试5",
-      "summary": "该法于2017年6月1日起施行，是中国网络安全领域的基础性法律。它规定了网络运营者的安全保护义务，要求其采取技术措施保障网络安全，防止数据泄露和网络攻击。该法适用于全国范围内的网络安全管理，确立了网络安全的基本制度框架。",
-      "timestamp": "2016-11-07T00:00:00Z",
-      "source_url": "https://www.npc.gov.cn/npc/c30834/201611/270b8e0c5c7c4a3db7ac4a7c3ae3c4f6.shtml",
-      "category": "Security",
-      "jurisdiction": "中国",
+      "title": "Labour Protection Act Amendment - Remote Work Provisions",
+      "summary": "Updated regulations for remote work arrangements including working hours, benefits, and safety requirements",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "source_url": "https://www.mol.go.th/",
+      "category": "Labor Compliance",
+      "jurisdiction": "Thailand",
       "publishDate": "2026-01-01",
-      "regulationType": "法律",
-      "importanceLevel": "critical",
-      "hasSource": true,
-      "createdAt": "2026-01-27T00:14:57.833Z",
-      "updatedAt": "2026-01-27T00:14:57.833Z"
-    },
-    {
-      "id": "REG-2023-11-06-001",
-      "region": "China",
-      "severity": "critical",
-      "title": "中华人民共和国民事诉讼法",
-      "summary": "中华人民共和国民事诉讼法是中国民事诉讼程序的基本法律，规定了法院审理民事案件的基本原则、管辖、审判组织、证据、审判程序、执行程序等核心制度。该法于1991年通过，历经五次修正，最新修正案于2023年9月1日通过，自2024年1月1日起施行。",
-      "timestamp": "2023-11-06T17:54:00Z",
-      "source_url": "https://www.jyg.gov.cn/fgj/ztzl/gzzd/art/2023/art_0298ac1ad4de4615ad7cba32e4eeb598.html",
-      "category": "Data Compliance",
-      "jurisdiction": "中国",
-      "publishDate": "2023-09-01",
-      "regulationType": "法律",
-      "importanceLevel": "critical",
-      "hasSource": true,
-      "createdAt": "2026-01-27T01:06:52.190Z",
-      "updatedAt": "2026-01-27T01:06:52.190Z"
+      "regulationType": "Remote Work Amendment",
+      "importanceLevel": "medium"
     }
-    
   ],
   "radarStats": [
     {
-      "id": "radar-001",
-      "region": "EU",
-      "riskLevel": 85,
-      "category": "Data Privacy",
-      "trend": "up",
-      "lastUpdated": "2024-01-15T10:00:00Z"
+      "id": "global-1",
+      "region": "Global",
+      "riskLevel": 76,
+      "category": "Data Protection",
+      "trend": "increasing",
+      "lastUpdated": "2026-01-29T10:00:00.000Z",
+      "value": 89,
+      "level": "high"
     },
     {
-      "id": "radar-002",
+      "id": "us-1",
       "region": "USA",
-      "riskLevel": 72,
-      "category": "Cybersecurity",
-      "trend": "up",
-      "lastUpdated": "2024-01-15T09:30:00Z"
+      "riskLevel": 82,
+      "category": "Data Security",
+      "trend": "increasing",
+      "lastUpdated": "2026-01-29T10:00:00.000Z",
+      "value": 92,
+      "level": "high"
     },
     {
-      "id": "radar-003",
-      "region": "China",
-      "riskLevel": 65,
-      "category": "Data Localization",
+      "id": "eu-1",
+      "region": "EU",
+      "riskLevel": 78,
+      "category": "Intellectual Property",
       "trend": "stable",
-      "lastUpdated": "2024-01-15T09:00:00Z"
+      "lastUpdated": "2026-01-29T10:00:00.000Z",
+      "value": 75,
+      "level": "medium"
     },
     {
-      "id": "radar-004",
-      "region": "UK",
-      "riskLevel": 58,
-      "category": "Competition Law",
-      "trend": "down",
-      "lastUpdated": "2024-01-15T08:30:00Z"
+      "id": "apac-1",
+      "region": "APAC",
+      "riskLevel": 70,
+      "category": "Labor Compliance",
+      "trend": "increasing",
+      "lastUpdated": "2026-01-29T10:00:00.000Z",
+      "value": 80,
+      "level": "medium"
     }
   ],
   "stats": [
     {
-      "label": "Total Risks",
-      "value": "247",
-      "change": "+12%",
-      "icon": "AlertTriangle"
+      "label": "Regulations Updated",
+      "value": "8",
+      "change": "+300%",
+      "icon": "Scale"
     },
     {
-      "label": "Monitored Jurisdictions",
-      "value": "58",
-      "change": "+3",
+      "label": "High-Risk Regions",
+      "value": "3",
+      "change": "+150%",
       "icon": "Globe"
     },
     {
-      "label": "Compliant Assets",
-      "value": "89%",
-      "change": "+2%",
-      "icon": "CheckCircle"
-    },
-    {
-      "label": "Response Time",
-      "value": "2.4h",
-      "change": "-0.3h",
-      "icon": "Clock"
+      "label": "Data Security Laws",
+      "value": "3",
+      "change": "+200%",
+      "icon": "Shield"
     }
   ],
   "activities": [
     {
-      "id": 1,
-      "action": "Risk assessment completed for EU AI Act",
-      "time": "2 min ago",
-      "user": "System"
+      "id": 20260129001,
+      "action": "Added California Consumer Privacy Act Amendment",
+      "time": "10:00",
+      "user": "Crawler System"
     },
     {
-      "id": 2,
-      "action": "New regulation detected in USA jurisdiction",
-      "time": "15 min ago",
-      "user": "AI Monitor"
+      "id": 20260129002,
+      "action": "Added GDPR Cross-Border Transfer Guidelines",
+      "time": "10:05",
+      "user": "Crawler System"
     },
     {
-      "id": 3,
-      "action": "Compliance report generated for Q4 2023",
-      "time": "1 hour ago",
-      "user": "Jane Doe"
+      "id": 20260129003,
+      "action": "Added Singapore PDPA Amendment",
+      "time": "10:10",
+      "user": "Crawler System"
     },
     {
-      "id": 4,
-      "action": "Alert threshold updated for critical risks",
-      "time": "2 hours ago",
-      "user": "John Smith"
+      "id": 20260129004,
+      "action": "Added Patent Review Procedure Updates",
+      "time": "10:15",
+      "user": "Crawler System"
     }
   ]
 }

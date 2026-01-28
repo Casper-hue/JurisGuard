@@ -257,11 +257,21 @@ export class StrictSaveManager {
   }
 
   private generateCaseId(): string {
-    return `case_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    const year = new Date().getFullYear();
+    const randomNum = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+    return `CAS-${year}-${randomNum}`;
   }
 
   private generateAlertId(): string {
-    return `alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    const year = new Date().getFullYear();
+    const randomNum = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+    return `REG-${year}-${randomNum}`;
+  }
+  
+  private generateDocumentId(): string {
+    const year = new Date().getFullYear();
+    const randomNum = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+    return `DOC-${year}-${randomNum}`;
   }
 
   // 使用API路由保存数据的方法

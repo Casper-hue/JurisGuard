@@ -1,0 +1,48 @@
+name: Crawl and Process Legal Data
+
+on:
+  schedule:
+    # 每天凌晨2点运行
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  crawl-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run crawler script
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          NEXT_PUBLIC_AI_API_KEY: ${{ secrets.NEXT_PUBLIC_AI_API_KEY }}
+          NEXT_PUBLIC_AI_BASE_URL: ${{ secrets.NEXT_PUBLIC_AI_BASE_URL }}
+          NEXT_PUBLIC_AI_MODEL: ${{ secrets.NEXT_PUBLIC_AI_MODEL }}
+        run: |
+          # 运行数据爬取和处理脚本
+          node scripts/crawl-and-process.js
+          
+      - name: Commit and push if changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update legal data [Automated]"
+            git push
+            echo "Changes committed and pushed"
+          fi
+        continue-on-error: true

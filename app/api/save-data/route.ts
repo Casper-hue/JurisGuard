@@ -23,6 +23,9 @@ export async function POST(request: NextRequest) {
     } else if (dataType === 'regulation') {
       filePath = path.join(process.cwd(), 'data', 'compliance-data.json')
       dataKey = 'alerts'
+    } else if (dataType === 'document') {
+      filePath = path.join(process.cwd(), 'data', 'documents-data.json')
+      dataKey = 'documents'
     } else {
       return NextResponse.json(
         { success: false, error: '不支持的数据类型' },
@@ -53,6 +56,8 @@ export async function POST(request: NextRequest) {
     let publicFilePath: string
     if (dataType === 'case') {
       publicFilePath = path.join(process.cwd(), 'public', 'data', 'cases-data.json')
+    } else if (dataType === 'document') {
+      publicFilePath = path.join(process.cwd(), 'public', 'data', 'documents-data.json')
     } else {
       publicFilePath = path.join(process.cwd(), 'public', 'data', 'compliance-data.json')
     }

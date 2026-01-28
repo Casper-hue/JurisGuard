@@ -31,6 +31,9 @@ export default function AIAssistantPage() {
     temperature: 0.7,
     maxTokens: 2000
   })
+  
+  // 免费API配置状态
+  const [useFreeAPI, setUseFreeAPI] = useState<'none' | 'openrouter' | 'huggingface' | 'together'>('none')
 
   // Risk Analysis Tool状态 - 使用新的AI系统
   const [inputText, setInputText] = useState('')
@@ -42,18 +45,68 @@ export default function AIAssistantPage() {
   useEffect(() => {
     const loadConfigFromStorage = () => {
       if (typeof window !== 'undefined') {
-        setApiConfig({
-          apiKey: localStorage.getItem('ai_api_key') || '',
-          baseURL: localStorage.getItem('ai_base_url') || 'https://api.deepseek.com/v1',
-          model: localStorage.getItem('ai_model') || 'deepseek-chat',
-          temperature: parseFloat(localStorage.getItem('ai_temperature') || '0.7'),
-          maxTokens: parseInt(localStorage.getItem('ai_max_tokens') || '2000')
-        })
+        // 加载API配置
+        const storedApiKey = localStorage.getItem('ai_api_key') || ''
+        const storedBaseURL = localStorage.getItem('ai_base_url') || 'https://api.deepseek.com/v1'
+        const storedModel = localStorage.getItem('ai_model') || 'deepseek-chat'
+        
+        // 检查是否使用免费API
+        const storedUseFreeAPI = localStorage.getItem('use_free_api') as 'none' | 'openrouter' | 'huggingface' | 'together' || 'none'
+        
+        setUseFreeAPI(storedUseFreeAPI)
+        
+        // 如果使用免费API，则使用预设配置
+        if (storedUseFreeAPI !== 'none') {
+          setApiConfig({
+            apiKey: storedApiKey,
+            baseURL: getFreeAPIBaseURL(storedUseFreeAPI),
+            model: getFreeAPIModel(storedUseFreeAPI),
+            temperature: parseFloat(localStorage.getItem('ai_temperature') || '0.7'),
+            maxTokens: parseInt(localStorage.getItem('ai_max_tokens') || '2000')
+          })
+        } else {
+          // 使用传统配置
+          setApiConfig({
+            apiKey: storedApiKey,
+            baseURL: storedBaseURL,
+            model: storedModel,
+            temperature: parseFloat(localStorage.getItem('ai_temperature') || '0.7'),
+            maxTokens: parseInt(localStorage.getItem('ai_max_tokens') || '2000')
+          })
+        }
       }
     }
 
     loadConfigFromStorage()
   }, [])
+  
+  // 获取免费API的基础URL
+  const getFreeAPIBaseURL = (service: 'openrouter' | 'huggingface' | 'together'): string => {
+    switch(service) {
+      case 'openrouter':
+        return 'https://openrouter.ai/api/v1'
+      case 'huggingface':
+        return 'https://api-inference.huggingface.co/v1'
+      case 'together':
+        return 'https://api.together.xyz/v1'
+      default:
+        return 'https://api.deepseek.com/v1'
+    }
+  }
+  
+  // 获取免费API的模型
+  const getFreeAPIModel = (service: 'openrouter' | 'huggingface' | 'together'): string => {
+    switch(service) {
+      case 'openrouter':
+        return 'mistralai/mistral-7b-instruct:free'
+      case 'huggingface':
+        return 'microsoft/DialoGPT-medium'
+      case 'together':
+        return 'togethercomputer/StripedHyena-Nous-7B'
+      default:
+        return 'deepseek-chat'
+    }
+  }
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return
@@ -71,14 +124,24 @@ export default function AIAssistantPage() {
     setError(null)
 
     try {
-      // 使用AI服务发送消息
-      const aiService = getAIService({
-        apiKey: apiConfig.apiKey,
-        baseURL: apiConfig.baseURL,
-        model: apiConfig.model,
-        temperature: apiConfig.temperature,
-        max_tokens: apiConfig.maxTokens
-      })
+      let aiService;
+      
+      // 根据配置决定使用哪种AI服务
+      if (useFreeAPI !== 'none' && apiConfig.apiKey) {
+        // 使用免费API服务
+        const { getFreeAIService } = await import('@/lib/ai-service');
+        aiService = getFreeAIService(useFreeAPI, apiConfig.apiKey);
+      } else {
+        // 使用传统AI服务
+        aiService = getAIService({
+          apiKey: apiConfig.apiKey,
+          baseURL: apiConfig.baseURL,
+          model: apiConfig.model,
+          temperature: apiConfig.temperature,
+          max_tokens: apiConfig.maxTokens
+        });
+      }
+      
       const assistantMessage = await aiService.sendMessage([...messages, userMessage])
       
       setMessages(prev => [...prev, assistantMessage])
@@ -155,20 +218,35 @@ export default function AIAssistantPage() {
     
     try {
       // 检查API配置
-      if (!apiConfig.apiKey || !apiConfig.baseURL) {
-        throw new Error('Please configure AI API key and base URL first')
+      if (!apiConfig.apiKey) {
+        throw new Error('Please configure AI API key first')
+      }
+      
+      let aiConfigObj: AIConfig;
+      
+      // 根据配置决定使用哪种AI服务
+      if (useFreeAPI !== 'none') {
+        // 使用免费API配置
+        aiConfigObj = {
+          apiKey: apiConfig.apiKey,
+          baseURL: getFreeAPIBaseURL(useFreeAPI),
+          model: getFreeAPIModel(useFreeAPI),
+          temperature: apiConfig.temperature,
+          max_tokens: apiConfig.maxTokens
+        };
+      } else {
+        // 使用传统配置
+        aiConfigObj = {
+          apiKey: apiConfig.apiKey,
+          baseURL: apiConfig.baseURL,
+          model: apiConfig.model,
+          temperature: apiConfig.temperature,
+          max_tokens: apiConfig.maxTokens
+        };
       }
       
       // Use new AI smart service
-      const aiConfig: AIConfig = {
-        apiKey: apiConfig.apiKey,
-        baseURL: apiConfig.baseURL,
-        model: apiConfig.model,
-        temperature: apiConfig.temperature,
-        max_tokens: apiConfig.maxTokens
-      }
-      
-      const riskAnalyzer = getSmartAIService(aiConfig, 'risk-analyzer')
+      const riskAnalyzer = getSmartAIService(aiConfigObj, 'risk-analyzer')
       const result = await riskAnalyzer.processInput(inputText)
       
       if (result.role === 'risk-analyzer') {
@@ -456,16 +534,76 @@ export default function AIAssistantPage() {
           <div className="absolute top-32 right-4 z-50 bg-card/95 border border-border rounded-lg p-4 max-w-md shadow-lg backdrop-blur-sm">
             <h2 className="text-lg font-semibold text-foreground mb-3">API Configuration</h2>
             <div className="space-y-3">
+              {/* 免费API选择 */}
+              <div>
+                <label className="text-sm text-muted-foreground mb-2 block">Use Free API</label>
+                <select
+                  value={useFreeAPI}
+                  onChange={(e) => {
+                    const value = e.target.value as 'none' | 'openrouter' | 'huggingface' | 'together';
+                    setUseFreeAPI(value);
+                    
+                    // 如果选择了免费API，则自动设置相应的配置
+                    if (value !== 'none') {
+                      setApiConfig(prev => ({
+                        ...prev,
+                        baseURL: getFreeAPIBaseURL(value),
+                        model: getFreeAPIModel(value)
+                      }));
+                    }
+                  }}
+                  className="w-full px-3 py-2 rounded-md border border-border bg-input text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring focus:border-transparent text-sm"
+                >
+                  <option value="none" className="text-muted-foreground">None (Custom)</option>
+                  <option value="openrouter" className="text-muted-foreground">OpenRouter (Free)</option>
+                  <option value="huggingface" className="text-muted-foreground">Hugging Face (Free)</option>
+                  <option value="together" className="text-muted-foreground">Together AI (Free)</option>
+                </select>
+              </div>
+              
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">API Key</label>
                 <input
                   type="password"
                   value={apiConfig.apiKey}
                   onChange={(e) => setApiConfig(prev => ({ ...prev, apiKey: e.target.value }))}
-                  placeholder="Enter your API key"
+                  placeholder={
+                    useFreeAPI === 'openrouter' ? "Enter OpenRouter API key" :
+                    useFreeAPI === 'huggingface' ? "Enter Hugging Face API key" :
+                    useFreeAPI === 'together' ? "Enter Together AI API key" :
+                    "Enter your API key"
+                  }
                   className="w-full px-3 py-2 rounded-md border border-border bg-input text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring focus:border-transparent text-sm"
                 />
               </div>
+              
+              {/* 显示当前选择的API信息 */}
+              {useFreeAPI !== 'none' && (
+                <div className="text-xs text-muted-foreground p-2 bg-muted rounded-md">
+                  {useFreeAPI === 'openrouter' && (
+                    <div>
+                      <strong>OpenRouter Free:</strong> 200 requests/day, 20 requests/min<br/>
+                      Model: mistralai/mistral-7b-instruct:free<br/>
+                      Register at: https://openrouter.ai/
+                    </div>
+                  )}
+                  {useFreeAPI === 'huggingface' && (
+                    <div>
+                      <strong>Hugging Face Free:</strong> Limited by model<br/>
+                      Model: microsoft/DialoGPT-medium<br/>
+                      Register at: https://huggingface.co/inference-api
+                    </div>
+                  )}
+                  {useFreeAPI === 'together' && (
+                    <div>
+                      <strong>Together AI Free:</strong> Trial credits<br/>
+                      Model: togethercomputer/StripedHyena-Nous-7B<br/>
+                      Register at: https://www.together.ai/
+                    </div>
+                  )}
+                </div>
+              )}
+              
               <div>
                 <label className="text-sm text-muted-foreground mb-2 block">API Base URL</label>
                 <input
@@ -491,6 +629,15 @@ export default function AIAssistantPage() {
                     <option value="gpt-4-turbo" className="text-muted-foreground">GPT-4 Turbo</option>
                     <option value="claude-3-sonnet" className="text-muted-foreground">Claude 3 Sonnet</option>
                     <option value="claude-3-opus" className="text-muted-foreground">Claude 3 Opus</option>
+                    {useFreeAPI === 'openrouter' && (
+                      <option value="mistralai/mistral-7b-instruct:free" className="text-muted-foreground">Mistral 7B Instruct (Free)</option>
+                    )}
+                    {useFreeAPI === 'huggingface' && (
+                      <option value="microsoft/DialoGPT-medium" className="text-muted-foreground">DialoGPT Medium (Free)</option>
+                    )}
+                    {useFreeAPI === 'together' && (
+                      <option value="togethercomputer/StripedHyena-Nous-7B" className="text-muted-foreground">StripedHyena-Nous-7B (Free)</option>
+                    )}
                   </select>
                 </div>
                 <div>
@@ -533,6 +680,7 @@ export default function AIAssistantPage() {
                   localStorage.setItem('ai_model', apiConfig.model)
                   localStorage.setItem('ai_temperature', apiConfig.temperature.toString())
                   localStorage.setItem('ai_max_tokens', apiConfig.maxTokens.toString())
+                  localStorage.setItem('use_free_api', useFreeAPI) // 保存免费API选择
                   setShowSettings(false)
                   
                   // 显示保存成功提示

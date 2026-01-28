@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
 export default function SettingsPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center bg-background">
@@ -17,19 +20,27 @@ export default function SettingsPage() {
         
         <div className="space-y-4 mb-6">
           <p className="text-muted-foreground">
-            This feature is currently under development.
+            Manage your JurisGuard settings and data.
           </p>
+        </div>
+        
+        <div className="space-y-4 mb-6">
+          <Link href="/admin/data-management" className="block">
+            <Button variant="default" className="w-full">
+              Data Management
+            </Button>
+          </Link>
           <p className="text-sm text-muted-foreground">
-            Settings management functionality will be available in a future update.
+            Manually update legal regulations and cases data
           </p>
         </div>
         
         <div className="bg-secondary/50 border border-border rounded-lg p-4 mb-6">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-sm font-medium text-yellow-600">Coming Soon</span>
+            <span className="text-sm font-medium text-yellow-600">More Features</span>
           </div>
           <p className="text-xs text-muted-foreground">
-            Expected release: Q2 2024
+            Additional settings coming in future updates
           </p>
         </div>
       </div>

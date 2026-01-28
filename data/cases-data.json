@@ -1,205 +1,416 @@
 {
+  "lastUpdated": "2026-01-29T10:00:00.000Z",
+  "totalCases": 10,
   "cases": [
     {
-      "id": "SC-2023-001",
-      "title": "测试4",
-      "court": "Supreme Court",
-      "jurisdiction": "United States",
-      "caseType": "Copyright",
-      "filingDate": "2023-01-15",
-      "status": "settled",
-      "parties": [
-        "Google LLC",
-        "Oracle America, Inc."
+      "id": "CASE-20260129-001",
+      "title": "Apple Inc. v. Epic Games, Inc., 141 S. Ct. 2332 (2021)",
+      "summary": "Antitrust case involving Apple's App Store distribution practices and developer commission fees.",
+      "fullText": "In Apple Inc. v. Epic Games, Inc., the Supreme Court addressed antitrust claims challenging Apple's App Store distribution practices. Epic Games alleged that Apple violated federal antitrust laws by maintaining a monopoly on iOS app distribution and charging developers a 30% commission fee. The Court ruled that Apple must allow developers to link to payment methods outside of the company's in-app purchase system, though it rejected Epic's claim that Apple was a monopolist under antitrust law. The decision has significant implications for digital marketplaces and platform governance.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2020-08-13",
+      "dateResolved": "2021-09-10",
+      "status": "Resolved",
+      "category": "Antitrust",
+      "jurisdiction": "USA",
+      "region": "California",
+      "riskLevel": "high",
+      "plaintiff": "Epic Games, Inc.",
+      "defendant": "Apple Inc.",
+      "caseType": "Antitrust Violation",
+      "outcome": "Mixed decision favoring both parties",
+      "legalPrecedents": [
+        "Illinois Brick Co. v. Illinois, 431 U.S. 720",
+        "FTC v. Qualcomm Inc., 969 F.3d 974"
       ],
-      "description": "Landmark copyright case regarding software APIs",
-      "impactLevel": "high"
+      "impactAssessment": {
+        "industryImpact": "High",
+        "financialImpact": "$ billions in potential revenue changes",
+        "regulatoryImpact": "Changes to app store policies required"
+      },
+      "relatedRegulations": [
+        "Sherman Antitrust Act",
+        "Clayton Act"
+      ],
+      "tags": [
+        "Antitrust",
+        "App Store",
+        "Digital Markets",
+        "Platform Governance"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/20pdf/20-1087_8j5c.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "EC-2023-045",
-      "title": "European Commission v. Meta Platforms",
-      "court": "European Court of Justice",
+      "id": "CASE-20260129-002",
+      "title": "Schrems II - Data Protection Commissioner v. Facebook Ireland Limited, C-311/18",
+      "summary": "European Court of Justice ruling invalidating the EU-US Privacy Shield framework.",
+      "fullText": "In Case C-311/18, the European Court of Justice invalidated the EU-US Privacy Shield framework, which allowed US companies to transfer personal data from the EU. The court found that US surveillance laws did not provide adequate protection for EU citizens' data as required under GDPR. The ruling also placed restrictions on Standard Contractual Clauses (SCCs) for international data transfers. This decision fundamentally altered international data transfer mechanisms and forced companies to restructure their cross-border data flows.",
+      "court": "Court of Justice of the European Union",
+      "dateFiled": "2013-10-03",
+      "dateResolved": "2020-07-16",
+      "status": "Resolved",
+      "category": "Data Protection",
       "jurisdiction": "European Union",
-      "caseType": "Data Privacy",
-      "filingDate": "2023-03-20",
-      "status": "active",
-      "parties": [
-        "European Commission",
-        "Meta Platforms, Inc."
+      "region": "Europe",
+      "riskLevel": "critical",
+      "plaintiff": "Max Schrems",
+      "defendant": "Facebook Ireland Limited",
+      "caseType": "Data Protection",
+      "outcome": "EU-US Privacy Shield invalidated",
+      "legalPrecedents": [
+        "Case C-252/09, Google Spain SL v. Agencia Española de Protección de Datos",
+        "Digital Rights Ireland v. Minister for Communications, C-293/12"
       ],
-      "description": "Data transfer compliance under GDPR regulations",
-      "impactLevel": "high"
+      "impactAssessment": {
+        "industryImpact": "Critical",
+        "financialImpact": "$ billions in compliance costs",
+        "regulatoryImpact": "Major changes to international data transfer"
+      },
+      "relatedRegulations": [
+        "General Data Protection Regulation (GDPR)",
+        "Charter of Fundamental Rights of the European Union"
+      ],
+      "tags": [
+        "GDPR",
+        "International Data Transfer",
+        "Privacy Shield",
+        "Data Protection"
+      ],
+      "source": "Court of Justice of the European Union",
+      "url": "https://curia.europa.eu/juris/document/document.jsf?text=&docid=228677&doclang=EN",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
     },
     {
-      "id": "CA-2023-128",
-      "title": "California Privacy Protection Agency v. Amazon",
-      "court": "California Superior Court",
-      "jurisdiction": "California",
-      "caseType": "Consumer Privacy",
-      "filingDate": "2023-05-10",
-      "status": "active",
-      "parties": [
-        "CPPA",
-        "Amazon.com, Inc."
+      "id": "CASE-20260129-003",
+      "title": "Camreta v. Alford, 563 U.S. 692 (2011)",
+      "summary": "Supreme Court case on child privacy rights in school settings.",
+      "fullText": "In Camreta v. Alford, the Supreme Court addressed the question of whether child protective services workers violated a student's Fourth Amendment rights by interviewing her at school without parental consent or a warrant. The Court held that the child abuse investigation did not violate the Fourth Amendment, emphasizing the government's interest in protecting children. The decision clarified the boundaries between parental rights and state authority to protect children, particularly in school settings.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2009-10-15",
+      "dateResolved": "2011-03-30",
+      "status": "Resolved",
+      "category": "Privacy Rights",
+      "jurisdiction": "USA",
+      "region": "Oregon",
+      "riskLevel": "medium",
+      "plaintiff": "Douglas County School District",
+      "defendant": "Melvin Alford",
+      "caseType": "Fourth Amendment",
+      "outcome": "Decision favoring school district",
+      "legalPrecedents": [
+        "New Jersey v. T.L.O., 469 U.S. 325",
+        "Safford Unified School District v. Redding, 557 U.S. 364"
       ],
-      "description": "CCPA compliance enforcement action",
-      "impactLevel": "medium"
+      "impactAssessment": {
+        "industryImpact": "Moderate",
+        "financialImpact": "Limited financial impact",
+        "regulatoryImpact": "Guidance on school privacy practices"
+      },
+      "relatedRegulations": [
+        "Family Educational Rights and Privacy Act (FERPA)",
+        "Fourth Amendment to the US Constitution"
+      ],
+      "tags": [
+        "Privacy Rights",
+        "School Searches",
+        "Fourth Amendment",
+        "Child Protection"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/10pdf/09-152.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "medium"
     },
     {
-      "id": "UK-2023-067",
-      "title": "Information Commissioner's Office v. TikTok",
-      "court": "High Court of Justice",
-      "jurisdiction": "United Kingdom",
-      "caseType": "Children's Privacy",
-      "filingDate": "2023-02-28",
-      "status": "appealed",
-      "parties": [
-        "ICO",
-        "TikTok Ltd."
+      "id": "CASE-20260129-004",
+      "title": "FTC v. Phoebe Putney Health System, Inc., 568 U.S. 216 (2013)",
+      "summary": "Supreme Court case clarifying the 'state action' doctrine in antitrust law.",
+      "fullText": "In FTC v. Phoebe Putney Health System, Inc., the Supreme Court clarified the scope of the 'state action' doctrine, which can shield private parties from federal antitrust liability. The Court held that Georgia's grant of authority to hospital authorities did not clearly articulate a state policy to displace competition in the relevant market. This decision strengthened federal antitrust enforcement against allegedly anticompetitive conduct by private parties acting under state authority.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2012-03-26",
+      "dateResolved": "2013-01-14",
+      "status": "Resolved",
+      "category": "Antitrust",
+      "jurisdiction": "USA",
+      "region": "Georgia",
+      "riskLevel": "high",
+      "plaintiff": "Federal Trade Commission",
+      "defendant": "Phoebe Putney Health System, Inc.",
+      "caseType": "Antitrust Enforcement",
+      "outcome": "Decision favoring FTC",
+      "legalPrecedents": [
+        "California Retail Liquor Dealers Assn. v. Midcal Aluminum, Inc., 445 U.S. 97",
+        "Parker v. Brown, 317 U.S. 341"
       ],
-      "description": "Children's data protection compliance under UK GDPR",
-      "impactLevel": "medium"
+      "impactAssessment": {
+        "industryImpact": "High",
+        "financialImpact": "Billions in potential market effects",
+        "regulatoryImpact": "Strengthened FTC antitrust enforcement"
+      },
+      "relatedRegulations": [
+        "Sherman Act",
+        "Federal Trade Commission Act"
+      ],
+      "tags": [
+        "Antitrust",
+        "State Action Doctrine",
+        "Healthcare Mergers",
+        "FTC Enforcement"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/12pdf/11-1466_5im1.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "AU-2023-089",
-      "title": "Australian Competition and Consumer Commission v. Apple",
-      "court": "Federal Court of Australia",
-      "jurisdiction": "Australia",
-      "caseType": "Competition Law",
-      "filingDate": "2023-04-05",
-      "status": "closed",
-      "parties": [
-        "ACCC",
-        "Apple Inc."
+      "id": "CASE-20260129-005",
+      "title": "Burwell v. Hobby Lobby Stores, Inc., 573 U.S. 682 (2014)",
+      "summary": "Supreme Court case on religious liberty and healthcare mandates.",
+      "fullText": "In Burwell v. Hobby Lobby, the Supreme Court held that closely held corporations cannot be required to provide contraceptive coverage in their health insurance plans if it violates the owners' religious beliefs. The Court ruled 5-4 that the Religious Freedom Restoration Act (RFRA) applied to closely held corporations and that the mandate substantially burdened their religious exercise. The decision had significant implications for employment law and religious liberty in corporate contexts.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2013-06-17",
+      "dateResolved": "2014-06-30",
+      "status": "Resolved",
+      "category": "Religious Liberty",
+      "jurisdiction": "USA",
+      "region": "Oklahoma",
+      "riskLevel": "high",
+      "plaintiff": "Sebelius/Burwell (HHS Secretary)",
+      "defendant": "Hobby Lobby Stores, Inc.",
+      "caseType": "Religious Freedom",
+      "outcome": "Decision favoring Hobby Lobby",
+      "legalPrecedents": [
+        "Employment Division v. Smith, 494 U.S. 872",
+        "Church of Lukumi Babalu Aye v. City of Hialeah, 508 U.S. 520"
       ],
-      "description": "App Store competition and consumer protection case",
-      "impactLevel": "low"
+      "impactAssessment": {
+        "industryImpact": "High",
+        "financialImpact": "Billions in healthcare cost implications",
+        "regulatoryImpact": "Changes to ACA contraceptive mandate"
+      },
+      "relatedRegulations": [
+        "Patient Protection and Affordable Care Act",
+        "Religious Freedom Restoration Act"
+      ],
+      "tags": [
+        "Religious Liberty",
+        "Healthcare Mandates",
+        "Corporate Rights",
+        "ACA"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/13pdf/13-354_7l38.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "CASE_20240115_001",
-      "title": "张三诉李四合同纠纷案",
-      "court": "北京市第一中级人民法院",
-      "jurisdiction": "北京市",
-      "caseType": "民事",
-      "filingDate": "2024-01-15",
-      "status": "active",
-      "parties": [
-        "张三（原告）",
-        "李四（被告）"
+      "id": "CASE-20260129-006",
+      "title": "Riley v. California, 573 U.S. 373 (2014)",
+      "summary": "Supreme Court case establishing privacy protections for digital devices.",
+      "fullText": "In Riley v. California, the Supreme Court unanimously held that police generally need a warrant before searching digital information on cell phones seized from persons who have been arrested. The Court recognized that modern cell phones contain vast amounts of personal information and afford an increasingly integral and pervasive role in daily life. The decision established strong privacy protections for digital information and limited law enforcement's ability to search digital devices without judicial oversight.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2013-05-13",
+      "dateResolved": "2014-06-25",
+      "status": "Resolved",
+      "category": "Privacy Rights",
+      "jurisdiction": "USA",
+      "region": "California",
+      "riskLevel": "medium",
+      "plaintiff": "David Riley",
+      "defendant": "State of California",
+      "caseType": "Fourth Amendment",
+      "outcome": "Decision favoring Riley",
+      "legalPrecedents": [
+        "Chimel v. California, 395 U.S. 752",
+        "United States v. Robinson, 414 U.S. 218"
       ],
-      "description": "原告张三起诉被告李四，要求其支付合同项下货款人民币500万元及相应利息。案件核心争议为被告是否构成合同违约及是否应履行货款支付义务。",
-      "impactLevel": "medium",
-      "source_url": null,
-      "outcome": null,
-      "key_issues": [
-        "合同违约认定",
-        "货款支付义务"
+      "impactAssessment": {
+        "industryImpact": "Moderate",
+        "financialImpact": "Technology industry adaptation costs",
+        "regulatoryImpact": "Enhanced digital privacy protections"
+      },
+      "relatedRegulations": [
+        "Fourth Amendment to the US Constitution",
+        "Electronic Communications Privacy Act"
       ],
-      "createdAt": "2026-01-27T00:01:51.106Z",
-      "updatedAt": "2026-01-27T00:01:51.106Z"
+      "tags": [
+        "Digital Privacy",
+        "Fourth Amendment",
+        "Cell Phone Searches",
+        "Warrant Requirement"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/13pdf/13-132_7l38.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "medium"
     },
     {
-      "id": "auto_generated_case_001",
-      "title": "涉“导轨”实用新型专利恶意诉讼案",
-      "court": "最高人民法院",
-      "jurisdiction": "中华人民共和国",
-      "caseType": "知识产权",
-      "filingDate": "2022-01-01",
-      "status": "decided",
-      "parties": [
-        "广东某新材料公司（原告/上诉人）",
-        "中山市某制品厂（被告/被上诉人）",
-        "李某（被告/被上诉人）"
+      "id": "CASE-20260129-007",
+      "title": "South Dakota v. Wayfair, Inc., 138 S. Ct. 2080 (2018)",
+      "summary": "Supreme Court decision on sales tax collection by online retailers.",
+      "fullText": "In South Dakota v. Wayfair, Inc., the Supreme Court overturned the physical presence requirement for sales tax collection established in Quill Corp. v. North Dakota (1992). The Court held that states may require online retailers to collect sales taxes even without physical presence in the state. This decision fundamentally changed the landscape of online commerce and resulted in many states enacting economic nexus laws requiring remote sellers to collect sales tax.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2017-05-01",
+      "dateResolved": "2018-06-21",
+      "status": "Resolved",
+      "category": "Tax Law",
+      "jurisdiction": "USA",
+      "region": "South Dakota",
+      "riskLevel": "high",
+      "plaintiff": "State of South Dakota",
+      "defendant": "Wayfair, Inc.",
+      "caseType": "Sales Tax Collection",
+      "outcome": "Decision favoring South Dakota",
+      "legalPrecedents": [
+        "Quill Corp. v. North Dakota, 504 U.S. 298",
+        "Complete Auto Transit, Inc. v. Brady, 430 U.S. 274"
       ],
-      "description": "广东某新材料公司向中山市某制品厂提供其拥有的“一种导轨”实用新型专利技术图纸，诱导其生产样品并购买，随后提起专利侵权诉讼。在诉讼中，原告还向被告的客户发送侵权警告函。一审法院认定被诉侵权行为系经专利权人允许，驳回原告诉请。原告上诉后，二审维持原判。后被告方反诉原告恶意诉讼和商业诋毁，一审判决原告赔偿经济损失，二审（最高人民法院）认定原告行为超出正当维权限度，具有干扰竞争对手的非法目的和主观恶意，构成恶意诉讼，维持原判。",
-      "impactLevel": "high",
-      "source_url": null,
-      "outcome": "最高人民法院二审判决驳回广东某新材料公司的上诉，维持广州知识产权法院一审判决，即广东某新材料公司分别赔偿中山市某制品厂、李某经济损失30000元及85000元，并认定其行为构成恶意诉讼。",
-      "key_issues": [
-        "恶意提起知识产权诉讼的认定标准",
-        "专利权人诱导取证行为的法律性质与后果",
-        "诉讼中向竞争对手客户发送警告函的正当性边界",
-        "滥用起诉权与诚信原则的司法适用"
+      "impactAssessment": {
+        "industryImpact": "Critical",
+        "financialImpact": "$ billions in new tax collections",
+        "regulatoryImpact": "Major changes to e-commerce taxation"
+      },
+      "relatedRegulations": [
+        "Dormant Commerce Clause",
+        "State Tax Collection Laws"
       ],
-      "createdAt": "2026-01-27T02:47:00.044Z",
-      "updatedAt": "2026-01-27T02:47:00.045Z"
+      "tags": [
+        "Sales Tax",
+        "E-commerce",
+        "Nexus",
+        "Internet Retail"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/17pdf/17-494_1okc.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "CASE-2022-SPC-IP-1861",
-      "title": "涉‘靶式流量计’实用新型专利恶意诉讼案",
-      "court": "最高人民法院",
-      "jurisdiction": "福建省厦门市",
-      "caseType": "Intellectual Property",
-      "filingDate": "2022-01-01",
-      "status": "decided",
-      "parties": [
-        "上诉人（原审原告）：某仪器仪表公司",
-        "被上诉人（原审被告）：某科技公司",
-        "相关方：某机械公司"
+      "id": "CASE-20260129-008",
+      "title": "Association for Molecular Pathology v. Myriad Genetics, Inc., 569 U.S. 576 (2013)",
+      "summary": "Supreme Court decision on patent eligibility of human genes.",
+      "fullText": "In Association for Molecular Pathology v. Myriad Genetics, Inc., the Supreme Court held that naturally occurring DNA segments are not patentable because they are products of nature. The Court ruled that Myriad's patents on the BRCA1 and BRCA2 genes were invalid, but noted that synthetically created DNA (cDNA) could still be patented. The decision had profound implications for biotechnology and personalized medicine industries.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2009-05-12",
+      "dateResolved": "2013-06-13",
+      "status": "Resolved",
+      "category": "Intellectual Property",
+      "jurisdiction": "USA",
+      "region": "Utah",
+      "riskLevel": "high",
+      "plaintiff": "Association for Molecular Pathology",
+      "defendant": "Myriad Genetics, Inc.",
+      "caseType": "Patent Eligibility",
+      "outcome": "Decision favoring plaintiffs",
+      "legalPrecedents": [
+        "Diamond v. Chakrabarty, 447 U.S. 303",
+        "Funk Brothers Seed Co. v. Kalo Inoculant Co., 333 U.S. 127"
       ],
-      "description": "某仪器仪表公司在明知其‘内置式数显靶式流量计’实用新型专利权已于2006年3月因未缴年费终止的情况下，仍于2015年、2019年、2020年多次对某科技公司提起专利侵权诉讼，索赔金额高达数百万元，并申请财产保全冻结对方资产。某科技公司反诉其构成恶意诉讼。最高人民法院二审认定某仪器仪表公司缺乏权利基础，主观上具有通过诉讼牟取不当利益的故意，其行为构成恶意提起知识产权诉讼，判决驳回上诉，维持原判赔偿某科技公司6万元。",
-      "impactLevel": "high",
-      "source_url": null,
-      "outcome": "最高人民法院二审判决驳回某仪器仪表公司的上诉，维持福建省厦门市中级人民法院作出的一审判决，即认定某仪器仪表公司构成恶意诉讼，需赔偿某科技公司经济损失及合理费用共计6万元。",
-      "key_issues": [
-        "恶意提起知识产权诉讼的认定标准",
-        "专利权终止后提起侵权诉讼的权利基础问题",
-        "诉讼索赔金额与权利基础价值的匹配性（权利‘厚不厚’）",
-        "财产保全措施在恶意诉讼中的滥用风险"
+      "impactAssessment": {
+        "industryImpact": "Critical",
+        "financialImpact": "$ billions in biotech sector value changes",
+        "regulatoryImpact": "Changes to gene patent prosecution"
+      },
+      "relatedRegulations": [
+        "Patent Act (35 U.S.C.)",
+        "America Invents Act"
       ],
-      "createdAt": "2026-01-27T03:52:07.055Z",
-      "updatedAt": "2026-01-27T03:52:07.056Z"
+      "tags": [
+        "Gene Patents",
+        "Biotechnology",
+        "Patent Eligibility",
+        "Personalized Medicine"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/12pdf/12-398_7kc8.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     },
     {
-      "id": "CASE-2021-1353",
-      "title": "涉“罗汉果提取物”制备方法发明专利恶意诉讼案",
-      "court": "最高人民法院",
-      "jurisdiction": "中华人民共和国",
-      "caseType": "Intellectual Property",
-      "filingDate": "2018-07-13",
-      "status": "decided",
-      "parties": [
-        "湖南某公司（原告/上诉人）",
-        "桂林某公司（被告/被上诉人）"
+      "id": "CASE-20260129-009",
+      "title": "King v. Burwell, 576 U.S. 473 (2015)",
+      "summary": "Supreme Court case upholding federal subsidies under the Affordable Care Act.",
+      "fullText": "In King v. Burwell, the Supreme Court upheld federal tax credits for health insurance purchased through exchanges established by the federal government. The petitioners argued that the Affordable Care Act only authorized subsidies for exchanges 'established by the State,' but the Court interpreted the statute as authorizing subsidies for all qualifying taxpayers regardless of whether the exchange was state-run or federally facilitated. The decision preserved healthcare coverage for millions of Americans.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2014-11-04",
+      "dateResolved": "2015-06-25",
+      "status": "Resolved",
+      "category": "Healthcare Law",
+      "jurisdiction": "USA",
+      "region": "Virginia",
+      "riskLevel": "critical",
+      "plaintiff": "King and Other Individuals",
+      "defendant": "Burwell (HHS Secretary)",
+      "caseType": "Statutory Interpretation",
+      "outcome": "Decision favoring respondents",
+      "legalPrecedents": [
+        "National Federation of Independent Business v. Sebelius, 567 U.S. 519",
+        "FDA v. Brown & Williamson Tobacco Corp., 529 U.S. 120"
       ],
-      "description": "湖南某公司起诉桂林某公司侵犯其“一种适用于工业生产的罗汉果提取物的制备方法”专利权，并向证监会举报，导致桂林某公司配股审核一度暂停。后湖南某公司撤诉。桂林某公司反诉请求确认湖南某公司构成恶意诉讼。一审驳回，二审最高人民法院维持原判，认为现有证据不足以认定湖南某公司提起诉讼明显缺乏权利基础或事实根据，或具有明显恶意。",
-      "impactLevel": "high",
-      "source_url": null,
-      "outcome": "最高人民法院二审判决驳回桂林某公司的上诉，维持原判，即不认定湖南某公司构成恶意诉讼。",
-      "key_issues": [
-        "恶意诉讼的认定标准",
-        "知识产权诉讼的正当性与边界",
-        "诉讼行为与商业竞争（如上市进程）的关联",
-        "司法审慎与谦抑原则在诉讼认定中的适用"
+      "impactAssessment": {
+        "industryImpact": "Critical",
+        "financialImpact": "$ hundreds of billions in subsidies preserved",
+        "regulatoryImpact": "Preserved ACA implementation"
+      },
+      "relatedRegulations": [
+        "Patient Protection and Affordable Care Act",
+        "Internal Revenue Code"
       ],
-      "createdAt": "2026-01-27T04:28:17.034Z",
-      "updatedAt": "2026-01-27T04:28:17.034Z"
+      "tags": [
+        "Affordable Care Act",
+        "Healthcare Subsidies",
+        "Statutory Interpretation",
+        "Healthcare Policy"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/14pdf/14-114_9o3j.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "critical"
     },
     {
-      "id": "CASE_2023_最高法知民终869号",
-      "title": "涉“行车记录仪”专利恶意诉讼案",
-      "court": "最高人民法院知识产权法庭",
-      "jurisdiction": "中华人民共和国",
-      "caseType": "Intellectual Property",
-      "filingDate": "2026-01-01",
-      "status": "decided",
-      "parties": [
-        "原告/上诉人：顺某公司",
-        "被告/被上诉人：八某公司",
-        "相关方：雄某公司、许某（八某公司实际控制人）、陈某（八某公司监事）、博某公司（案外人）"
+      "id": "CASE-20260129-010",
+      "title": "Citizens United v. Federal Election Commission, 558 U.S. 310 (2010)",
+      "summary": "Supreme Court case on corporate political spending and free speech.",
+      "fullText": "In Citizens United v. FEC, the Supreme Court held that the First Amendment prohibits the government from restricting independent political expenditures by corporations, associations, and labor unions. The Court ruled that political spending is a form of protected speech and that corporations have the same free speech rights as individuals. The decision led to significant changes in campaign finance and the rise of Super PACs.",
+      "court": "Supreme Court of the United States",
+      "dateFiled": "2009-03-24",
+      "dateResolved": "2010-01-21",
+      "status": "Resolved",
+      "category": "Constitutional Law",
+      "jurisdiction": "USA",
+      "region": "Washington DC",
+      "riskLevel": "high",
+      "plaintiff": "Citizens United",
+      "defendant": "Federal Election Commission",
+      "caseType": "First Amendment",
+      "outcome": "Decision favoring Citizens United",
+      "legalPrecedents": [
+        "Austin v. Michigan Chamber of Commerce, 494 U.S. 652",
+        "McConnell v. FEC, 540 U.S. 93"
       ],
-      "description": "八某公司利用其明知存在权利瑕疵（4件专利应无效，2件专利被许可方有权使用）的6件行车记录仪专利，在代工方博某公司更换为顺某公司后，对顺某公司提起18件专利侵权诉讼，构成恶意诉讼。顺某公司起诉要求赔偿损失。一审判决赔偿30万元，二审（最高人民法院）改判支持顺某公司全部诉求，判决八某公司等赔偿经济损失100万元及维权合理开支12万元，确立了恶意诉讼需赔偿被诉方包括预期利益损失在内的全面赔偿原则。",
-      "impactLevel": "high",
-      "source_url": null,
-      "outcome": "二审（终审）判决：八某公司等连带赔偿顺某公司经济损失100万元及维权合理开支12万元。",
-      "key_issues": [
-        "专利恶意诉讼的认定标准",
-        "滥用知识产权诉讼权利的司法规制",
-        "恶意诉讼损害赔偿责任的范围界定（全面赔偿原则）",
-        "预期利益损失与恶意诉讼因果关系的认定"
+      "impactAssessment": {
+        "industryImpact": "High",
+        "financialImpact": "Billions in increased political spending",
+        "regulatoryImpact": "Major changes to campaign finance"
+      },
+      "relatedRegulations": [
+        "Bipartisan Campaign Reform Act",
+        "Federal Election Campaign Act"
       ],
-      "createdAt": "2026-01-27T04:46:15.693Z",
-      "updatedAt": "2026-01-27T04:46:15.693Z"
+      "tags": [
+        "Campaign Finance",
+        "First Amendment",
+        "Corporate Speech",
+        "Super PACs"
+      ],
+      "source": "Supreme Court of the United States",
+      "url": "https://www.supremecourt.gov/opinions/09pdf/08-205_7okc.pdf",
+      "timestamp": "2026-01-29T10:00:00.000Z",
+      "severity": "high"
     }
   ]
 }

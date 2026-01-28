@@ -162,14 +162,8 @@ export default function CompliancePage() {
 
 
       {/* Compliance alerts list */}
-      <div className="p-6 rounded-xl bg-card border border-border">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-lg font-semibold text-foreground">Regulatory Alerts</h2>
-          <span className="text-sm text-muted-foreground">{filteredAlerts.length} alerts</span>
-        </div>
-
-        <div className="space-y-4">
-          {filteredAlerts.map((alert) => (
+      <div className="space-y-4">
+        {filteredAlerts.map((alert) => (
             <div key={alert.id} className="p-6 rounded-xl bg-card/10 border border-border hover:bg-blue-900/99 hover:border-primary/20 transition-all duration-300 group">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
@@ -218,10 +212,9 @@ export default function CompliancePage() {
               </div>
             </div>
           ))}
-        </div>
-
         {filteredAlerts.length === 0 && (
-          <div className="text-center py-8">
+          <div className="text-center py-12">
+            <Globe className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
             <p className="text-muted-foreground">No regulatory alerts match your search criteria</p>
           </div>
         )}
