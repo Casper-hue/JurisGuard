@@ -1,29 +1,16 @@
-// next.config.js - Cloudflare Pages 兼容配置
+// next.config.js - 静态导出配置，Cloudflare Pages兼容
 /** @type {import('next').NextConfig} */
-
-// 定义动态路由，这些路由将不会被静态生成
 const nextConfig = {
-  // 不使用output: 'export'，而是让Cloudflare Pages处理
-  // 但在构建时排除API路由
-  experimental: {
-    // 确保某些路由不会被预构建
-    serverComponentsExternalPackages: [],
-  },
+  // 使用静态导出模式，Cloudflare Pages友好
+  output: 'export',
+  
+  // 禁用图片优化，因为静态导出时不支持
   images: {
-    unoptimized: true, // Cloudflare Pages对图片优化有限制
+    unoptimized: true,
   },
-  // 为Cloudflare Pages添加重写规则
-  async rewrites() {
-    return [
-      // 将API请求映射到正确的处理程序
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*'
-      }
-    ]
-  },
-  // 确保静态资源正确处理
-  trailingSlash: false,
+  
+  // 其他配置
+  trailingSlash: true, // 添加尾随斜杠
 }
 
 module.exports = nextConfig
