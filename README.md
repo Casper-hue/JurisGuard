@@ -196,12 +196,9 @@ JurisGuard/
 ![AI文本分析功能](screenshots/ai-assistant_2.png)
 *AI文本分析功能，支持手动上传文本的结构化分析和摘要生成*
 
-#### 企业级功能
-![公司配置界面](screenshots/company-profile.png)
-*公司业务配置界面，可设置公司背景信息以获得定制化合规建议*
-
-![风险量化评分](screenshots/risk-scoring.png)
-*风险量化评分功能，显示详细的多因子风险评估结果*
+#### AI文本分析与风险评估
+![AI文本分析功能](screenshots/ai-assistant_2.png)
+*AI文本分析功能，支持手动上传文本的结构化分析和量化风险评估*
 
 #### 法规管理
 ![法规管理界面](screenshots/compliance.png)
