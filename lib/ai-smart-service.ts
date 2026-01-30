@@ -62,7 +62,7 @@ ${conversationHistory ? `对话历史：\n${conversationHistory.join('\n')}\n\n`
   `
 }
 
-// Risk Analysis Tool Prompt
+// Risk Analysis Tool Prompt with Risk Scoring Matrix
 const buildRiskAnalysisPrompt = (text: string): string => {
   return `
 # 角色定位：风险分析专家
@@ -70,7 +70,7 @@ const buildRiskAnalysisPrompt = (text: string): string => {
 ## 核心职责
 你是一个专业的法律风险分析专家，主要任务是：
 - 识别文本中的法律实体和关键信息
-- 进行科学的风险评估和级别判定
+- 进行科学的风险评估和量化评分
 - 提取结构化数据用于数据库存储
 - 提供详细的风险分析依据
 
@@ -108,7 +108,56 @@ const buildRiskAnalysisPrompt = (text: string): string => {
 7. source_url: 来源链接（如果有）
 8. category: 法规类别（Data Compliance/Privacy/Security等）
 
-### 第三步：科学风险评估
+### 第三步：风险量化评分（新增）
+使用以下评分矩阵进行量化分析：
+
+#### 评分维度（1-5分）：
+1. **业务关联度 (Business Relevance)**：
+   - 5分：直接影响公司核心业务
+   - 4分：影响主要业务线
+   - 3分：影响次要业务
+   - 2分：轻微影响
+   - 1分：无直接影响
+
+2. **惩罚严苛度 (Penalty Severity)**：
+   - 5分：可能导致刑事处罚或重大民事赔偿
+   - 4分：高额罚款或禁令
+   - 3分：中等罚款或限制
+   - 2分：警告或小额罚款
+   - 1分：无实质性惩罚
+
+3. **合规紧急度 (Compliance Urgency)**：
+   - 5分：立即生效，无过渡期
+   - 4分：短期过渡期（<30天）
+   - 3分：中期过渡期（30-90天）
+   - 2分：长期过渡期（>90天）
+   - 1分：无明确时间要求
+
+#### 风险总分计算公式：
+Score = (业务关联度 × 0.4) + (惩罚严苛度 × 0.4) + (合规紧急度 × 0.2)
+
+#### 风险等级划分：
+- **High (≥4.0)**: 高风险，需要立即关注和行动
+- **Medium (2.5-3.9)**: 中等风险，需要制定应对计划
+- **Low (<2.5)**: 低风险，可定期监控
+
+### 第四步：法律术语对齐（新增）
+为确保法律术语提取的准确性，必须遵循以下术语对齐规则：
+
+#### 中国民法典术语对齐规则：
+- **除斥期间 (Preclusive Period)**: 指法律规定的某种权利的存续期间，期间届满后权利消灭。特征：不适用中断、中止、延长。
+- **善意取得 (Acquisition in Good Faith)**: 指善意第三人从无权处分人处取得财产所有权。要件：善意、有偿、已交付。
+- **无权处分 (Unauthorized Disposition)**: 指无处分权人处分他人财产。法律后果：效力待定，需权利人追认。
+- **不当得利 (Unjust Enrichment)**: 指没有合法依据取得利益，致他人受损。要件：一方获利、他方受损、无法律依据。
+- **无因管理 (Negotiorum Gestio)**: 指未受委托，也无法律义务而为他人管理事务。要件：管理他人事务、有为他人谋利意思。
+
+#### 术语提取要求：
+- 当识别到上述术语时，必须在JSON中增加"legal_basis"字段
+- 简述该术语的法律特征和适用条件
+- 引用具体法律条文（如民法典第XXX条）
+- 防止AI产生幻觉，确保术语解释的准确性
+
+### 第五步：科学风险评估
 使用以下标准进行风险评估：
 
 #### 案件风险评估（impactLevel）：
@@ -134,6 +183,13 @@ const buildRiskAnalysisPrompt = (text: string): string => {
   },
   "riskAssessment": {
     "level": "critical/high/medium/low",
+    "quantitativeScore": {
+      "businessRelevance": 1-5,
+      "penaltySeverity": 1-5,
+      "complianceUrgency": 1-5,
+      "totalScore": 1-5,
+      "riskLevel": "High/Medium/Low"
+    },
     "reasoning": "详细的风险评估理由",
     "factors": ["标的额", "法律重要性", "社会影响", "时效性"],
     "confidence": 0.95

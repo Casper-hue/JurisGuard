@@ -39,9 +39,24 @@ export interface RiskAnalysisResult {
     summary?: string
     timestamp?: string
     category?: string
+    
+    // Legal terminology alignment (新增)
+    legal_basis?: {
+      term: string
+      definition: string
+      legal_provision?: string
+      characteristics: string[]
+    }
   }
   riskAssessment: {
     level: 'critical' | 'high' | 'medium' | 'low'
+    quantitativeScore?: {
+      businessRelevance: number
+      penaltySeverity: number
+      complianceUrgency: number
+      totalScore: number
+      riskLevel: 'High' | 'Medium' | 'Low'
+    }
     reasoning: string
     factors: string[]
     confidence: number
@@ -66,6 +81,13 @@ export interface EditableAnalysisData {
   extractedData: any
   riskAssessment: {
     level: 'critical' | 'high' | 'medium' | 'low'
+    quantitativeScore?: {
+      businessRelevance: number
+      penaltySeverity: number
+      complianceUrgency: number
+      totalScore: number
+      riskLevel: 'High' | 'Medium' | 'Low'
+    }
     reasoning: string
     factors: string[]
     confidence: number

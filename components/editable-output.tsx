@@ -121,10 +121,47 @@ export default function EditableOutput({ analysisResult, onDataChange }: Editabl
     )
   }
 
+  // 法律术语对齐展示
+  const renderLegalBasis = () => (
+    <div className="legal-basis-section bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+      <h4 className="font-semibold text-lg mb-3 text-blue-900">Legal Terminology Alignment</h4>
+      <div className="legal-term-details">
+        <div className="term-header flex items-center gap-3 mb-2">
+          <span className="term-name font-bold text-blue-800">
+            {editableData.extractedData.legal_basis?.term}
+          </span>
+          {editableData.extractedData.legal_basis?.legal_provision && (
+            <span className="legal-provision text-sm text-blue-600 bg-blue-100 px-2 py-1 rounded">
+              {editableData.extractedData.legal_basis.legal_provision}
+            </span>
+          )}
+        </div>
+        
+        <div className="term-definition mb-3">
+          <strong className="text-blue-900">Definition:</strong>
+          <p className="text-blue-800 mt-1">{editableData.extractedData.legal_basis?.definition}</p>
+        </div>
+        
+        <div className="term-characteristics">
+          <strong className="text-blue-900">Legal Characteristics:</strong>
+          <div className="characteristics-list flex flex-wrap gap-2 mt-1">
+            {editableData.extractedData.legal_basis?.characteristics.map((char: string, index: number) => (
+              <span key={index} className="characteristic-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-md text-sm">
+                {char}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+
   // 风险评估详情展示
   const renderRiskAssessment = () => (
     <div className="risk-assessment-section bg-background border border-border rounded-lg p-4 mb-4">
       <h4 className="font-semibold text-lg mb-3 text-white">Risk Assessment Details</h4>
+      
+      {/* 风险等级和评分 */}
       <div className="risk-level flex items-center gap-4 mb-3">
         <span className={`level-badge px-3 py-1 rounded-full text-white ${
           editableData.riskAssessment.level === 'critical' ? 'bg-red-600' :
@@ -133,22 +170,65 @@ export default function EditableOutput({ analysisResult, onDataChange }: Editabl
         }`}>
           {editableData.riskAssessment.level.toUpperCase()}
         </span>
+        
+        {/* 风险评分显示 */}
+        {editableData.riskAssessment.quantitativeScore && (
+          <span className={`score-badge px-3 py-1 rounded-full text-white ${
+            editableData.riskAssessment.quantitativeScore.riskLevel === 'High' ? 'bg-red-600' :
+            editableData.riskAssessment.quantitativeScore.riskLevel === 'Medium' ? 'bg-yellow-500' : 'bg-green-500'
+          }`}>
+            Score: {editableData.riskAssessment.quantitativeScore.totalScore.toFixed(1)} 
+            ({editableData.riskAssessment.quantitativeScore.riskLevel})
+          </span>
+        )}
+        
         <span className="text-muted-foreground">Confidence: {(editableData.confidence * 100).toFixed(1)}%</span>
       </div>
+      
+      {/* 风险评分详情 */}
+      {editableData.riskAssessment.quantitativeScore && (
+        <div className="risk-scoring-details mb-3">
+          <strong className="text-white">Quantitative Risk Scoring:</strong>
+          <div className="grid grid-cols-3 gap-4 mt-2">
+            <div className="score-item text-center">
+              <div className="score-value text-lg font-bold text-blue-400">
+                {editableData.riskAssessment.quantitativeScore.businessRelevance}
+              </div>
+              <div className="score-label text-xs text-muted-foreground">Business Relevance</div>
+            </div>
+            <div className="score-item text-center">
+              <div className="score-value text-lg font-bold text-red-400">
+                {editableData.riskAssessment.quantitativeScore.penaltySeverity}
+              </div>
+              <div className="score-label text-xs text-muted-foreground">Penalty Severity</div>
+            </div>
+            <div className="score-item text-center">
+              <div className="score-value text-lg font-bold text-orange-400">
+                {editableData.riskAssessment.quantitativeScore.complianceUrgency}
+              </div>
+              <div className="score-label text-xs text-muted-foreground">Compliance Urgency</div>
+            </div>
+          </div>
+          <div className="score-formula mt-2 text-xs text-muted-foreground text-center">
+            Total Score = (Relevance × 0.4) + (Severity × 0.4) + (Urgency × 0.2)
+          </div>
+        </div>
+      )}
+      
       <div className="risk-reasoning mb-3">
         <strong className="text-white">Assessment Basis:</strong>
         <p className="text-muted-foreground mt-1">{editableData.riskAssessment.reasoning}</p>
       </div>
       <div className="risk-factors">
-        <strong className="text-white">Assessment Factors:</strong>
-        <div className="factor-tags flex flex-wrap gap-2 mt-1">
-          {editableData.riskAssessment.factors.map((factor, index) => (
-            <span key={index} className="factor-tag bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-              {factor}
-            </span>
-          ))}
+          <strong className="text-white">Assessment Factors:</strong>
+          <div className="factor-tags flex flex-wrap gap-2 mt-1">
+            {editableData.riskAssessment.factors.map((factor, index) => (
+              <span key={index} className="factor-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-md text-sm">
+                {factor}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
     </div>
   )
 
@@ -207,6 +287,9 @@ export default function EditableOutput({ analysisResult, onDataChange }: Editabl
       </div>
       
       <div className="p-6">
+        {/* 法律术语对齐展示 */}
+        {editableData.extractedData.legal_basis && renderLegalBasis()}
+        
         {/* 风险评估展示 */}
         {renderRiskAssessment()}
         
