@@ -1,6 +1,6 @@
 # JurisGuard
 
-**Cross-border regulatory monitoring platform built during career transition period (2024)**
+**Cross-border regulatory monitoring platform built during career transition period**
 
 A production-deployed web application that automates regulatory change tracking across multiple jurisdictions. Built to solve a real Legal Ops problem: keeping pace with regulatory updates without manual monitoring overhead.
 
@@ -104,7 +104,7 @@ Weights are configurable based on company risk appetite.
 
 ## Deployment & Maintenance
 
-**Status**: Production-deployed and operational since [month/year]
+**Status**: Production-deployed and operational since [06/2025]
 
 **Maintenance overhead**: 
 - Data pipeline: ~2 hours/month (monitoring scraper health, updating selectors when source sites change)
@@ -112,9 +112,9 @@ Weights are configurable based on company risk appetite.
 - Content: AI summaries occasionally need manual correction
 
 **Cost structure**:
-- Hosting: [amount or "free tier"]
-- LLM API calls: [amount or estimate]
-- Developer time: Built solo over [timeframe]
+- Hosting: [0]
+- LLM API calls: [0]
+- Developer time: Built solo over [a week]
 
 ---
 
@@ -292,4 +292,4 @@ Issues: [https://github.com/Casper-hue/JurisGuard/issues](https://github.com/Cas
 
 Built during a career transition period between in-house legal work and Legal Operations roles. The goal was to combine legal domain knowledge (3 years in-house: compliance, contracts, IP) with technical skills (Python, JavaScript, LLM APIs) to create something that solves a real Legal Ops problem.
 
-This project represents ~[X months] of part-time development work, deployed to production and maintained as a live system. It's my answer to the question: "Can you bridge legal and technical work?" Not as a demo, but as something that actually runs and delivers value.
+This project represents a week of part-time development work, deployed to production and maintained as a live system. It's my answer to the question: "Can you bridge legal and technical work?" Not as a demo, but as something that actually runs and delivers value.
