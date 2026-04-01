@@ -1,288 +1,295 @@
-# JurisGuard 🛡️
+# JurisGuard
 
-> AI驱动的法律合规管理平台 - 智能化法规追踪与风险评估
+**Cross-border regulatory monitoring platform built during career transition period (2024)**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Next.js](https://img.shields.io/badge/Next.js-16.1.4-blue.svg)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)](https://reactjs.org/)
-
-[English](#english) | [中文](#中文)
+A production-deployed web application that automates regulatory change tracking across multiple jurisdictions. Built to solve a real Legal Ops problem: keeping pace with regulatory updates without manual monitoring overhead.
 
 ---
 
-## 中文
+## Problem Statement
 
-### 📋 项目简介
+Legal teams operating across borders face a manual, resource-intensive workflow for regulatory monitoring:
+- Checking multiple government websites daily for regulatory updates
+- Manually parsing legal documents to identify relevant changes
+- Assessing business impact of each regulatory change
+- Maintaining internal documentation of compliance requirements
 
-JurisGuard 是一个基于AI技术的法律合规管理平台，专为法律专业人士和企业合规部门设计。通过智能化的法规追踪、风险评估和法律咨询功能，帮助用户实时掌握全球法规动态，降低合规风险。
-
-**核心价值**：将复杂的多法域合规管理简化为智能化操作，提升法律工作效率和准确性。
-
----
-
-### ✨ 核心功能
-
-#### 🌐 智能化法规追踪
-- **实时监控**：自动化获取欧美、东南亚等主要法域的最新法规变化
-- **多源数据**：支持GitHub Actions驱动的自动化数据更新机制
-- **时效性保障**：确保法规信息的及时性和准确性
-
-#### 🤖 AI法律专家助手
-- **专业角色建模**：模拟15年以上跨国企业合规经验的法务专家
-- **多法域支持**：深度覆盖GDPR、EU AI Act、CCPA等全球主要法规体系
-- **结构化输出**：遵循Westlaw等专业法律数据库标准格式
-- **权威咨询**：提供专业级的法律解读和风险评估
-
-#### 📊 智能合规仪表板
-- **可视化监控**：实时展示合规警报与风险指标
-- **风险评估雷达**：多维度可视化展示合规风险等级
-- **数据统计面板**：关键指标实时监控和趋势分析
-- **智能筛选**：按地区、法规类型、风险等级灵活过滤
-
-#### 📋 全方位合规管理
-- **法规知识库**：丰富的法律案例与判例分析
-- **文档管理中心**：合同模板、政策文件集中管理
-- **风险量化评估**：基于财务、法律、业务等多维度的综合风险评分
-
-#### 🔧 企业级功能增强
-- **公司业务对齐**：AI助手可根据公司具体业务背景提供定制化合规建议
-- **风险分级评分**：量化风险评估模型，业务关联度(40%) + 惩罚严苛度(40%) + 合规紧急度(20%)
-- **法律术语对齐**：专业法律术语识别与标准化，确保AI输出的准确性和专业性
+This process doesn't scale. Companies either dedicate significant legal headcount to monitoring, or accept the risk of missing critical regulatory changes.
 
 ---
 
-### 🛠️ 技术栈
+## Solution Overview
 
-#### 🚀 前端架构
-- **Next.js 16**：最新版框架，支持App Router、Server Components、Streaming等前沿特性
-- **React 18**：现代化UI构建，充分利用并发渲染和Hooks机制
-- **TypeScript**：强类型保障，提升代码可维护性与开发体验
-- **Tailwind CSS**：原子化CSS框架，高效构建美观响应式界面
+JurisGuard automates the monitoring → parsing → analysis workflow:
 
-#### 🤖 AI与数据处理
-- **多AI后端支持**：无缝集成OpenRouter、Hugging Face、Together AI等主流平台
-- **智能数据管道**：自动化法规爬取与处理，通过GitHub Actions实现持续更新
-- **结构化数据管理**：统一的数据模型与状态管理方案
+1. **Automated data collection**: GitHub Actions pipeline scrapes regulatory sources on schedule
+2. **Structured data processing**: Standardizes heterogeneous legal documents into queryable format
+3. **AI-assisted analysis**: LLM-based system identifies relevant changes and assesses business impact
+4. **User interface**: Dashboard for filtering, search, and drill-down into specific regulatory items
 
-#### ✨ 开发体验
-- **现代构建工具**：Webpack 5 + SWC编译，极速开发体验
-- **代码质量保障**：ESLint + Prettier + TypeScript严格模式，保证代码规范
-- **动画与交互**：Framer Motion实现流畅的UI过渡效果
-- **性能优化**：图片懒加载、代码分割、预加载等优化策略
-
-#### 🧠 AI智能增强
-- **上下文感知**：动态公司背景注入，AI可结合具体业务场景分析
-- **量化风险模型**：多因子评分算法，科学评估法律风险等级
-- **术语标准化**：专业法律术语对齐机制，防止AI幻觉，确保输出准确性
-- **用户体验优化**：柔和舒适的对话界面，减少视觉疲劳
+**Current scope**: EU (GDPR, AI Act), US (CCPA), and selected ASEAN jurisdictions. Extensible architecture supports adding new sources.
 
 ---
 
-### 🚀 快速开始
+## Technical Implementation
 
-#### 1. 克隆项目
+### Architecture
+- **Frontend**: Next.js 16 (App Router) + React 18 + TypeScript
+- **Data pipeline**: Node.js scripts + GitHub Actions (scheduled runs)
+- **AI layer**: OpenRouter/Hugging Face APIs for document analysis
+- **Deployment**: [Specify platform - Vercel/AWS/etc.]
+
+### Key Technical Decisions
+
+**Why Next.js**: Server-side rendering for better SEO and initial load performance. App Router enables file-system-based routing that maps cleanly to Legal Ops workflow (dashboard → compliance → cases → documents).
+
+**Why scheduled pipeline vs. real-time**: Regulatory changes are not real-time events. Scheduled scraping (daily/weekly) matches the actual cadence of regulatory updates while keeping infrastructure costs low.
+
+**Why multiple LLM providers**: Redundancy for API availability + cost optimization (different models for different tasks: summarization vs. structured extraction).
+
+### Data Flow
+
+```
+[Government Websites] 
+    ↓
+[GitHub Actions Scraper]  ← Scheduled runs
+    ↓
+[Raw HTML/PDF Storage]
+    ↓
+[Processing Script]       ← Parse + structure
+    ↓
+[JSON Data Store]
+    ↓
+[Next.js API Routes]      ← Query interface
+    ↓
+[React Dashboard]         ← User-facing UI
+```
+
+### Project Structure
+
+```
+├── app/                   # Next.js pages (dashboard, compliance, cases, documents, AI assistant)
+├── components/            # Reusable UI components
+├── lib/                   # Core services (AI, crawler, utilities)
+├── scripts/               # Data collection and processing scripts
+├── data/                  # Structured JSON outputs from pipeline
+└── types/                 # TypeScript type definitions
+```
+
+---
+
+## Functional Scope
+
+### Core Features
+- **Regulatory dashboard**: Filterable view of recent regulatory changes (by jurisdiction, risk level, date)
+- **Document library**: Centralized repository of compliance-related documents
+- **Case database**: Reference database of legal precedents and enforcement actions
+- **AI assistant**: LLM-powered interface for regulatory Q&A and document analysis
+
+### Risk Assessment Logic
+Multi-factor scoring model for prioritizing regulatory changes:
+- Business relevance (40%): How directly it affects company operations
+- Penalty severity (40%): Potential financial/legal consequences of non-compliance  
+- Urgency (20%): Time to compliance deadline
+
+Weights are configurable based on company risk appetite.
+
+### Limitations & Trade-offs
+- **No real-time alerts**: Scheduled batch processing means updates lag by up to 24 hours
+- **Manual source configuration**: Adding new regulatory sources requires code changes
+- **AI hallucination risk**: LLM outputs are not guaranteed accurate; human review required
+- **Single-user system**: No multi-user auth or role-based access control (yet)
+
+---
+
+## Deployment & Maintenance
+
+**Status**: Production-deployed and operational since [month/year]
+
+**Maintenance overhead**: 
+- Data pipeline: ~2 hours/month (monitoring scraper health, updating selectors when source sites change)
+- Infrastructure: Minimal (serverless deployment)
+- Content: AI summaries occasionally need manual correction
+
+**Cost structure**:
+- Hosting: [amount or "free tier"]
+- LLM API calls: [amount or estimate]
+- Developer time: Built solo over [timeframe]
+
+---
+
+## Business Value Delivered
+
+This project demonstrates:
+
+1. **Legal Ops workflow understanding**: Automated a real, repetitive legal task (regulatory monitoring) that typically requires dedicated headcount
+
+2. **Technical delivery**: Shipped a working application to production, not just a prototype
+
+3. **Business-tech translation**: Designed a scoring model that translates legal risk into quantifiable business metrics
+
+4. **Platform thinking**: Extensible architecture that supports adding new jurisdictions/sources without rewriting core logic
+
+---
+
+## Technical Skills Demonstrated
+
+**Frontend Development**
+- Modern React patterns (hooks, server components, streaming)
+- TypeScript for type safety and maintainability
+- Responsive UI design (desktop + mobile)
+
+**Backend & Automation**
+- RESTful API design (Next.js API routes)
+- CI/CD automation (GitHub Actions)
+- Web scraping and data processing pipelines
+
+**LegalTech Domain Knowledge**
+- Regulatory data modeling (understanding how legal documents are structured)
+- Risk assessment frameworks (multi-factor scoring)
+- Legal terminology standardization (preventing AI errors through controlled vocabularies)
+
+**System Design**
+- Scheduled batch processing vs. real-time trade-offs
+- Data pipeline error handling and monitoring
+- Scalable architecture (can add jurisdictions without refactoring)
+
+---
+
+## What I Would Do Differently for an Enterprise Legal Ops Platform
+
+Having built this as a solo project, I now understand the gaps between this and an enterprise-grade system:
+
+**Missing capabilities**:
+- **User management**: RBAC, SSO integration, audit logging
+- **Workflow engine**: Approval chains, task assignment, SLA tracking
+- **Integration layer**: APIs for connecting to contract management, e-signature, matter management systems
+- **Data governance**: Retention policies, encryption at rest, compliance with data residency requirements
+- **Observability**: Application monitoring, error tracking, performance metrics
+
+**Architecture changes**:
+- Move from scheduled batch to event-driven (webhook-based updates when available)
+- Separate database layer instead of JSON files
+- Containerization for consistent dev/prod environments
+- Proper secrets management (not .env files)
+
+**Process improvements**:
+- User research before feature development (I built what I thought was useful, not what users validated)
+- A/B testing framework for UI changes
+- Formalized incident response process
+- SLA commitments and uptime monitoring
+
+These are the differences between a side project and a production system serving paying customers. Understanding these gaps is part of what I learned by shipping this.
+
+---
+
+## Related Work & Context
+
+**Similar platforms in the market**: 
+- Compliance Monitor (Deel): Real-time regulatory tracking across 150+ countries
+- NAVEX Regulatory Change Management: Alert classification and workflow management
+- Athennian: Entity management with multi-jurisdictional compliance tracking
+
+**What JurisGuard does differently**:
+- Open-source and self-hostable
+- Customizable risk scoring model
+- Direct AI assistance for document analysis (vs. just alerting)
+
+**What commercial platforms do better**:
+- Comprehensive source coverage (hundreds of jurisdictions vs. my ~10)
+- Professional legal analysis (human experts vs. LLM summaries)
+- Enterprise features (SSO, RBAC, integrations, SLAs)
+
+This project is a proof-of-concept that demonstrates technical capability and Legal Ops understanding, not a replacement for enterprise platforms.
+
+---
+
+## Setup & Usage
+
+### Prerequisites
+- Node.js 18+
+- API keys for LLM providers (OpenRouter/Hugging Face/Together AI)
+
+### Installation
 
 ```bash
 git clone https://github.com/Casper-hue/JurisGuard.git
 cd JurisGuard
-```
-
-#### 2. 安装依赖
-
-```bash
 npm install
 ```
 
-#### 3. 配置环境变量
+### Configuration
 
-复制 `.env.example` 文件为 `.env` 并配置相关API密钥：
-
-```bash
-# 支持多种AI后端
-OPENROUTER_API_KEY=your_openrouter_api_key
-HUGGINGFACE_API_KEY=your_huggingface_api_key
-TOGETHER_API_KEY=your_together_api_key
-```
-
-#### 4. 启动开发服务器
+Create `.env` file:
 
 ```bash
-npm run dev
+OPENROUTER_API_KEY=your_key_here
+HUGGINGFACE_API_KEY=your_key_here  
+TOGETHER_API_KEY=your_key_here
 ```
 
-访问 `http://localhost:3000` 查看应用
-
-#### 5. 数据更新（可选）
+### Running Locally
 
 ```bash
-# 使用默认AI后端
-npm run crawl-data
-
-# 使用特定AI后端
-npm run crawl-data-openrouter
-npm run crawl-data-huggingface
-npm run crawl-data-together
+npm run dev  # Start development server on localhost:3000
 ```
+
+### Data Pipeline
+
+```bash
+npm run crawl-data  # Run scraper + processing pipeline
+```
+
+This fetches latest regulatory data and updates the JSON database.
 
 ---
 
-### 📂 项目结构
+## Repository Structure
 
 ```
 JurisGuard/
-├── app/                    # Next.js App Router
-│   ├── dashboard/          # 智能合规仪表板
-│   ├── compliance/         # 法规管理页面
-│   ├── cases/             # 案例管理页面
-│   ├── documents/         # 文档管理页面
-│   ├── ai-assistant/      # AI助手页面
-│   └── api/               # API路由
-├── components/            # 可复用组件
-│   ├── ui/               # UI组件库
-│   ├── MainLayout.tsx    # 主布局组件
-│   └── risk-analyzer.tsx # 风险分析组件
-├── lib/                  # 工具库
-│   ├── ai-service.ts     # AI服务
-│   ├── crawler-service.ts # 爬虫服务
-│   └── utils.ts          # 工具函数
-├── data/                 # 静态数据
+├── app/                    # Next.js App Router pages
+│   ├── dashboard/          # Compliance dashboard UI
+│   ├── compliance/         # Regulatory tracking page  
+│   ├── cases/              # Case database page
+│   ├── documents/          # Document library page
+│   ├── ai-assistant/       # AI Q&A interface
+│   └── api/                # Backend API routes
+├── components/             # React components
+│   ├── ui/                 # Base UI components
+│   ├── MainLayout.tsx      # App shell layout
+│   └── risk-analyzer.tsx   # Risk scoring component
+├── lib/                    # Core business logic
+│   ├── ai-service.ts       # LLM integration layer
+│   ├── crawler-service.ts  # Web scraping logic
+│   └── utils.ts            # Utility functions
+├── scripts/                # Automation scripts
+│   └── crawl-and-process.js # Data pipeline orchestration
+├── data/                   # JSON data storage
 │   ├── compliance-data.json
 │   ├── cases-data.json
 │   └── documents-data.json
-├── public/               # 公共资源
-│   └── data/            # 公共数据文件
-├── scripts/              # 脚本文件
-│   └── crawl-and-process.js # 数据爬取处理脚本
-└── types/                # TypeScript类型定义
+└── types/                  # TypeScript definitions
     └── index.ts
 ```
 
 ---
 
-### � 使用场景
+## License
 
-#### 1. 企业合规部门
-- **实时监控**：7×24小时监控目标市场的法规变化
-- **风险评估**：智能化识别潜在合规风险
-- **决策支持**：为管理层提供数据驱动的合规决策
-
-#### 2. 律师事务所
-- **法规研究**：快速获取最新法规动态和专业解读
-- **案例参考**：智能检索相关法律案例和判例
-- **效率提升**：自动化处理重复性法律研究工作
-
-#### 3. 跨国企业
-- **多法域管理**：统一管理不同国家的合规要求
-- **风险预警**：及时发现跨境经营的法律风险
-- **成本控制**：降低合规管理的人力和时间成本
-
-#### 4. 个人法律从业者
-- **专业工具**：获得资深法务专家级别的咨询服务
-- **知识更新**：持续学习最新的法规变化和趋势
-- **效率优化**：提升个人法律工作的专业性和效率
+MIT License - See LICENSE file for details
 
 ---
 
-### 📸 功能演示
+## Contact
 
-#### 仪表板界面
-![仪表板界面](screenshots/dashboard.png)
-*智能合规仪表板，实时展示风险指标和合规警报*
-
-#### AI法律助手
-![AI法律助手界面](screenshots/ai-assistant.png)
-*AI法律专家助手界面，提供专业法规解读和风险评估*
-
-#### AI文本分析与风险评估
-![AI文本分析功能](screenshots/ai-assistant_2.png)
-*AI文本分析功能，支持手动上传文本的结构化分析和量化风险评估*
-
-#### 法规管理
-![法规管理界面](screenshots/compliance.png)
-*法规管理页面，展示最新法规动态和详细信息*
-
-#### 响应式设计
-![移动端界面](screenshots/mobile.png)
-*响应式设计，完美适配桌面和移动设备*
+Project: [https://github.com/Casper-hue/JurisGuard](https://github.com/Casper-hue/JurisGuard)  
+Issues: [https://github.com/Casper-hue/JurisGuard/issues](https://github.com/Casper-hue/JurisGuard/issues)
 
 ---
 
-### 🌟 项目特色
+## About This Project
 
-#### 💼 专业法律科技融合
-- **深度领域专精**：聚焦法律合规场景，解决真实业务痛点
-- **前沿技术应用**：AI+Web技术赋能传统法律工作流程
-- **用户体验导向**：深度调研法律从业者需求，打造专业化工作台
+Built during a career transition period between in-house legal work and Legal Operations roles. The goal was to combine legal domain knowledge (3 years in-house: compliance, contracts, IP) with technical skills (Python, JavaScript, LLM APIs) to create something that solves a real Legal Ops problem.
 
-#### 🧠 AI智能增强
-- **专家级角色建模**：超越通用LLM，模拟资深法务专家思维模式
-- **结构化专业输出**：遵循Westlaw等专业法律数据库标准格式
-- **法规溯源能力**：每个AI回答都提供法规依据与官方链接
-- **持续学习进化**：通过GitHub Actions自动化更新法规知识库
-
-#### 🌐 全球化合规支持
-- **多法域覆盖**：支持GDPR、EU AI Act、CCPA等主流法规体系
-- **实时法规追踪**：自动化获取最新法规变化，确保信息时效性
-- **跨区域对比**：提供不同法域间法规差异的智能分析
-
----
-
-### 🚀 发展蓝图
-
-#### 🔄 当前版本亮点 (v1.0)
-- ✅ **AI驱动合规分析** - 智能识别法律文本风险点
-- ✅ **自动化法规更新** - GitHub Actions驱动的实时法规爬取
-- ✅ **双语国际化** - 完整中英文支持，全球化用户体验
-- ✅ **全平台兼容** - 响应式设计，完美适配桌面与移动设备
-- ✅ **企业级定制** - 公司业务背景配置，个性化合规建议
-- ✅ **量化风险模型** - 科学的风险评分与等级划分
-- ✅ **专业术语对齐** - 防止AI幻觉，确保输出准确性
-
-#### 🎯 下一阶段 (v1.1-v1.3)
-- [ ] **团队协作套件** - 多用户权限管理，团队数据安全共享
-- [ ] **智能报告生成** - AI辅助生成专业合规报告与建议
-- [ ] **开放API平台** - 标准RESTful接口，便于第三方系统集成
-- [ ] **高级可视化** - 丰富的图表组件，深度数据分析洞察
-
-#### 🌟 未来展望 (v2.0+)
-- [ ] **企业级监控** - 7×24小时实时合规状态监控与告警
-- [ ] **预测性分析** - 基于法规趋势的前瞻性风险预测
-- [ ] **区块链验证** - 不可篡改的合规证明与审计轨迹
-- [ ] **行业定制化** - 针对金融、医疗、科技等垂直领域的专业模块
-
----
-
-### 🤝 贡献
-
-欢迎贡献代码、提出建议或报告问题！
-
-1. Fork 项目
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
----
-
-### 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
----
-
-### 📞 联系方式
-
-- 项目主页：https://github.com/Casper-hue/JurisGuard
-- 问题反馈：https://github.com/Casper-hue/JurisGuard/issues
-
----
-
-## English
-
-*English version coming soon...*
-
----
-
-## 致谢与后记
-
-感谢LLM模型的强大能力，为这个项目的开发提供了无限可能。感谢爬虫开源项目，为法律文本的获取和处理提供了便捷的工具。感谢所有阳光的午后和瞌睡的小鸟，让我觉得做点什么都有意义。希望科技发展的未来，人们可以打破知识和信息的壁垒，而不是被过量的信息和未知的风险所困扰。
+This project represents ~[X months] of part-time development work, deployed to production and maintained as a live system. It's my answer to the question: "Can you bridge legal and technical work?" Not as a demo, but as something that actually runs and delivers value.
