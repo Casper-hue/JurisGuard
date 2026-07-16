@@ -85,6 +85,25 @@ API availability redundancy + cost optimization (different models for different 
 
 ---
 
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Compliance Tracking
+![Compliance](screenshots/compliance.png)
+
+### AI Assistant
+![AI Assistant](screenshots/ai-assistant.png)
+
+### Company Profile Configuration
+![Company Profile](screenshots/company-profile.png)
+
+### Mobile View
+![Mobile](screenshots/mobile.png)
+
+---
+
 ## Tech Stack
 
 - **Frontend**: Next.js 16 (App Router) + React 18 + TypeScript + Tailwind CSS
